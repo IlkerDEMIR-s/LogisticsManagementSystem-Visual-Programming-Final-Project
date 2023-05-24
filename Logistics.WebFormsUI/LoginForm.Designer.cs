@@ -51,7 +51,7 @@
             this.cbxCompanyName.Location = new System.Drawing.Point(625, 229);
             this.cbxCompanyName.Name = "cbxCompanyName";
             this.cbxCompanyName.Size = new System.Drawing.Size(168, 21);
-            this.cbxCompanyName.TabIndex = 1;
+            this.cbxCompanyName.TabIndex = 2;
             // 
             // btnLogin
             // 
@@ -61,7 +61,7 @@
             this.btnLogin.Location = new System.Drawing.Point(625, 359);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(77, 33);
-            this.btnLogin.TabIndex = 5;
+            this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "&Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -74,7 +74,7 @@
             this.btnCancel.Location = new System.Drawing.Point(716, 359);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(77, 33);
-            this.btnCancel.TabIndex = 6;
+            this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -88,7 +88,7 @@
             this.cbxShowPassword.Location = new System.Drawing.Point(625, 295);
             this.cbxShowPassword.Name = "cbxShowPassword";
             this.cbxShowPassword.Size = new System.Drawing.Size(59, 19);
-            this.cbxShowPassword.TabIndex = 3;
+            this.cbxShowPassword.TabIndex = 4;
             this.cbxShowPassword.Text = "show";
             this.cbxShowPassword.UseVisualStyleBackColor = false;
             this.cbxShowPassword.CheckedChanged += new System.EventHandler(this.cbxShowPassword_CheckedChanged);
@@ -99,7 +99,7 @@
             this.cbxFactoryType.Location = new System.Drawing.Point(625, 186);
             this.cbxFactoryType.Name = "cbxFactoryType";
             this.cbxFactoryType.Size = new System.Drawing.Size(168, 21);
-            this.cbxFactoryType.TabIndex = 0;
+            this.cbxFactoryType.TabIndex = 1;
             this.cbxFactoryType.SelectedIndexChanged += new System.EventHandler(this.cbxFactoryType_SelectedIndexChanged);
             // 
             // txtPassword
@@ -107,7 +107,7 @@
             this.txtPassword.Location = new System.Drawing.Point(625, 269);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(168, 20);
-            this.txtPassword.TabIndex = 2;
+            this.txtPassword.TabIndex = 3;
             this.toolTipPassword.SetToolTip(this.txtPassword, "Please enter your password.\r\n");
             // 
             // lblPassword
@@ -168,7 +168,7 @@
             this.lblRegisterSys.Location = new System.Drawing.Point(622, 326);
             this.lblRegisterSys.Name = "lblRegisterSys";
             this.lblRegisterSys.Size = new System.Drawing.Size(127, 15);
-            this.lblRegisterSys.TabIndex = 4;
+            this.lblRegisterSys.TabIndex = 5;
             this.lblRegisterSys.TabStop = true;
             this.lblRegisterSys.Text = "Register in the system";
             this.lblRegisterSys.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRegisterSys_LinkClicked);
@@ -183,7 +183,7 @@
             this.btnDirectEntry.Location = new System.Drawing.Point(625, 145);
             this.btnDirectEntry.Name = "btnDirectEntry";
             this.btnDirectEntry.Size = new System.Drawing.Size(168, 25);
-            this.btnDirectEntry.TabIndex = 9;
+            this.btnDirectEntry.TabIndex = 0;
             this.btnDirectEntry.Text = "Direct Entry";
             this.btnDirectEntry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDirectEntry.UseVisualStyleBackColor = false;

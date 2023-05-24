@@ -41,11 +41,9 @@
             this.gbxSend = new System.Windows.Forms.GroupBox();
             this.lblStockInputSecondLine = new System.Windows.Forms.Label();
             this.lblDepotId = new System.Windows.Forms.Label();
-            this.lblUnitInStockDisplay = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.txtProductIdDisplay = new System.Windows.Forms.TextBox();
             this.txtStockInput = new System.Windows.Forms.TextBox();
-            this.txtUnitInStockDisplay = new System.Windows.Forms.TextBox();
             this.lblStockInput = new System.Windows.Forms.Label();
             this.lblProductIdDisplay = new System.Windows.Forms.Label();
             this.txtDepotId = new System.Windows.Forms.TextBox();
@@ -79,6 +77,8 @@
             this.toolStripMenuItemTips = new System.Windows.Forms.ToolStripMenuItem();
             this.dffToolStripMenuItemGeneral = new System.Windows.Forms.ToolStripMenuItem();
             this.ddfToolStripMenuItemSpecial = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).BeginInit();
             this.gbxSearchByName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
@@ -99,7 +99,7 @@
             this.btnLogOut.Location = new System.Drawing.Point(655, 496);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(129, 39);
-            this.btnLogOut.TabIndex = 3;
+            this.btnLogOut.TabIndex = 4;
             this.btnLogOut.Text = "&Log Out";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -113,7 +113,7 @@
             this.btnCancel.Location = new System.Drawing.Point(790, 495);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(129, 39);
-            this.btnCancel.TabIndex = 4;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -136,7 +136,7 @@
             this.gbxSearchByName.Location = new System.Drawing.Point(411, 43);
             this.gbxSearchByName.Name = "gbxSearchByName";
             this.gbxSearchByName.Size = new System.Drawing.Size(245, 67);
-            this.gbxSearchByName.TabIndex = 0;
+            this.gbxSearchByName.TabIndex = 1;
             this.gbxSearchByName.TabStop = false;
             this.gbxSearchByName.Text = "Search by Supplier Depot Name";
             // 
@@ -184,18 +184,16 @@
             // 
             this.gbxSend.Controls.Add(this.lblStockInputSecondLine);
             this.gbxSend.Controls.Add(this.lblDepotId);
-            this.gbxSend.Controls.Add(this.lblUnitInStockDisplay);
             this.gbxSend.Controls.Add(this.btnSubmit);
             this.gbxSend.Controls.Add(this.txtProductIdDisplay);
             this.gbxSend.Controls.Add(this.txtStockInput);
-            this.gbxSend.Controls.Add(this.txtUnitInStockDisplay);
             this.gbxSend.Controls.Add(this.lblStockInput);
             this.gbxSend.Controls.Add(this.lblProductIdDisplay);
             this.gbxSend.Controls.Add(this.txtDepotId);
             this.gbxSend.Location = new System.Drawing.Point(411, 219);
             this.gbxSend.Name = "gbxSend";
             this.gbxSend.Size = new System.Drawing.Size(508, 149);
-            this.gbxSend.TabIndex = 1;
+            this.gbxSend.TabIndex = 2;
             this.gbxSend.TabStop = false;
             // 
             // lblStockInputSecondLine
@@ -210,20 +208,11 @@
             // lblDepotId
             // 
             this.lblDepotId.AutoSize = true;
-            this.lblDepotId.Location = new System.Drawing.Point(45, 29);
+            this.lblDepotId.Location = new System.Drawing.Point(65, 47);
             this.lblDepotId.Name = "lblDepotId";
             this.lblDepotId.Size = new System.Drawing.Size(47, 13);
             this.lblDepotId.TabIndex = 16;
             this.lblDepotId.Text = "DepotID";
-            // 
-            // lblUnitInStockDisplay
-            // 
-            this.lblUnitInStockDisplay.AutoSize = true;
-            this.lblUnitInStockDisplay.Location = new System.Drawing.Point(21, 97);
-            this.lblUnitInStockDisplay.Name = "lblUnitInStockDisplay";
-            this.lblUnitInStockDisplay.Size = new System.Drawing.Size(71, 13);
-            this.lblUnitInStockDisplay.TabIndex = 18;
-            this.lblUnitInStockDisplay.Text = "Unit in stocks";
             // 
             // btnSubmit
             // 
@@ -237,11 +226,11 @@
             // 
             // txtProductIdDisplay
             // 
-            this.txtProductIdDisplay.Location = new System.Drawing.Point(98, 64);
+            this.txtProductIdDisplay.Location = new System.Drawing.Point(118, 82);
             this.txtProductIdDisplay.Name = "txtProductIdDisplay";
             this.txtProductIdDisplay.ReadOnly = true;
             this.txtProductIdDisplay.Size = new System.Drawing.Size(100, 20);
-            this.txtProductIdDisplay.TabIndex = 6;
+            this.txtProductIdDisplay.TabIndex = 1;
             this.txtProductIdDisplay.TabStop = false;
             // 
             // txtStockInput
@@ -250,15 +239,6 @@
             this.txtStockInput.Name = "txtStockInput";
             this.txtStockInput.Size = new System.Drawing.Size(172, 20);
             this.txtStockInput.TabIndex = 0;
-            // 
-            // txtUnitInStockDisplay
-            // 
-            this.txtUnitInStockDisplay.Location = new System.Drawing.Point(98, 95);
-            this.txtUnitInStockDisplay.Name = "txtUnitInStockDisplay";
-            this.txtUnitInStockDisplay.ReadOnly = true;
-            this.txtUnitInStockDisplay.Size = new System.Drawing.Size(100, 20);
-            this.txtUnitInStockDisplay.TabIndex = 7;
-            this.txtUnitInStockDisplay.TabStop = false;
             // 
             // lblStockInput
             // 
@@ -272,7 +252,7 @@
             // lblProductIdDisplay
             // 
             this.lblProductIdDisplay.AutoSize = true;
-            this.lblProductIdDisplay.Location = new System.Drawing.Point(37, 66);
+            this.lblProductIdDisplay.Location = new System.Drawing.Point(57, 84);
             this.lblProductIdDisplay.Name = "lblProductIdDisplay";
             this.lblProductIdDisplay.Size = new System.Drawing.Size(55, 13);
             this.lblProductIdDisplay.TabIndex = 17;
@@ -280,11 +260,11 @@
             // 
             // txtDepotId
             // 
-            this.txtDepotId.Location = new System.Drawing.Point(98, 26);
+            this.txtDepotId.Location = new System.Drawing.Point(118, 44);
             this.txtDepotId.Name = "txtDepotId";
             this.txtDepotId.ReadOnly = true;
             this.txtDepotId.Size = new System.Drawing.Size(100, 20);
-            this.txtDepotId.TabIndex = 5;
+            this.txtDepotId.TabIndex = 0;
             this.txtDepotId.TabStop = false;
             // 
             // gbxFactoryInfo
@@ -515,7 +495,7 @@
             this.btnDepotOperations.Location = new System.Drawing.Point(12, 471);
             this.btnDepotOperations.Name = "btnDepotOperations";
             this.btnDepotOperations.Size = new System.Drawing.Size(297, 64);
-            this.btnDepotOperations.TabIndex = 2;
+            this.btnDepotOperations.TabIndex = 3;
             this.btnDepotOperations.Text = "&Depot Operations";
             this.btnDepotOperations.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDepotOperations.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -526,11 +506,12 @@
             // 
             this.menuStripBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItemAbout,
-            this.helpToolStripMenuItemHelp});
+            this.helpToolStripMenuItemHelp,
+            this.accountTransactionsToolStripMenuItem});
             this.menuStripBar.Location = new System.Drawing.Point(0, 0);
             this.menuStripBar.Name = "menuStripBar";
             this.menuStripBar.Size = new System.Drawing.Size(932, 24);
-            this.menuStripBar.TabIndex = 28;
+            this.menuStripBar.TabIndex = 0;
             this.menuStripBar.Text = "menuStrip1";
             // 
             // helpToolStripMenuItemAbout
@@ -558,14 +539,14 @@
             // 
             this.toolStripMenuItemWithWebSite.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemWithWebSite.Image")));
             this.toolStripMenuItemWithWebSite.Name = "toolStripMenuItemWithWebSite";
-            this.toolStripMenuItemWithWebSite.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemWithWebSite.Size = new System.Drawing.Size(114, 22);
             this.toolStripMenuItemWithWebSite.Text = "Tutorial";
             this.toolStripMenuItemWithWebSite.Click += new System.EventHandler(this.toolStripMenuItemWithWebSite_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
             // 
             // toolStripMenuItemTips
             // 
@@ -574,22 +555,39 @@
             this.ddfToolStripMenuItemSpecial});
             this.toolStripMenuItemTips.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemTips.Image")));
             this.toolStripMenuItemTips.Name = "toolStripMenuItemTips";
-            this.toolStripMenuItemTips.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemTips.Size = new System.Drawing.Size(114, 22);
             this.toolStripMenuItemTips.Text = "Tips";
             // 
             // dffToolStripMenuItemGeneral
             // 
             this.dffToolStripMenuItemGeneral.Name = "dffToolStripMenuItemGeneral";
-            this.dffToolStripMenuItemGeneral.Size = new System.Drawing.Size(180, 22);
+            this.dffToolStripMenuItemGeneral.Size = new System.Drawing.Size(138, 22);
             this.dffToolStripMenuItemGeneral.Text = "General Tips";
             this.dffToolStripMenuItemGeneral.Click += new System.EventHandler(this.dffToolStripMenuItemGeneral_Click);
             // 
             // ddfToolStripMenuItemSpecial
             // 
             this.ddfToolStripMenuItemSpecial.Name = "ddfToolStripMenuItemSpecial";
-            this.ddfToolStripMenuItemSpecial.Size = new System.Drawing.Size(180, 22);
+            this.ddfToolStripMenuItemSpecial.Size = new System.Drawing.Size(138, 22);
             this.ddfToolStripMenuItemSpecial.Text = "Special Tips";
             this.ddfToolStripMenuItemSpecial.Click += new System.EventHandler(this.ddfToolStripMenuItemSpecial_Click);
+            // 
+            // accountTransactionsToolStripMenuItem
+            // 
+            this.accountTransactionsToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.accountTransactionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changePasswordToolStripMenuItem});
+            this.accountTransactionsToolStripMenuItem.Name = "accountTransactionsToolStripMenuItem";
+            this.accountTransactionsToolStripMenuItem.Size = new System.Drawing.Size(131, 20);
+            this.accountTransactionsToolStripMenuItem.Text = "Account transactions";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Text = "Change password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // CustomerForm
             // 
@@ -638,11 +636,9 @@
         private System.Windows.Forms.DataGridView dgwDepots;
         private System.Windows.Forms.GroupBox gbxSend;
         private System.Windows.Forms.Label lblDepotId;
-        private System.Windows.Forms.Label lblUnitInStockDisplay;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.TextBox txtProductIdDisplay;
         private System.Windows.Forms.TextBox txtStockInput;
-        private System.Windows.Forms.TextBox txtUnitInStockDisplay;
         private System.Windows.Forms.Label lblStockInput;
         private System.Windows.Forms.Label lblProductIdDisplay;
         private System.Windows.Forms.TextBox txtDepotId;
@@ -678,5 +674,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTips;
         private System.Windows.Forms.ToolStripMenuItem dffToolStripMenuItemGeneral;
         private System.Windows.Forms.ToolStripMenuItem ddfToolStripMenuItemSpecial;
+        private System.Windows.Forms.ToolStripMenuItem accountTransactionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
     }
 }

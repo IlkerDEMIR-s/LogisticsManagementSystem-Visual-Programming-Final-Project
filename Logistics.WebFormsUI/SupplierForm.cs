@@ -137,5 +137,12 @@ namespace Logistics.WebFormsUI
             MessageBox.Show("We have been working on the development of logistics management systems for many years.",
                                                         "Info", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePasswordForm changePasswordForm = new ChangePasswordForm(_factoryId, _factoryTypeId);
+            changePasswordForm.ShowDialog();
+            
+        }
     }
 } 

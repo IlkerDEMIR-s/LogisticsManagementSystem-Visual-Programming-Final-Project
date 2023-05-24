@@ -66,6 +66,8 @@
             this.toolStripMenuItemTips = new System.Windows.Forms.ToolStripMenuItem();
             this.dffToolStripMenuItemGeneral = new System.Windows.Forms.ToolStripMenuItem();
             this.ddfToolStripMenuItemSpecial = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxFactoryInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwReceived)).BeginInit();
@@ -81,7 +83,7 @@
             this.btnProductOperations.Location = new System.Drawing.Point(411, 23);
             this.btnProductOperations.Name = "btnProductOperations";
             this.btnProductOperations.Size = new System.Drawing.Size(287, 89);
-            this.btnProductOperations.TabIndex = 0;
+            this.btnProductOperations.TabIndex = 1;
             this.btnProductOperations.Text = "&Product Operations";
             this.btnProductOperations.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnProductOperations.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -97,7 +99,7 @@
             this.btnDepotOperations.Location = new System.Drawing.Point(411, 127);
             this.btnDepotOperations.Name = "btnDepotOperations";
             this.btnDepotOperations.Size = new System.Drawing.Size(287, 89);
-            this.btnDepotOperations.TabIndex = 1;
+            this.btnDepotOperations.TabIndex = 2;
             this.btnDepotOperations.Text = "&Depot Operations";
             this.btnDepotOperations.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDepotOperations.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -113,7 +115,7 @@
             this.btnCustomerTransactions.Location = new System.Drawing.Point(411, 229);
             this.btnCustomerTransactions.Name = "btnCustomerTransactions";
             this.btnCustomerTransactions.Size = new System.Drawing.Size(287, 89);
-            this.btnCustomerTransactions.TabIndex = 2;
+            this.btnCustomerTransactions.TabIndex = 3;
             this.btnCustomerTransactions.Text = "Customer &Transactions";
             this.btnCustomerTransactions.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCustomerTransactions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -338,7 +340,7 @@
             this.btnCancel.Location = new System.Drawing.Point(574, 545);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(129, 40);
-            this.btnCancel.TabIndex = 4;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -353,7 +355,7 @@
             this.btnLogOut.Location = new System.Drawing.Point(439, 546);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(129, 39);
-            this.btnLogOut.TabIndex = 3;
+            this.btnLogOut.TabIndex = 4;
             this.btnLogOut.Text = "&Log Out";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -414,11 +416,12 @@
             // 
             this.menuStripBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItemAbout,
-            this.helpToolStripMenuItemHelp});
+            this.helpToolStripMenuItemHelp,
+            this.accountTransactionsToolStripMenuItem});
             this.menuStripBar.Location = new System.Drawing.Point(0, 0);
             this.menuStripBar.Name = "menuStripBar";
             this.menuStripBar.Size = new System.Drawing.Size(718, 24);
-            this.menuStripBar.TabIndex = 20;
+            this.menuStripBar.TabIndex = 0;
             this.menuStripBar.Text = "menuStrip";
             // 
             // helpToolStripMenuItemAbout
@@ -446,14 +449,14 @@
             // 
             this.toolStripMenuItemWithWebSite.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemWithWebSite.Image")));
             this.toolStripMenuItemWithWebSite.Name = "toolStripMenuItemWithWebSite";
-            this.toolStripMenuItemWithWebSite.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemWithWebSite.Size = new System.Drawing.Size(114, 22);
             this.toolStripMenuItemWithWebSite.Text = "Tutorial";
             this.toolStripMenuItemWithWebSite.Click += new System.EventHandler(this.toolStripMenuItemWithWebSite_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
             // 
             // toolStripMenuItemTips
             // 
@@ -462,22 +465,39 @@
             this.ddfToolStripMenuItemSpecial});
             this.toolStripMenuItemTips.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemTips.Image")));
             this.toolStripMenuItemTips.Name = "toolStripMenuItemTips";
-            this.toolStripMenuItemTips.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemTips.Size = new System.Drawing.Size(114, 22);
             this.toolStripMenuItemTips.Text = "Tips";
             // 
             // dffToolStripMenuItemGeneral
             // 
             this.dffToolStripMenuItemGeneral.Name = "dffToolStripMenuItemGeneral";
-            this.dffToolStripMenuItemGeneral.Size = new System.Drawing.Size(180, 22);
+            this.dffToolStripMenuItemGeneral.Size = new System.Drawing.Size(138, 22);
             this.dffToolStripMenuItemGeneral.Text = "General Tips";
             this.dffToolStripMenuItemGeneral.Click += new System.EventHandler(this.dffToolStripMenuItemGeneral_Click);
             // 
             // ddfToolStripMenuItemSpecial
             // 
             this.ddfToolStripMenuItemSpecial.Name = "ddfToolStripMenuItemSpecial";
-            this.ddfToolStripMenuItemSpecial.Size = new System.Drawing.Size(180, 22);
+            this.ddfToolStripMenuItemSpecial.Size = new System.Drawing.Size(138, 22);
             this.ddfToolStripMenuItemSpecial.Text = "Special Tips";
             this.ddfToolStripMenuItemSpecial.Click += new System.EventHandler(this.ddfToolStripMenuItemSpecial_Click);
+            // 
+            // accountTransactionsToolStripMenuItem
+            // 
+            this.accountTransactionsToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.accountTransactionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changePasswordToolStripMenuItem});
+            this.accountTransactionsToolStripMenuItem.Name = "accountTransactionsToolStripMenuItem";
+            this.accountTransactionsToolStripMenuItem.Size = new System.Drawing.Size(131, 20);
+            this.accountTransactionsToolStripMenuItem.Text = "Account transactions";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Text = "Change password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // SupplierForm
             // 
@@ -552,5 +572,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTips;
         private System.Windows.Forms.ToolStripMenuItem dffToolStripMenuItemGeneral;
         private System.Windows.Forms.ToolStripMenuItem ddfToolStripMenuItemSpecial;
+        private System.Windows.Forms.ToolStripMenuItem accountTransactionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
     }
 }

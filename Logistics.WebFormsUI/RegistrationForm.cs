@@ -81,6 +81,8 @@ namespace Logistics.WebFormsUI
                     throw new Exception("Please select a factory type.");
                 }
 
+                CheckIfCompanyNameExists();
+
                 _factoryService.Add(new Factory
                 {
                     CompanyName = txtCompanyName.Text,
@@ -95,13 +97,13 @@ namespace Logistics.WebFormsUI
                     HomePage = txtHomepage.Text
 
                 });
-                MessageBox.Show("Factory added successfully.", "Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Factory added successfully.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                 LoginForm loginForm = new LoginForm();
                 loginForm.Show();
                 this.Close();
-                
+
             }
             catch (Exception ex) when (ex.Message == "Please select a factory type.")
             {
@@ -110,6 +112,14 @@ namespace Logistics.WebFormsUI
             catch (Exception exception)
             {               
                 MessageBox.Show(exception.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CheckIfCompanyNameExists()
+        {
+            if (_factoryService.GetByCompanyName(txtCompanyName.Text) != null)
+            {
+                throw new Exception("This company name is already registered.");
             }
         }
 

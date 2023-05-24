@@ -190,7 +190,6 @@ namespace Logistics.WebFormsUI
             txtStockInput.Clear();
             txtDepotId.Clear();
             txtProductIdDisplay.Clear();
-            txtUnitInStockDisplay.Clear();
         }
 
         private int addOrders()
@@ -229,7 +228,6 @@ namespace Logistics.WebFormsUI
 
             txtDepotId.Text = row.Cells[0].Value.ToString();
             txtProductIdDisplay.Text = row.Cells[3].Value.ToString();
-            txtUnitInStockDisplay.Text = row.Cells[10].Value.ToString();
         }
 
         private void txtSearchDepotName_TextChanged(object sender, EventArgs e)
@@ -299,6 +297,12 @@ namespace Logistics.WebFormsUI
         private void ddfToolStripMenuItemSpecial_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://learn.microsoft.com/en-us/dotnet/desktop/winforms/?view=netdesktop-7.0");
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePasswordForm changePasswordForm = new ChangePasswordForm(_factoryId, _factoryTypeId);
+            changePasswordForm.ShowDialog();
         }
     }
 }

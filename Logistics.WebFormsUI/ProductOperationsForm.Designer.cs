@@ -55,18 +55,18 @@
             this.lblSearchProductName = new System.Windows.Forms.Label();
             this.txtSearchProductName = new System.Windows.Forms.TextBox();
             this.gbxSearchByName = new System.Windows.Forms.GroupBox();
+            this.pbxSearch = new System.Windows.Forms.PictureBox();
             this.btnHomePage = new System.Windows.Forms.Button();
             this.toolTipSearchName = new System.Windows.Forms.ToolTip(this.components);
             this.gbxCategory = new System.Windows.Forms.GroupBox();
             this.cbxSearchCategory = new System.Windows.Forms.ComboBox();
             this.lblSelect = new System.Windows.Forms.Label();
-            this.pbxSearch = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProduct)).BeginInit();
             this.gbxSearchByName.SuspendLayout();
-            this.gbxCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
+            this.gbxCategory.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -310,6 +310,16 @@
             this.gbxSearchByName.TabStop = false;
             this.gbxSearchByName.Text = "Search by Name";
             // 
+            // pbxSearch
+            // 
+            this.pbxSearch.Image = ((System.Drawing.Image)(resources.GetObject("pbxSearch.Image")));
+            this.pbxSearch.Location = new System.Drawing.Point(253, 27);
+            this.pbxSearch.Name = "pbxSearch";
+            this.pbxSearch.Size = new System.Drawing.Size(32, 29);
+            this.pbxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxSearch.TabIndex = 2;
+            this.pbxSearch.TabStop = false;
+            // 
             // btnHomePage
             // 
             this.btnHomePage.Image = ((System.Drawing.Image)(resources.GetObject("btnHomePage.Image")));
@@ -353,16 +363,6 @@
             this.lblSelect.TabIndex = 0;
             this.lblSelect.Text = "Select Category";
             // 
-            // pbxSearch
-            // 
-            this.pbxSearch.Image = ((System.Drawing.Image)(resources.GetObject("pbxSearch.Image")));
-            this.pbxSearch.Location = new System.Drawing.Point(253, 27);
-            this.pbxSearch.Name = "pbxSearch";
-            this.pbxSearch.Size = new System.Drawing.Size(32, 29);
-            this.pbxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxSearch.TabIndex = 2;
-            this.pbxSearch.TabStop = false;
-            // 
             // ProductOperationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,9 +387,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgwProduct)).EndInit();
             this.gbxSearchByName.ResumeLayout(false);
             this.gbxSearchByName.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).EndInit();
             this.gbxCategory.ResumeLayout(false);
             this.gbxCategory.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).EndInit();
             this.ResumeLayout(false);
 
         }

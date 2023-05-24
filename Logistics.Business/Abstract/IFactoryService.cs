@@ -18,6 +18,10 @@ namespace Logistics.Business.Abstract
         void Update(Factory factory);
         List<Factory> GetCustomersForDataGridView(int factoryID);
         string GetCompanyNameById(int factoryId);
+        List<Factory> GetByCompanyName(string companyName);
+        Factory GetFactoryById(int factoryId);
+
+     
 
     }
 }

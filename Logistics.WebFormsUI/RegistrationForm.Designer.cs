@@ -65,7 +65,7 @@
             // 
             // txtHomepage
             // 
-            this.txtHomepage.Location = new System.Drawing.Point(502, 197);
+            this.txtHomepage.Location = new System.Drawing.Point(511, 197);
             this.txtHomepage.Name = "txtHomepage";
             this.txtHomepage.Size = new System.Drawing.Size(194, 20);
             this.txtHomepage.TabIndex = 9;
@@ -79,14 +79,14 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(502, 157);
+            this.txtPhone.Location = new System.Drawing.Point(511, 157);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(194, 20);
             this.txtPhone.TabIndex = 8;
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(499, 117);
+            this.txtCountry.Location = new System.Drawing.Point(508, 116);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(197, 20);
             this.txtCountry.TabIndex = 7;
@@ -95,17 +95,17 @@
             // 
             this.lblCompanyName.AutoSize = true;
             this.lblCompanyName.BackColor = System.Drawing.Color.Transparent;
-            this.lblCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCompanyName.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblCompanyName.Location = new System.Drawing.Point(33, 74);
+            this.lblCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCompanyName.ForeColor = System.Drawing.Color.White;
+            this.lblCompanyName.Location = new System.Drawing.Point(24, 73);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(108, 15);
+            this.lblCompanyName.Size = new System.Drawing.Size(117, 16);
             this.lblCompanyName.TabIndex = 7;
             this.lblCompanyName.Text = "Company Name";
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(499, 73);
+            this.txtCity.Location = new System.Drawing.Point(508, 73);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(197, 20);
             this.txtCity.TabIndex = 6;
@@ -127,11 +127,12 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPhone.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblPhone.Location = new System.Drawing.Point(445, 157);
+            this.lblPhone.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPhone.ForeColor = System.Drawing.Color.White;
+            this.lblPhone.Location = new System.Drawing.Point(447, 159);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(48, 15);
+            this.lblPhone.Size = new System.Drawing.Size(56, 18);
             this.lblPhone.TabIndex = 11;
             this.lblPhone.Text = "Phone";
             // 
@@ -139,33 +140,35 @@
             // 
             this.lblContactName.AutoSize = true;
             this.lblContactName.BackColor = System.Drawing.Color.Transparent;
-            this.lblContactName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblContactName.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblContactName.Location = new System.Drawing.Point(45, 198);
+            this.lblContactName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblContactName.ForeColor = System.Drawing.Color.White;
+            this.lblContactName.Location = new System.Drawing.Point(36, 197);
             this.lblContactName.Name = "lblContactName";
-            this.lblContactName.Size = new System.Drawing.Size(97, 15);
+            this.lblContactName.Size = new System.Drawing.Size(104, 16);
             this.lblContactName.TabIndex = 12;
             this.lblContactName.Text = "Contact Name";
             // 
             // lblCountry
             // 
             this.lblCountry.AutoSize = true;
-            this.lblCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCountry.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblCountry.Location = new System.Drawing.Point(438, 117);
+            this.lblCountry.BackColor = System.Drawing.Color.Transparent;
+            this.lblCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCountry.ForeColor = System.Drawing.Color.White;
+            this.lblCountry.Location = new System.Drawing.Point(440, 119);
             this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(55, 15);
+            this.lblCountry.Size = new System.Drawing.Size(67, 18);
             this.lblCountry.TabIndex = 13;
             this.lblCountry.Text = "Country";
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCity.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblCity.Location = new System.Drawing.Point(463, 73);
+            this.lblCity.BackColor = System.Drawing.Color.Transparent;
+            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCity.ForeColor = System.Drawing.Color.White;
+            this.lblCity.Location = new System.Drawing.Point(465, 75);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(30, 15);
+            this.lblCity.Size = new System.Drawing.Size(37, 18);
             this.lblCity.TabIndex = 14;
             this.lblCity.Text = "City";
             // 
@@ -173,11 +176,11 @@
             // 
             this.lblAdress.AutoSize = true;
             this.lblAdress.BackColor = System.Drawing.Color.Transparent;
-            this.lblAdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdress.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblAdress.Location = new System.Drawing.Point(91, 275);
+            this.lblAdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAdress.ForeColor = System.Drawing.Color.White;
+            this.lblAdress.Location = new System.Drawing.Point(82, 274);
             this.lblAdress.Name = "lblAdress";
-            this.lblAdress.Size = new System.Drawing.Size(50, 15);
+            this.lblAdress.Size = new System.Drawing.Size(56, 16);
             this.lblAdress.TabIndex = 15;
             this.lblAdress.Text = "Adress";
             // 
@@ -185,11 +188,11 @@
             // 
             this.lblContactTitle.AutoSize = true;
             this.lblContactTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblContactTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblContactTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblContactTitle.Location = new System.Drawing.Point(54, 236);
+            this.lblContactTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblContactTitle.ForeColor = System.Drawing.Color.White;
+            this.lblContactTitle.Location = new System.Drawing.Point(45, 235);
             this.lblContactTitle.Name = "lblContactTitle";
-            this.lblContactTitle.Size = new System.Drawing.Size(87, 15);
+            this.lblContactTitle.Size = new System.Drawing.Size(94, 16);
             this.lblContactTitle.TabIndex = 16;
             this.lblContactTitle.Text = "Contact Title";
             // 
@@ -214,11 +217,11 @@
             // 
             this.lblFactoryType.AutoSize = true;
             this.lblFactoryType.BackColor = System.Drawing.Color.Transparent;
-            this.lblFactoryType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblFactoryType.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblFactoryType.Location = new System.Drawing.Point(54, 158);
+            this.lblFactoryType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFactoryType.ForeColor = System.Drawing.Color.White;
+            this.lblFactoryType.Location = new System.Drawing.Point(45, 157);
             this.lblFactoryType.Name = "lblFactoryType";
-            this.lblFactoryType.Size = new System.Drawing.Size(87, 15);
+            this.lblFactoryType.Size = new System.Drawing.Size(99, 16);
             this.lblFactoryType.TabIndex = 19;
             this.lblFactoryType.Text = "Factory Type";
             // 
@@ -226,22 +229,23 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPassword.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblPassword.Location = new System.Drawing.Point(72, 117);
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
+            this.lblPassword.Location = new System.Drawing.Point(63, 116);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(69, 15);
+            this.lblPassword.Size = new System.Drawing.Size(75, 16);
             this.lblPassword.TabIndex = 20;
             this.lblPassword.Text = "Password";
             // 
             // lblHomepage
             // 
             this.lblHomepage.AutoSize = true;
-            this.lblHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHomepage.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblHomepage.Location = new System.Drawing.Point(416, 198);
+            this.lblHomepage.BackColor = System.Drawing.Color.Transparent;
+            this.lblHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblHomepage.ForeColor = System.Drawing.Color.White;
+            this.lblHomepage.Location = new System.Drawing.Point(418, 200);
             this.lblHomepage.Name = "lblHomepage";
-            this.lblHomepage.Size = new System.Drawing.Size(77, 15);
+            this.lblHomepage.Size = new System.Drawing.Size(89, 18);
             this.lblHomepage.TabIndex = 21;
             this.lblHomepage.Text = "Homepage";
             // 
@@ -274,8 +278,9 @@
             // lblRegister
             // 
             this.lblRegister.AutoSize = true;
+            this.lblRegister.BackColor = System.Drawing.Color.Transparent;
             this.lblRegister.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblRegister.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblRegister.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.lblRegister.Location = new System.Drawing.Point(298, 9);
             this.lblRegister.Name = "lblRegister";
             this.lblRegister.Size = new System.Drawing.Size(214, 42);
@@ -285,14 +290,15 @@
             // cbxShow
             // 
             this.cbxShow.AutoSize = true;
-            this.cbxShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxShow.BackColor = System.Drawing.Color.Transparent;
+            this.cbxShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbxShow.ForeColor = System.Drawing.Color.DarkBlue;
-            this.cbxShow.Location = new System.Drawing.Point(369, 119);
+            this.cbxShow.Location = new System.Drawing.Point(360, 117);
             this.cbxShow.Name = "cbxShow";
-            this.cbxShow.Size = new System.Drawing.Size(55, 19);
+            this.cbxShow.Size = new System.Drawing.Size(59, 19);
             this.cbxShow.TabIndex = 25;
             this.cbxShow.Text = "show";
-            this.cbxShow.UseVisualStyleBackColor = true;
+            this.cbxShow.UseVisualStyleBackColor = false;
             this.cbxShow.CheckedChanged += new System.EventHandler(this.cbxShow_CheckedChanged);
             // 
             // btnBack
@@ -316,6 +322,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(790, 406);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cbxShow);

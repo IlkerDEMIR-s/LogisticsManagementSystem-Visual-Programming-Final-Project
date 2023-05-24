@@ -70,6 +70,7 @@
             this.lblUpdateContactTitle = new System.Windows.Forms.Label();
             this.lblUpdateContactName = new System.Windows.Forms.Label();
             this.btnCloseDepot = new System.Windows.Forms.Button();
+            this.btnCloneDepot = new System.Windows.Forms.Button();
             this.gbxSearchByName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwDepots)).BeginInit();
@@ -466,11 +467,25 @@
             this.btnCloseDepot.UseVisualStyleBackColor = true;
             this.btnCloseDepot.Click += new System.EventHandler(this.btnCloseDepot_Click);
             // 
+            // btnCloneDepot
+            // 
+            this.btnCloneDepot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCloneDepot.Image = ((System.Drawing.Image)(resources.GetObject("btnCloneDepot.Image")));
+            this.btnCloneDepot.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCloneDepot.Location = new System.Drawing.Point(430, 37);
+            this.btnCloneDepot.Name = "btnCloneDepot";
+            this.btnCloneDepot.Size = new System.Drawing.Size(165, 42);
+            this.btnCloneDepot.TabIndex = 8;
+            this.btnCloneDepot.Text = "Clo&ne Depot";
+            this.btnCloneDepot.UseVisualStyleBackColor = true;
+            this.btnCloneDepot.Click += new System.EventHandler(this.btnCloneDepot_Click);
+            // 
             // CustomerDepotOperationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 494);
+            this.Controls.Add(this.btnCloneDepot);
             this.Controls.Add(this.btnCloseDepot);
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.gbxAddDepot);
@@ -479,6 +494,7 @@
             this.Controls.Add(this.btnHomePage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerDepotOperationsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer Depot Operations Page";
             this.Load += new System.EventHandler(this.CustomerDepotOperationsForm_Load);
             this.gbxSearchByName.ResumeLayout(false);
@@ -536,5 +552,6 @@
         private System.Windows.Forms.TextBox txtUpdateUnitInStock;
         private System.Windows.Forms.Label lblUpdateUnitInStock;
         private System.Windows.Forms.PictureBox pbxSearch;
+        private System.Windows.Forms.Button btnCloneDepot;
     }
 }

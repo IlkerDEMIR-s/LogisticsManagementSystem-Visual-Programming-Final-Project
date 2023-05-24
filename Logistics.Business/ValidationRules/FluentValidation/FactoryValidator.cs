@@ -22,7 +22,7 @@ namespace Logistics.Business.ValidationRules.FluentValidation
             RuleFor(f => f.ContactName).NotEmpty().WithMessage("Contact name cannot be empty!");
             RuleFor(f => f.ContactTitle).NotEmpty().WithMessage("Contact title cannot be empty!");     
             RuleFor(f => f.Password).NotEmpty().WithMessage("Password cannot be empty!");
-            RuleFor(f => f.Password).MinimumLength(4).WithMessage("Password must be at least 4 characters long");
+            RuleFor(f => f.Password).MinimumLength(5).WithMessage("Password must be at least 4 characters long");
             RuleFor(f => f.Password).MaximumLength(28).WithMessage("Password must be at most 28 characters long");
             RuleFor(f => f.Password).Matches(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{4,28}$")
                 .WithMessage("Password must contain at least one uppercase letter, one lowercase letter, one number and one special character");

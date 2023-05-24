@@ -6,10 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Logistics.Business.DependencyResolvers.Ninject
-{
-    //We create a class called InstanceFactory.
-    //This class will be used to create instances of classes that implement the interface.
-    //Because windows forms does not support dependency injection, we will use this class to create instances.
+{    
+    //Because Windows forms does not support parameterized constructor.
     public class InstanceFactory
     {
         public static T GetInstance<T>()

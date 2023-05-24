@@ -200,5 +200,28 @@ namespace Logistics.WebFormsUI
                 }
             }
         }
+
+        private void btnCloneDepot_Click(object sender, EventArgs e)
+        {
+            var row = dgwDepots.CurrentRow;
+
+            if (row != null)
+            {
+                txtDepotName.Text = row.Cells[1].Value.ToString();
+                txtContactName.Text = row.Cells[4].Value.ToString();
+                txtContactTitle.Text = row.Cells[5].Value.ToString();
+                rtxtAdress.Text = row.Cells[6].Value.ToString();
+                txtCity.Text = row.Cells[7].Value.ToString();
+                txtCountry.Text = row.Cells[8].Value.ToString();
+                txtPhone.Text = row.Cells[9].Value.ToString();
+
+                MessageBox.Show("Depot cloned successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Please select a depot to clone.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }
