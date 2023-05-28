@@ -4,7 +4,9 @@ using Logistics.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
+using Timer = System.Windows.Forms.Timer;
 
 namespace Logistics.WebFormsUI
 {
@@ -20,8 +22,8 @@ namespace Logistics.WebFormsUI
         {
             InitializeComponent();
             _factoryDetailService = InstanceFactory.GetInstance<IFactoryDetailService>();
-            _factoryService = InstanceFactory.GetInstance<IFactoryService>();           
-           
+            _factoryService = InstanceFactory.GetInstance<IFactoryService>();
+
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -191,6 +193,7 @@ namespace Logistics.WebFormsUI
         {
             tryAutoLogin();
         }
+
     }
 }
 

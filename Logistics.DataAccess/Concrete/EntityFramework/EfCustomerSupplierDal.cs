@@ -9,13 +9,14 @@ namespace Logistics.DataAccess.Concrete.EntityFramework
 {
     public class EfCustomerSupplierDal : EfEntityRepositoryBase<CustomerSupplier, LogisticsContext>, ICustomerSupplierDal
     {
-        public void AddCustomerToSuppliers(int customerId, int supplierId)
+        public void AddCustomerToSuppliers(int customerId, int supplierId, string customerName)
         {
 
             var customerSupplier = new CustomerSupplier
             {
                 CustomerId = customerId,
-                SupplierId = supplierId
+                SupplierId = supplierId,
+                CustomerName = customerName
             };
 
             Add(customerSupplier);

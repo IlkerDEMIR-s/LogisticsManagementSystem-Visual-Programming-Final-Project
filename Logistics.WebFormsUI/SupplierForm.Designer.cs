@@ -55,7 +55,7 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.rtbWarning = new System.Windows.Forms.RichTextBox();
             this.lblWarning = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbxWarning = new System.Windows.Forms.PictureBox();
             this.dgwReceived = new System.Windows.Forms.DataGridView();
             this.lblReceived = new System.Windows.Forms.Label();
             this.menuStripBar = new System.Windows.Forms.MenuStrip();
@@ -69,7 +69,7 @@
             this.accountTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxFactoryInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxWarning)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwReceived)).BeginInit();
             this.menuStripBar.SuspendLayout();
             this.SuspendLayout();
@@ -363,6 +363,7 @@
             // 
             // rtbWarning
             // 
+            this.rtbWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rtbWarning.Location = new System.Drawing.Point(17, 433);
             this.rtbWarning.Name = "rtbWarning";
             this.rtbWarning.ReadOnly = true;
@@ -381,15 +382,15 @@
             this.lblWarning.TabIndex = 16;
             this.lblWarning.Text = "Warning";
             // 
-            // pictureBox1
+            // pbxWarning
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 412);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(17, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.pbxWarning.Image = ((System.Drawing.Image)(resources.GetObject("pbxWarning.Image")));
+            this.pbxWarning.Location = new System.Drawing.Point(17, 412);
+            this.pbxWarning.Name = "pbxWarning";
+            this.pbxWarning.Size = new System.Drawing.Size(17, 15);
+            this.pbxWarning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxWarning.TabIndex = 17;
+            this.pbxWarning.TabStop = false;
             // 
             // dgwReceived
             // 
@@ -495,7 +496,7 @@
             // 
             this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
@@ -506,7 +507,7 @@
             this.ClientSize = new System.Drawing.Size(718, 592);
             this.Controls.Add(this.lblReceived);
             this.Controls.Add(this.dgwReceived);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbxWarning);
             this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.rtbWarning);
             this.Controls.Add(this.btnLogOut);
@@ -524,7 +525,7 @@
             this.Load += new System.EventHandler(this.SupplierForm_Load);
             this.gbxFactoryInfo.ResumeLayout(false);
             this.gbxFactoryInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxWarning)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwReceived)).EndInit();
             this.menuStripBar.ResumeLayout(false);
             this.menuStripBar.PerformLayout();
@@ -561,7 +562,7 @@
         private System.Windows.Forms.RichTextBox txtAddress;
         private System.Windows.Forms.RichTextBox rtbWarning;
         private System.Windows.Forms.Label lblWarning;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxWarning;
         private System.Windows.Forms.DataGridView dgwReceived;
         private System.Windows.Forms.Label lblReceived;
         private System.Windows.Forms.MenuStrip menuStripBar;

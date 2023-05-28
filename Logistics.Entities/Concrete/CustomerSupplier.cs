@@ -8,5 +8,6 @@ namespace Logistics.Entities.Concrete
         public int Id { get; set; }
         public int CustomerId { get; set; }
         public int SupplierId { get; set; }
+        public string CustomerName { get; set; }
     }
 }

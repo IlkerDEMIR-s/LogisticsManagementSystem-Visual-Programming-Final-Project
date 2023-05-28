@@ -24,9 +24,9 @@ namespace Logistics.Business.Concrete
             _customerDal.Add(customerSupplier);
         }
 
-        public void AddCustomerToSuppliers(int customerId, int supplierId)
+        public void AddCustomerToSuppliers(int customerId, int supplierId, string customerName)
         {
-            _customerDal.AddCustomerToSuppliers(customerId, supplierId);
+            _customerDal.AddCustomerToSuppliers(customerId, supplierId, customerName);
         }
 
         public bool CheckIfCustomerExists(int customerId, int factoryId)
@@ -44,6 +44,11 @@ namespace Logistics.Business.Concrete
             {
                 throw new Exception("Delete failed!");
             }
+        }
+
+        public List<CustomerSupplier> GetAll()
+        {
+            return _customerDal.GetAll();
         }
 
         public List<CustomerSupplier> GetAllCustomersBySupplierId(int supplierId)

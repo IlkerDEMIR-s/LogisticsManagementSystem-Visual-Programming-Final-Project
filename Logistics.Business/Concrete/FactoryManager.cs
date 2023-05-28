@@ -98,9 +98,9 @@ namespace Logistics.Business.Concrete
             return _factoryDal.GetCompanyNameById(factoryId);
         }
 
-        public List<Factory> GetByCompanyName(string companyName)
+        public Factory GetByCompanyName(string companyName)
         {
-            return _factoryDal.GetAll(f => f.CompanyName.ToLower().Contains(companyName.ToLower()));
+            return _factoryDal.Get(f => f.CompanyName.ToLower().Contains(companyName.ToLower()));
         }
 
         public Factory GetFactoryById(int factoryId)

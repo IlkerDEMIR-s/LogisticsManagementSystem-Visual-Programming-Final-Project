@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.txtCompanyName = new System.Windows.Forms.TextBox();
             this.txtHomepage = new System.Windows.Forms.TextBox();
@@ -54,6 +55,7 @@
             this.lblRegister = new System.Windows.Forms.Label();
             this.cbxShow = new System.Windows.Forms.CheckBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.toolTipPassword = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // txtCompanyName
@@ -76,6 +78,8 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(207, 20);
             this.txtPassword.TabIndex = 1;
+            this.toolTipPassword.SetToolTip(this.txtPassword, "Password must contain at least one uppercase letter, one lowercase letter, one nu" +
+        "mber and one special character!\r\n");
             // 
             // txtPhone
             // 
@@ -386,5 +390,6 @@
         private System.Windows.Forms.Label lblRegister;
         private System.Windows.Forms.CheckBox cbxShow;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ToolTip toolTipPassword;
     }
 }

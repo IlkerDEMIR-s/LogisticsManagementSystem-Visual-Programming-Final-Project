@@ -81,7 +81,7 @@ namespace Logistics.WebFormsUI
                     throw new Exception("Please select a factory type.");
                 }
 
-                if(CheckIfCompanyNameExists())
+                if (CheckIfCompanyNameExists(txtCompanyName.Text.ToLower()))
                 {
                     _factoryService.Add(new Factory
                     {
@@ -105,7 +105,6 @@ namespace Logistics.WebFormsUI
                     this.Close();
                 }
 
-
             }
             catch (Exception ex) when (ex.Message == "Please select a factory type.")
             {
@@ -117,13 +116,13 @@ namespace Logistics.WebFormsUI
             }
         }
 
-        private bool CheckIfCompanyNameExists()
+        private bool CheckIfCompanyNameExists(string companyName)
         {
-            if (_factoryService.GetByCompanyName(txtCompanyName.Text.ToLower()) != null)
+            if (_factoryService.GetByCompanyName(companyName) != null)
             {
                MessageBox.Show("This company name already exists.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
+                return false;       
+            }  
             return true;
         }
 

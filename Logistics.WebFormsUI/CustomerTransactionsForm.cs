@@ -4,6 +4,7 @@ using Logistics.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -35,18 +36,14 @@ namespace Logistics.WebFormsUI
         {
             loadCategoryCustomers();
             loadCustomers();
+            loadCustomersTLoadCustomersToComboBox();
         }
 
         private void loadCustomers()
-        {  
-            dgwDeleteCustomer.DataSource = _customerSupplierService.GetAllCustomersBySupplierId(_factoryId);
-            dgwDeleteCustomer.Columns["SupplierID"].Visible = false;
-            dgwDeleteCustomer.Columns["Id"].Visible = false;
-            
+        {              
             dgwCustomers.DataSource = _factoryService.GetCustomersForDataGridView(_factoryId);
             dgwCustomers.Columns["Password"].Visible = false;
-            dgwCustomers.Columns["TypeID"].Visible = false;
-            
+            dgwCustomers.Columns["TypeID"].Visible = false;            
         }
 
         private void loadCategoryCustomers()
@@ -73,15 +70,24 @@ namespace Logistics.WebFormsUI
             try
             {
                 bool customerExists = _customerSupplierService.CheckIfCustomerExists(customerId, _factoryId);
+                int selectedValueId = Convert.ToInt32(cbxCustomers.SelectedValue);
+                string customerName = cbxCustomers.GetItemText(cbxCustomers.SelectedItem);
+
                 if (customerExists)
                 {
                     MessageBox.Show("The customer already exists.",
                         "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                else if (selectedValueId == 0)
+                {
+                    MessageBox.Show("Please select a customer.",
+                                               "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 else
                 {
-                    _customerSupplierService.AddCustomerToSuppliers(customerId, _factoryId);
+                    _customerSupplierService.AddCustomerToSuppliers(customerId, _factoryId, customerName);
                     loadCustomers();
+                    loadCustomersTLoadCustomersToComboBox();
 
                     MessageBox.Show("The customer has been successfully added.",
                         "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -107,35 +113,60 @@ namespace Logistics.WebFormsUI
                 customerId = selectedCustomer.FactoryID;
             }
         }
+
+        private void loadCustomersTLoadCustomersToComboBox()
+        {
+            var customers = _customerSupplierService.GetAllCustomersBySupplierId(_factoryId);
+
+            var dataSource = new List<CustomerSupplier> {
+                new CustomerSupplier { Id = 0, CustomerName = "Select a customer..." } };
+            dataSource.AddRange(customers);
+
+            cbxDeleteCustomer.DataSource = dataSource;
+            cbxDeleteCustomer.DisplayMember = "CustomerName";
+            cbxDeleteCustomer.ValueMember = "Id";
+        }
+
         private void btnDeleteCustomer_Click(object sender, EventArgs e)
         {
-            if (dgwDeleteCustomer.CurrentRow != null)
+            try
             {
-                var id = Convert.ToInt32(dgwDeleteCustomer.CurrentRow.Cells[0].Value);
-                var customerId = dgwDeleteCustomer.CurrentRow.Cells[1].Value.ToString();
-                var result = MessageBox.Show($"Are you sure you want to delete the customer with FactoryID {customerId}?", "Confirm Closure", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                int selectedValueId = Convert.ToInt32(cbxDeleteCustomer.SelectedValue);
 
-                if (result == DialogResult.Yes)
+                if (selectedValueId == 0)
                 {
-                    try
+                    MessageBox.Show("Please select a customer.",
+                            "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+
+                    var id = Convert.ToInt32(cbxDeleteCustomer.SelectedValue);
+                    var customerName = cbxDeleteCustomer.GetItemText(cbxDeleteCustomer.SelectedItem);
+                    var result = MessageBox.Show($"Are you sure you want to delete the customer {customerName}?", "Confirm Closure", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
                     {
+
                         _customerSupplierService.Delete(new CustomerSupplier
                         {
                             Id = id
                         });
                         MessageBox.Show("Customer deleted!");
                         loadCustomers();
-                    }
-                    catch (ValidationException ex)
-                    {
-                        MessageBox.Show($"Customer could not be deleted. {ex.Message}", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"An error occurred while deleting the customer: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        loadCustomersTLoadCustomersToComboBox();
                     }
                 }
             }
+            catch (ValidationException ex)
+            {
+                MessageBox.Show($"Customer could not be deleted. {ex.Message}", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while deleting the customer: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }        
+            
         }
 
     }

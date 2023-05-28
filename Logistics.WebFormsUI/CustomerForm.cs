@@ -304,5 +304,6 @@ namespace Logistics.WebFormsUI
             ChangePasswordForm changePasswordForm = new ChangePasswordForm(_factoryId, _factoryTypeId);
             changePasswordForm.ShowDialog();
         }
+        
     }
 }

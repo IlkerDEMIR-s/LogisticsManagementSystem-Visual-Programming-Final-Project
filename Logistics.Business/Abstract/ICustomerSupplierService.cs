@@ -11,8 +11,10 @@ namespace Logistics.Business.Abstract
     {
         void Delete(CustomerSupplier customerSupplier);
         void Add(CustomerSupplier customerSupplier);
-        void AddCustomerToSuppliers(int customerId, int supplierId);
+        void AddCustomerToSuppliers(int customerId, int supplierId, string customerName);
         List<CustomerSupplier> GetAllCustomersBySupplierId(int supplierId);
         bool CheckIfCustomerExists(int customerId, int factoryId);
+        List<CustomerSupplier> GetAll();    
+
     }
 }

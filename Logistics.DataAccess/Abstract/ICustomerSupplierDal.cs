@@ -6,7 +6,7 @@ namespace Logistics.DataAccess.Abstract
 {
     public interface ICustomerSupplierDal : IEntityRepository<CustomerSupplier>
     {
-        void AddCustomerToSuppliers(int customerId, int supplierId);
+        void AddCustomerToSuppliers(int customerId, int supplierId, string customerName);
         bool CheckIfCustomerExists(int customerId, int factoryId);
     }
 }

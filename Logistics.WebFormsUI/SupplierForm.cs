@@ -33,6 +33,12 @@ namespace Logistics.WebFormsUI
             {
                 rtbWarning.AppendText(warningMessage);
             }
+            else
+            {
+                rtbWarning.AppendText("All stocks are in sufficient quantity...");
+                lblWarning.Visible = false;
+                pbxWarning.Visible = false;
+            }
       
         }
 
