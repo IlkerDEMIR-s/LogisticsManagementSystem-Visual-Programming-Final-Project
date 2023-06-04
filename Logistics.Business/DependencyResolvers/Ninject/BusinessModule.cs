@@ -33,8 +33,12 @@ namespace Logistics.Business.DependencyResolvers.Ninject
 
             Bind<IOrderService>().To<OrderManager>().InSingletonScope();
             Bind<IOrderDal>().To<EfOrderDal>().InSingletonScope();
+                        
+            Bind<IStatusDetailService>().To<StatusDetailManager>().InSingletonScope();
+            Bind<IStatusDetailDal>().To<EfStatusDetailDal>().InSingletonScope();
 
-
+            Bind<IExpeditionService>().To<ExpeditionManager>().InSingletonScope();
+            Bind<IExpeditionDal>().To<EfExpeditionDal>().InSingletonScope();
 
         }
     }

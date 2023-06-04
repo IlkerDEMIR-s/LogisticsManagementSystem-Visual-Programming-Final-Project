@@ -56,14 +56,12 @@
             this.lblUnitInStock = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblCity = new System.Windows.Forms.Label();
-            this.txtProductId = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtContactTitle = new System.Windows.Forms.TextBox();
             this.txtContactName = new System.Windows.Forms.TextBox();
             this.txtDepotName = new System.Windows.Forms.TextBox();
             this.lblContactTitle = new System.Windows.Forms.Label();
             this.lblContactName = new System.Windows.Forms.Label();
-            this.lblProductID = new System.Windows.Forms.Label();
             this.lblDepotName = new System.Windows.Forms.Label();
             this.dgwProducts = new System.Windows.Forms.DataGridView();
             this.gbxUpdate = new System.Windows.Forms.GroupBox();
@@ -83,6 +81,8 @@
             this.btnCloseDepot = new System.Windows.Forms.Button();
             this.btnHomePage = new System.Windows.Forms.Button();
             this.btnCloneDepot = new System.Windows.Forms.Button();
+            this.cbxProducts = new System.Windows.Forms.ComboBox();
+            this.lblProduct = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwDepots)).BeginInit();
             this.gbxSearchByName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
@@ -241,6 +241,8 @@
             // 
             // gbxAddDepot
             // 
+            this.gbxAddDepot.Controls.Add(this.cbxProducts);
+            this.gbxAddDepot.Controls.Add(this.lblProduct);
             this.gbxAddDepot.Controls.Add(this.txtCountry);
             this.gbxAddDepot.Controls.Add(this.lblCountry);
             this.gbxAddDepot.Controls.Add(this.rtxtAdress);
@@ -251,14 +253,12 @@
             this.gbxAddDepot.Controls.Add(this.lblUnitInStock);
             this.gbxAddDepot.Controls.Add(this.lblPhone);
             this.gbxAddDepot.Controls.Add(this.lblCity);
-            this.gbxAddDepot.Controls.Add(this.txtProductId);
             this.gbxAddDepot.Controls.Add(this.btnAdd);
             this.gbxAddDepot.Controls.Add(this.txtContactTitle);
             this.gbxAddDepot.Controls.Add(this.txtContactName);
             this.gbxAddDepot.Controls.Add(this.txtDepotName);
             this.gbxAddDepot.Controls.Add(this.lblContactTitle);
             this.gbxAddDepot.Controls.Add(this.lblContactName);
-            this.gbxAddDepot.Controls.Add(this.lblProductID);
             this.gbxAddDepot.Controls.Add(this.lblDepotName);
             this.gbxAddDepot.Location = new System.Drawing.Point(260, 274);
             this.gbxAddDepot.Name = "gbxAddDepot";
@@ -348,13 +348,6 @@
             this.lblCity.TabIndex = 12;
             this.lblCity.Text = "City";
             // 
-            // txtProductId
-            // 
-            this.txtProductId.Location = new System.Drawing.Point(83, 57);
-            this.txtProductId.Name = "txtProductId";
-            this.txtProductId.Size = new System.Drawing.Size(115, 20);
-            this.txtProductId.TabIndex = 1;
-            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(178, 222);
@@ -403,15 +396,6 @@
             this.lblContactName.Size = new System.Drawing.Size(75, 13);
             this.lblContactName.TabIndex = 2;
             this.lblContactName.Text = "Contact Name";
-            // 
-            // lblProductID
-            // 
-            this.lblProductID.AutoSize = true;
-            this.lblProductID.Location = new System.Drawing.Point(19, 60);
-            this.lblProductID.Name = "lblProductID";
-            this.lblProductID.Size = new System.Drawing.Size(58, 13);
-            this.lblProductID.TabIndex = 1;
-            this.lblProductID.Text = "Product ID";
             // 
             // lblDepotName
             // 
@@ -584,6 +568,23 @@
             this.btnCloneDepot.UseVisualStyleBackColor = true;
             this.btnCloneDepot.Click += new System.EventHandler(this.btnCloneDepot_Click);
             // 
+            // cbxProducts
+            // 
+            this.cbxProducts.FormattingEnabled = true;
+            this.cbxProducts.Location = new System.Drawing.Point(85, 57);
+            this.cbxProducts.Name = "cbxProducts";
+            this.cbxProducts.Size = new System.Drawing.Size(115, 21);
+            this.cbxProducts.TabIndex = 24;
+            // 
+            // lblProduct
+            // 
+            this.lblProduct.AutoSize = true;
+            this.lblProduct.Location = new System.Drawing.Point(19, 61);
+            this.lblProduct.Name = "lblProduct";
+            this.lblProduct.Size = new System.Drawing.Size(58, 13);
+            this.lblProduct.TabIndex = 23;
+            this.lblProduct.Text = "Product ID";
+            // 
             // DepotOperationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -643,9 +644,7 @@
         private System.Windows.Forms.TextBox txtDepotName;
         private System.Windows.Forms.Label lblContactTitle;
         private System.Windows.Forms.Label lblContactName;
-        private System.Windows.Forms.Label lblProductID;
         private System.Windows.Forms.Label lblDepotName;
-        private System.Windows.Forms.TextBox txtProductId;
         private System.Windows.Forms.RichTextBox rtxtAdress;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtUnitInStock;
@@ -673,5 +672,7 @@
         private System.Windows.Forms.ToolTip toolTipInfo;
         private System.Windows.Forms.PictureBox pbxSearch;
         private System.Windows.Forms.Button btnCloneDepot;
+        private System.Windows.Forms.ComboBox cbxProducts;
+        private System.Windows.Forms.Label lblProduct;
     }
 }

@@ -15,7 +15,6 @@ namespace Logistics.WebFormsUI
         private IFactoryService _factoryService;
         private IFactoryDetailService _factoryDetailService;
         private IDepotService _depotService;
-        private IOrderService _orderService;
  
         public SupplierForm(int factoryId, int factoryTypeId)
         {
@@ -25,8 +24,7 @@ namespace Logistics.WebFormsUI
 
             _factoryService = InstanceFactory.GetInstance<IFactoryService>();
             _factoryDetailService = InstanceFactory.GetInstance<IFactoryDetailService>();
-            _depotService = InstanceFactory.GetInstance<IDepotService>();
-            _orderService = InstanceFactory.GetInstance<IOrderService>();
+            _depotService = InstanceFactory.GetInstance<IDepotService>();        
 
             string warningMessage = _depotService.CheckUnitInStock(_factoryId);
             if (!string.IsNullOrEmpty(warningMessage))
@@ -51,23 +49,9 @@ namespace Logistics.WebFormsUI
 
         private void SupplierForm_Load(object sender, EventArgs e)
         {
-            displayFactoryInformations();
-            receivedThings();
+            displayFactoryInformations();            
 
         }
-
-        private void receivedThings()
-        {
-            // Get the data from the data source
-            var data = _orderService.GetAllbyFactoryId(_factoryId);
-
-            // Sort the data in reverse order based on the "ColumnName" column
-            var sortedData = data.OrderByDescending(x => x.OrderDate).ToList();
-
-            // Bind the sorted data to the DataGridView control
-            dgwReceived.DataSource = sortedData;
-        }
-
         private void displayFactoryInformations()
         {
             var factoryInfo = _factoryService.GetByFactoryId(_factoryId);
@@ -149,6 +133,20 @@ namespace Logistics.WebFormsUI
             ChangePasswordForm changePasswordForm = new ChangePasswordForm(_factoryId, _factoryTypeId);
             changePasswordForm.ShowDialog();
             
+        }
+
+        private void btnOrderManagement_Click(object sender, EventArgs e)
+        {           
+            OrderManagementForm orderManagementForm = new OrderManagementForm(_factoryId, _factoryTypeId);
+            orderManagementForm.Show();
+            this.Hide();
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            ReportForm reportForm = new ReportForm(_factoryId, _factoryTypeId);
+            reportForm.Show();
+            this.Hide();
         }
     }
 } 

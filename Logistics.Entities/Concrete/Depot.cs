@@ -13,6 +13,7 @@ namespace Logistics.Entities.Concrete
         public string DepotName { get; set; }
         public int FactoryID { get; set; }
         public int ProductID { get; set; }
+        public string ProductName { get; set; }
         public string ContactName { get; set; }
         public string ContactTitle { get; set; }
         public string Address { get; set; }

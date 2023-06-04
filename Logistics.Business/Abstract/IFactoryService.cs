@@ -20,8 +20,9 @@ namespace Logistics.Business.Abstract
         string GetCompanyNameById(int factoryId);
         Factory GetByCompanyName(string companyName);
         Factory GetFactoryById(int factoryId);
+        string GetEncodedPassword(int factoryId);
 
-     
+
 
     }
 }

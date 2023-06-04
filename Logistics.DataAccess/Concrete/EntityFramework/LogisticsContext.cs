@@ -17,6 +17,8 @@ namespace Logistics.DataAccess.Concrete.EntityFramework
         public DbSet<Depot> Depots { get; set; }
         public DbSet<CustomerSupplier> CustomerSupplier { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<StatusDetail> StatusDetails { get; set; }
+        public DbSet<Expedition> Expeditions { get; set; }
 
     }
 }

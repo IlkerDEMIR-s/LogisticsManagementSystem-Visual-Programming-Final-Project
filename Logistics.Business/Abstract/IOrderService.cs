@@ -12,6 +12,12 @@ namespace Logistics.Business.Abstract
     {
         void Add(Order order);
         List<Order> GetAll();
-        List<Order> GetAllbyFactoryId(int factoryId);
+        List<Order> GetAllBySupplierId(int supplierId);
+        List<Order> GetAllByCustomerId(int customerId);
+        Order GetOrderById(int orderId);
+        void Update(Order order);
+        List<Order> GetAllCompletedOrdersByFactoryId(int factoryId);
+        List<Order> GetByDepotName(string searchKey, int factoryId);
+        List<Order> GetByDateRange(DateTime startDate, DateTime endDate, int factoryId);
     }
 }

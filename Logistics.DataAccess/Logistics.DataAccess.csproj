@@ -55,18 +55,22 @@
     <Compile Include="Abstract\ICustomerSupplierDal.cs" />
     <Compile Include="Abstract\IDepotDal.cs" />
     <Compile Include="Abstract\IEntityRepository.cs" />
+    <Compile Include="Abstract\IExpeditionDal.cs" />
     <Compile Include="Abstract\IFactoryDal.cs" />
     <Compile Include="Abstract\IFactoryDetailDal.cs" />
     <Compile Include="Abstract\IOrderDal.cs" />
     <Compile Include="Abstract\IProductDal.cs" />
+    <Compile Include="Abstract\IStatusDetailDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfCategoryDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfCustomerSupplierDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfDepotDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfEntityRepositoryBase.cs" />
+    <Compile Include="Concrete\EntityFramework\EfExpeditionDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfFactoryDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfFactoryDetailDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfOrderDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfProductDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfStatusDetailDal.cs" />
     <Compile Include="Concrete\EntityFramework\LogisticsContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

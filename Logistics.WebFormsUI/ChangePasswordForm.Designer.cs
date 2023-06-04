@@ -61,7 +61,7 @@
             this.txtOldPassword.Location = new System.Drawing.Point(177, 53);
             this.txtOldPassword.Name = "txtOldPassword";
             this.txtOldPassword.Size = new System.Drawing.Size(152, 20);
-            this.txtOldPassword.TabIndex = 1;
+            this.txtOldPassword.TabIndex = 0;
             this.toolTipPassword.SetToolTip(this.txtOldPassword, "Password must contain at least one uppercase letter, one lowercase letter, one nu" +
         "mber and one special character!\r\n");
             // 
@@ -70,7 +70,7 @@
             this.txtNewPassword.Location = new System.Drawing.Point(177, 104);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.Size = new System.Drawing.Size(152, 20);
-            this.txtNewPassword.TabIndex = 3;
+            this.txtNewPassword.TabIndex = 1;
             this.toolTipPassword.SetToolTip(this.txtNewPassword, "Password must contain at least one uppercase letter, one lowercase letter, one nu" +
         "mber and one special character!");
             // 
@@ -91,7 +91,7 @@
             this.txtConfirmPassword.Location = new System.Drawing.Point(177, 158);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(152, 20);
-            this.txtConfirmPassword.TabIndex = 5;
+            this.txtConfirmPassword.TabIndex = 2;
             this.toolTipPassword.SetToolTip(this.txtConfirmPassword, "Password must contain at least one uppercase letter, one lowercase letter, one nu" +
         "mber and one special character!");
             // 
@@ -115,7 +115,7 @@
             this.btnApprove.Location = new System.Drawing.Point(90, 236);
             this.btnApprove.Name = "btnApprove";
             this.btnApprove.Size = new System.Drawing.Size(100, 40);
-            this.btnApprove.TabIndex = 6;
+            this.btnApprove.TabIndex = 4;
             this.btnApprove.Text = "&Approve";
             this.btnApprove.UseVisualStyleBackColor = false;
             this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
@@ -128,7 +128,7 @@
             this.btnCancel.Location = new System.Drawing.Point(223, 236);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 40);
-            this.btnCancel.TabIndex = 7;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -139,7 +139,7 @@
             this.cbxHide.Location = new System.Drawing.Point(161, 201);
             this.cbxHide.Name = "cbxHide";
             this.cbxHide.Size = new System.Drawing.Size(29, 17);
-            this.cbxHide.TabIndex = 8;
+            this.cbxHide.TabIndex = 3;
             this.cbxHide.Text = " ";
             this.cbxHide.UseVisualStyleBackColor = true;
             this.cbxHide.CheckedChanged += new System.EventHandler(this.cbxHide_CheckedChanged);

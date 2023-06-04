@@ -56,8 +56,6 @@
             this.rtbWarning = new System.Windows.Forms.RichTextBox();
             this.lblWarning = new System.Windows.Forms.Label();
             this.pbxWarning = new System.Windows.Forms.PictureBox();
-            this.dgwReceived = new System.Windows.Forms.DataGridView();
-            this.lblReceived = new System.Windows.Forms.Label();
             this.menuStripBar = new System.Windows.Forms.MenuStrip();
             this.helpToolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,9 +66,10 @@
             this.ddfToolStripMenuItemSpecial = new System.Windows.Forms.ToolStripMenuItem();
             this.accountTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnOrderManagement = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
             this.gbxFactoryInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxWarning)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwReceived)).BeginInit();
             this.menuStripBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,10 +78,9 @@
             this.btnProductOperations.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnProductOperations.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnProductOperations.Image = ((System.Drawing.Image)(resources.GetObject("btnProductOperations.Image")));
-            this.btnProductOperations.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnProductOperations.Location = new System.Drawing.Point(411, 23);
+            this.btnProductOperations.Location = new System.Drawing.Point(419, 27);
             this.btnProductOperations.Name = "btnProductOperations";
-            this.btnProductOperations.Size = new System.Drawing.Size(287, 89);
+            this.btnProductOperations.Size = new System.Drawing.Size(287, 66);
             this.btnProductOperations.TabIndex = 1;
             this.btnProductOperations.Text = "&Product Operations";
             this.btnProductOperations.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -96,12 +94,11 @@
             this.btnDepotOperations.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnDepotOperations.Image = ((System.Drawing.Image)(resources.GetObject("btnDepotOperations.Image")));
             this.btnDepotOperations.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDepotOperations.Location = new System.Drawing.Point(411, 127);
+            this.btnDepotOperations.Location = new System.Drawing.Point(419, 101);
             this.btnDepotOperations.Name = "btnDepotOperations";
-            this.btnDepotOperations.Size = new System.Drawing.Size(287, 89);
+            this.btnDepotOperations.Size = new System.Drawing.Size(287, 66);
             this.btnDepotOperations.TabIndex = 2;
             this.btnDepotOperations.Text = "&Depot Operations";
-            this.btnDepotOperations.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDepotOperations.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDepotOperations.UseVisualStyleBackColor = true;
             this.btnDepotOperations.Click += new System.EventHandler(this.btnDepotOperations_Click);
@@ -112,9 +109,9 @@
             this.btnCustomerTransactions.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnCustomerTransactions.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomerTransactions.Image")));
             this.btnCustomerTransactions.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCustomerTransactions.Location = new System.Drawing.Point(411, 229);
+            this.btnCustomerTransactions.Location = new System.Drawing.Point(419, 173);
             this.btnCustomerTransactions.Name = "btnCustomerTransactions";
-            this.btnCustomerTransactions.Size = new System.Drawing.Size(287, 89);
+            this.btnCustomerTransactions.Size = new System.Drawing.Size(287, 66);
             this.btnCustomerTransactions.TabIndex = 3;
             this.btnCustomerTransactions.Text = "Customer &Transactions";
             this.btnCustomerTransactions.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,6 +221,7 @@
             // 
             // gbxFactoryInfo
             // 
+            this.gbxFactoryInfo.BackColor = System.Drawing.SystemColors.ControlLight;
             this.gbxFactoryInfo.Controls.Add(this.txtCompanyName);
             this.gbxFactoryInfo.Controls.Add(this.txtContactName);
             this.gbxFactoryInfo.Controls.Add(this.txtCity);
@@ -242,9 +240,9 @@
             this.gbxFactoryInfo.Controls.Add(this.lblContactTitle);
             this.gbxFactoryInfo.Controls.Add(this.lblCity);
             this.gbxFactoryInfo.Controls.Add(this.lblAddress);
-            this.gbxFactoryInfo.Location = new System.Drawing.Point(12, 23);
+            this.gbxFactoryInfo.Location = new System.Drawing.Point(12, 27);
             this.gbxFactoryInfo.Name = "gbxFactoryInfo";
-            this.gbxFactoryInfo.Size = new System.Drawing.Size(393, 341);
+            this.gbxFactoryInfo.Size = new System.Drawing.Size(393, 356);
             this.gbxFactoryInfo.TabIndex = 12;
             this.gbxFactoryInfo.TabStop = false;
             this.gbxFactoryInfo.Text = "Factory Info";
@@ -327,7 +325,7 @@
             this.txtHomePage.Location = new System.Drawing.Point(96, 286);
             this.txtHomePage.Name = "txtHomePage";
             this.txtHomePage.ReadOnly = true;
-            this.txtHomePage.Size = new System.Drawing.Size(282, 45);
+            this.txtHomePage.Size = new System.Drawing.Size(282, 50);
             this.txtHomePage.TabIndex = 12;
             this.txtHomePage.TabStop = false;
             this.txtHomePage.Text = "";
@@ -337,10 +335,10 @@
             this.btnCancel.BackColor = System.Drawing.Color.IndianRed;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancel.Location = new System.Drawing.Point(574, 545);
+            this.btnCancel.Location = new System.Drawing.Point(569, 522);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(129, 40);
-            this.btnCancel.TabIndex = 5;
+            this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -352,10 +350,10 @@
             this.btnLogOut.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(439, 546);
+            this.btnLogOut.Location = new System.Drawing.Point(434, 523);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(129, 39);
-            this.btnLogOut.TabIndex = 4;
+            this.btnLogOut.TabIndex = 6;
             this.btnLogOut.Text = "&Log Out";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -364,7 +362,7 @@
             // rtbWarning
             // 
             this.rtbWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rtbWarning.Location = new System.Drawing.Point(17, 433);
+            this.rtbWarning.Location = new System.Drawing.Point(12, 410);
             this.rtbWarning.Name = "rtbWarning";
             this.rtbWarning.ReadOnly = true;
             this.rtbWarning.Size = new System.Drawing.Size(686, 106);
@@ -376,7 +374,7 @@
             // 
             this.lblWarning.AutoSize = true;
             this.lblWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblWarning.Location = new System.Drawing.Point(40, 412);
+            this.lblWarning.Location = new System.Drawing.Point(35, 389);
             this.lblWarning.Name = "lblWarning";
             this.lblWarning.Size = new System.Drawing.Size(60, 15);
             this.lblWarning.TabIndex = 16;
@@ -385,36 +383,16 @@
             // pbxWarning
             // 
             this.pbxWarning.Image = ((System.Drawing.Image)(resources.GetObject("pbxWarning.Image")));
-            this.pbxWarning.Location = new System.Drawing.Point(17, 412);
+            this.pbxWarning.Location = new System.Drawing.Point(12, 389);
             this.pbxWarning.Name = "pbxWarning";
             this.pbxWarning.Size = new System.Drawing.Size(17, 15);
             this.pbxWarning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxWarning.TabIndex = 17;
             this.pbxWarning.TabStop = false;
             // 
-            // dgwReceived
-            // 
-            this.dgwReceived.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dgwReceived.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgwReceived.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwReceived.Location = new System.Drawing.Point(411, 342);
-            this.dgwReceived.Name = "dgwReceived";
-            this.dgwReceived.ReadOnly = true;
-            this.dgwReceived.Size = new System.Drawing.Size(292, 85);
-            this.dgwReceived.TabIndex = 18;
-            // 
-            // lblReceived
-            // 
-            this.lblReceived.AutoSize = true;
-            this.lblReceived.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblReceived.Location = new System.Drawing.Point(412, 323);
-            this.lblReceived.Name = "lblReceived";
-            this.lblReceived.Size = new System.Drawing.Size(139, 15);
-            this.lblReceived.TabIndex = 19;
-            this.lblReceived.Text = "Received from depot";
-            // 
             // menuStripBar
             // 
+            this.menuStripBar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.menuStripBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItemAbout,
             this.helpToolStripMenuItemHelp,
@@ -427,7 +405,7 @@
             // 
             // helpToolStripMenuItemAbout
             // 
-            this.helpToolStripMenuItemAbout.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.helpToolStripMenuItemAbout.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.helpToolStripMenuItemAbout.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.helpToolStripMenuItemAbout.Name = "helpToolStripMenuItemAbout";
             this.helpToolStripMenuItemAbout.Size = new System.Drawing.Size(52, 20);
@@ -436,7 +414,7 @@
             // 
             // helpToolStripMenuItemHelp
             // 
-            this.helpToolStripMenuItemHelp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.helpToolStripMenuItemHelp.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.helpToolStripMenuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemWithWebSite,
             this.toolStripSeparator1,
@@ -450,14 +428,14 @@
             // 
             this.toolStripMenuItemWithWebSite.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemWithWebSite.Image")));
             this.toolStripMenuItemWithWebSite.Name = "toolStripMenuItemWithWebSite";
-            this.toolStripMenuItemWithWebSite.Size = new System.Drawing.Size(114, 22);
+            this.toolStripMenuItemWithWebSite.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemWithWebSite.Text = "Tutorial";
             this.toolStripMenuItemWithWebSite.Click += new System.EventHandler(this.toolStripMenuItemWithWebSite_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // toolStripMenuItemTips
             // 
@@ -466,7 +444,7 @@
             this.ddfToolStripMenuItemSpecial});
             this.toolStripMenuItemTips.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemTips.Image")));
             this.toolStripMenuItemTips.Name = "toolStripMenuItemTips";
-            this.toolStripMenuItemTips.Size = new System.Drawing.Size(114, 22);
+            this.toolStripMenuItemTips.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemTips.Text = "Tips";
             // 
             // dffToolStripMenuItemGeneral
@@ -485,7 +463,7 @@
             // 
             // accountTransactionsToolStripMenuItem
             // 
-            this.accountTransactionsToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.accountTransactionsToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.accountTransactionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changePasswordToolStripMenuItem});
             this.accountTransactionsToolStripMenuItem.Name = "accountTransactionsToolStripMenuItem";
@@ -496,17 +474,49 @@
             // 
             this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.changePasswordToolStripMenuItem.Text = "Change password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
+            // btnOrderManagement
+            // 
+            this.btnOrderManagement.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOrderManagement.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btnOrderManagement.Image = ((System.Drawing.Image)(resources.GetObject("btnOrderManagement.Image")));
+            this.btnOrderManagement.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnOrderManagement.Location = new System.Drawing.Point(419, 245);
+            this.btnOrderManagement.Name = "btnOrderManagement";
+            this.btnOrderManagement.Size = new System.Drawing.Size(287, 66);
+            this.btnOrderManagement.TabIndex = 4;
+            this.btnOrderManagement.Text = "&Order Management";
+            this.btnOrderManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOrderManagement.UseCompatibleTextRendering = true;
+            this.btnOrderManagement.UseVisualStyleBackColor = true;
+            this.btnOrderManagement.Click += new System.EventHandler(this.btnOrderManagement_Click);
+            // 
+            // btnReport
+            // 
+            this.btnReport.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnReport.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
+            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReport.Location = new System.Drawing.Point(419, 317);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(287, 66);
+            this.btnReport.TabIndex = 5;
+            this.btnReport.Text = "&Reports";
+            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReport.UseCompatibleTextRendering = true;
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // SupplierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 592);
-            this.Controls.Add(this.lblReceived);
-            this.Controls.Add(this.dgwReceived);
+            this.ClientSize = new System.Drawing.Size(718, 571);
+            this.Controls.Add(this.btnReport);
+            this.Controls.Add(this.btnOrderManagement);
             this.Controls.Add(this.pbxWarning);
             this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.rtbWarning);
@@ -526,7 +536,6 @@
             this.gbxFactoryInfo.ResumeLayout(false);
             this.gbxFactoryInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxWarning)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwReceived)).EndInit();
             this.menuStripBar.ResumeLayout(false);
             this.menuStripBar.PerformLayout();
             this.ResumeLayout(false);
@@ -563,8 +572,6 @@
         private System.Windows.Forms.RichTextBox rtbWarning;
         private System.Windows.Forms.Label lblWarning;
         private System.Windows.Forms.PictureBox pbxWarning;
-        private System.Windows.Forms.DataGridView dgwReceived;
-        private System.Windows.Forms.Label lblReceived;
         private System.Windows.Forms.MenuStrip menuStripBar;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItemAbout;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItemHelp;
@@ -575,5 +582,7 @@
         private System.Windows.Forms.ToolStripMenuItem ddfToolStripMenuItemSpecial;
         private System.Windows.Forms.ToolStripMenuItem accountTransactionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.Button btnOrderManagement;
+        private System.Windows.Forms.Button btnReport;
     }
 }

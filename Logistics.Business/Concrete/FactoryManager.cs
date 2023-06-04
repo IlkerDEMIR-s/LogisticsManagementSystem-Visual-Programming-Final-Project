@@ -55,9 +55,9 @@ namespace Logistics.Business.Concrete
 
         public void Add(Factory factory)
         {
-            var validator = new FactoryValidator();
-            var context = new ValidationContext<Factory>(factory);
-            ValidationTool.Validate(validator, context);
+            //var validator = new FactoryValidator();
+            //var context = new ValidationContext<Factory>(factory);
+            //ValidationTool.Validate(validator, context);
             _factoryDal.Add(factory);
         }
 
@@ -75,9 +75,9 @@ namespace Logistics.Business.Concrete
 
         public void Update(Factory factory)
         {
-            var validator = new FactoryValidator();
-            var context = new ValidationContext<Factory>(factory);
-            ValidationTool.Validate(validator, context);
+            //var validator = new FactoryValidator();
+            //var context = new ValidationContext<Factory>(factory);
+            //ValidationTool.Validate(validator, context);
             try
             {
                 _factoryDal.Update(factory);
@@ -106,6 +106,11 @@ namespace Logistics.Business.Concrete
         public Factory GetFactoryById(int factoryId)
         {
             return _factoryDal.Get(f => f.FactoryID == factoryId);
+        }
+
+        public string GetEncodedPassword(int factoryId)
+        {
+            return _factoryDal.Get(f => f.FactoryID == factoryId).Password;
         }
     }
 }

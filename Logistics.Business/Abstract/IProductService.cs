@@ -19,5 +19,9 @@ namespace Logistics.Business.Abstract
         void UpdateStockQuantity(int productId, int newStockQuantity);
         List<Product> GetByFactoryId(int factoryId);
 
+        List<Product> GetByProductId(int productId);
+
+
+
     }
 }

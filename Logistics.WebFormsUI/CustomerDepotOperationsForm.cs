@@ -18,17 +18,27 @@ namespace Logistics.WebFormsUI
         private int _factoryId;
         private int _factoryTypeId;
         private IDepotService _depotService;
+        private IProductService _productService;
         public CustomerDepotOperationsForm(int factoryId, int factoryTypeId)
         {
             InitializeComponent();
             _factoryId = factoryId;
             _factoryTypeId = factoryTypeId;
             _depotService = InstanceFactory.GetInstance<IDepotService>();
+            _productService = InstanceFactory.GetInstance<IProductService>();                
         }
 
         private void CustomerDepotOperationsForm_Load(object sender, EventArgs e)
         {
             loadDepots();
+            loadProductsID();
+        }
+
+        private void loadProductsID()
+        {
+            cbxProducts.DataSource = _productService.GetAll(); ;
+            cbxProducts.DisplayMember = "ProductID";
+            cbxProducts.ValueMember = "ProductID";
         }
 
         private void loadDepots()
@@ -61,11 +71,11 @@ namespace Logistics.WebFormsUI
             var row = dgwDepots.CurrentRow;
 
             txtUpdateDepotName.Text = row.Cells[1].Value.ToString();
-            txtUpdateContactName.Text = row.Cells[4].Value.ToString();
-            txtUpdateContactTitle.Text = row.Cells[5].Value.ToString();
-            txtUpdatePhone.Text = row.Cells[9].Value.ToString();
-            txtUpdateAddress.Text = row.Cells[6].Value.ToString();
-            txtUpdateUnitInStock.Text = row.Cells[10].Value.ToString();
+            txtUpdateContactName.Text = row.Cells[5].Value.ToString();
+            txtUpdateContactTitle.Text = row.Cells[6].Value.ToString();
+            txtUpdatePhone.Text = row.Cells[10].Value.ToString();
+            txtUpdateAddress.Text = row.Cells[7].Value.ToString();
+            txtUpdateUnitInStock.Text = row.Cells[11].Value.ToString();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -76,7 +86,8 @@ namespace Logistics.WebFormsUI
                 {
                     FactoryID = Convert.ToInt32(_factoryId),
                     DepotName = txtDepotName.Text.ToString(),
-                    ProductID = Convert.ToInt32(txtProductId.Text),
+                    ProductID = Convert.ToInt32(cbxProducts.SelectedValue),
+                    ProductName = _productService.GetByProductId(Convert.ToInt32((int)cbxProducts.SelectedValue))[0].ProductName,
                     ContactName = txtContactName.Text.ToString(),
                     ContactTitle = txtContactTitle.Text.ToString(),
                     Address = rtxtAdress.Text.ToString(),
@@ -101,8 +112,7 @@ namespace Logistics.WebFormsUI
 
         private void clearTextBoxes()
         {
-            txtDepotName.Clear();
-            txtProductId.Clear();
+            txtDepotName.Clear();            
             txtContactName.Clear();
             txtContactTitle.Clear();
             rtxtAdress.Clear();
@@ -130,11 +140,12 @@ namespace Logistics.WebFormsUI
                     DepotName = txtUpdateDepotName.Text.ToString(),
                     FactoryID = Convert.ToInt32(_factoryId),
                     ProductID = Convert.ToInt32(row.Cells[3].Value),
+                    ProductName = row.Cells[4].Value.ToString(),
                     ContactName = txtUpdateContactName.Text.ToString(),
                     ContactTitle = txtUpdateContactTitle.Text.ToString(),
                     Address = txtUpdateAddress.Text.ToString(),
-                    City = row.Cells[7].Value.ToString(),
-                    Country = row.Cells[8].Value.ToString(),
+                    City = row.Cells[8].Value.ToString(),
+                    Country = row.Cells[9].Value.ToString(),
                     Phone = txtUpdatePhone.Text.ToString(),
                     UnitInStock = Convert.ToInt32(txtUpdateUnitInStock.Text),
 
@@ -208,12 +219,12 @@ namespace Logistics.WebFormsUI
             if (row != null)
             {
                 txtDepotName.Text = row.Cells[1].Value.ToString();
-                txtContactName.Text = row.Cells[4].Value.ToString();
-                txtContactTitle.Text = row.Cells[5].Value.ToString();
-                rtxtAdress.Text = row.Cells[6].Value.ToString();
-                txtCity.Text = row.Cells[7].Value.ToString();
-                txtCountry.Text = row.Cells[8].Value.ToString();
-                txtPhone.Text = row.Cells[9].Value.ToString();
+                txtContactName.Text = row.Cells[5].Value.ToString();
+                txtContactTitle.Text = row.Cells[6].Value.ToString();
+                rtxtAdress.Text = row.Cells[7].Value.ToString();
+                txtCity.Text = row.Cells[8].Value.ToString();
+                txtCountry.Text = row.Cells[9].Value.ToString();
+                txtPhone.Text = row.Cells[10].Value.ToString();
 
                 MessageBox.Show("Depot cloned successfully.");
             }

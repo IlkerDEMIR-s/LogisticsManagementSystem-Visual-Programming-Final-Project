@@ -7,7 +7,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -74,15 +76,23 @@ namespace Logistics.WebFormsUI
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+
             try
             {
+                string password = txtPassword.Text;
+                string companyName = txtCompanyName.Text.ToLower();
+
+
                 if (typeId == 0)
                 {
                     throw new Exception("Please select a factory type.");
                 }
 
-                if (CheckIfCompanyNameExists(txtCompanyName.Text.ToLower()))
+                if (CheckIfCompanyNameExists(companyName) && passwordValidation(password))
                 {
+                    // Encode and hash the password
+                    string passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
+
                     _factoryService.Add(new Factory
                     {
                         CompanyName = txtCompanyName.Text,
@@ -93,25 +103,23 @@ namespace Logistics.WebFormsUI
                         Country = txtCountry.Text,
                         Phone = txtPhone.Text,
                         TypeId = typeId,
-                        Password = txtPassword.Text,
+                        Password = passwordHash,
                         HomePage = txtHomepage.Text
-
                     });
-                    MessageBox.Show("Factory added successfully.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    MessageBox.Show("Factory added successfully.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     LoginForm loginForm = new LoginForm();
                     loginForm.Show();
                     this.Close();
                 }
-
             }
             catch (Exception ex) when (ex.Message == "Please select a factory type.")
             {
                 MessageBox.Show(ex.Message, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception exception)
-            {               
+            {
                 MessageBox.Show(exception.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -123,6 +131,19 @@ namespace Logistics.WebFormsUI
                MessageBox.Show("This company name already exists.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;       
             }  
+            return true;
+        }
+
+        private bool passwordValidation(string password)
+        {
+
+            var passwordValidator = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{4,28}$");
+            if (!passwordValidator.IsMatch(password))
+            {
+                MessageBox.Show("Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character. It should be between 4 and 28 characters long.", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
             return true;
         }
 

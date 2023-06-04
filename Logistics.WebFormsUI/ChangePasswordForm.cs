@@ -7,7 +7,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -49,7 +51,9 @@ namespace Logistics.WebFormsUI
             {
                 if(checkIfSame() && passwordMatchCheck(factory))
                 {
-                    factory.Password = txtNewPassword.Text;
+                    string password = txtNewPassword.Text;
+                    string encodedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+                    factory.Password = encodedPassword;
                     _factoryService.Update(factory);
 
                     resetSession();
@@ -63,22 +67,6 @@ namespace Logistics.WebFormsUI
             {
                 MessageBox.Show(exception.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void clearTextBoxes()
-        {
-            txtOldPassword.Clear();
-            txtNewPassword.Clear();
-            txtConfirmPassword.Clear();
-            txtOldPassword.Focus();
-        }
-
-        private static void resetSession()
-        {
-            Properties.Settings.Default.FactoryId = 0;
-            Properties.Settings.Default.FactoryTypeId = 0;
-            Properties.Settings.Default.Password = "";
-            Properties.Settings.Default.Save();
         }
 
         private bool checkIfSame()
@@ -96,17 +84,51 @@ namespace Logistics.WebFormsUI
 
         private bool passwordMatchCheck(Factory factory)
         {
-            if (txtNewPassword.Text == txtConfirmPassword.Text  && txtOldPassword.Text == factory.Password)
-            {               
-               return true;
+            string oldPassword = txtOldPassword.Text;
+
+            bool verified = BCrypt.Net.BCrypt.Verify(oldPassword, factory.Password);
+
+            if (verified)
+            {
+                if (txtNewPassword.Text == txtConfirmPassword.Text)
+                {
+                    // Check if the new password meets the validation criteria
+                    var passwordValidator = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{4,28}$");
+                    if (!passwordValidator.IsMatch(txtNewPassword.Text))
+                    {
+                        MessageBox.Show("Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character. It should be between 4 and 28 characters long.", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Passwords do not match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
             }
             else
             {
-                MessageBox.Show("Passwords do not match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Old password is incorrect!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
-
             }
+        }
 
+        private void clearTextBoxes()
+        {
+            txtOldPassword.Clear();
+            txtNewPassword.Clear();
+            txtConfirmPassword.Clear();
+            txtOldPassword.Focus();
+        }
+
+        private static void resetSession()
+        {
+            Properties.Settings.Default.FactoryId = 0;
+            Properties.Settings.Default.FactoryTypeId = 0;
+            Properties.Settings.Default.Password = "";
+            Properties.Settings.Default.Save();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

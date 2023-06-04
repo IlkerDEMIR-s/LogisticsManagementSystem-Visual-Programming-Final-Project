@@ -46,10 +46,12 @@
     <Compile Include="Concrete\Category.cs" />
     <Compile Include="Concrete\CustomerSupplier.cs" />
     <Compile Include="Concrete\Depot.cs" />
+    <Compile Include="Concrete\Expedition.cs" />
     <Compile Include="Concrete\Factory.cs" />
     <Compile Include="Concrete\FactoryDetail.cs" />
     <Compile Include="Concrete\Order.cs" />
     <Compile Include="Concrete\Product.cs" />
+    <Compile Include="Concrete\StatusDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

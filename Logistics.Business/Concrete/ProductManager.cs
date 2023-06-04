@@ -94,5 +94,10 @@ namespace Logistics.Business.Concrete
         {
             return _productDal.GetAll(p => p.FactoryID == factoryId);
         }
+
+        public List<Product> GetByProductId(int productId)
+        {
+            return _productDal.GetAll().Where(p => p.ProductID == productId).ToList();
+        }
     }
 }

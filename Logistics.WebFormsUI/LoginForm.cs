@@ -4,6 +4,8 @@ using Logistics.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
@@ -112,9 +114,12 @@ namespace Logistics.WebFormsUI
             int factoryId = Convert.ToInt32(cbxCompanyName.SelectedValue);
             int factoryTypeId = Convert.ToInt32(cbxFactoryType.SelectedValue);
 
-            bool isAuthenticated = _factoryService.CheckPassword(factoryId, password);
 
-            if (isAuthenticated)
+            string storedEncodedPassword = _factoryService.GetEncodedPassword(factoryId);
+
+            bool verified = BCrypt.Net.BCrypt.Verify(password,storedEncodedPassword);
+
+            if (verified)
             {
                 saveCredentials(factoryId, factoryTypeId, password); // Save credentials
                 launchForm(factoryId, factoryTypeId);
@@ -150,11 +155,14 @@ namespace Logistics.WebFormsUI
             int factoryTypeId = Properties.Settings.Default.FactoryTypeId;
             string password = Properties.Settings.Default.Password;
 
-            if (factoryId != 0 && factoryTypeId != 0 && password != "")
+            if (factoryId != 0 && factoryTypeId != 0 && !string.IsNullOrEmpty(password))
             {
-                bool isAuthenticated = _factoryService.CheckPassword(factoryId, password);
+                // Retrieve the stored encoded password from the database
+                string storedEncodedPassword = _factoryService.GetEncodedPassword(factoryId);
 
-                if (isAuthenticated)
+                bool verified = BCrypt.Net.BCrypt.Verify(password, storedEncodedPassword);
+
+                if (verified)
                 {
                     launchForm(factoryId, factoryTypeId);
                 }
@@ -164,7 +172,6 @@ namespace Logistics.WebFormsUI
                 }
             }
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();

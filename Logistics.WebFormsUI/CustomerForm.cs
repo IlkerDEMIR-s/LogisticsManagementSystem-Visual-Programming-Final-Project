@@ -1,7 +1,9 @@
 ﻿using Logistics.Business.Abstract;
 using Logistics.Business.DependencyResolvers.Ninject;
+using Logistics.Business.Utilities;
 using Logistics.Entities.Concrete;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,17 +23,20 @@ namespace Logistics.WebFormsUI
         private IFactoryService _factoryService;
         private IFactoryDetailService _factoryDetailService; 
         private IStockUpdaterService _stockUpdaterService;
+        private IStatusDetailService _statusDetailService;
 
         private IDepotService _depotService;
         private IProductService _productService;
-        private IOrderService _orderService;
+        private IOrderService _orderService;        
 
         private int _selectedProductId;
-        private int _selectedDepotId;
-        private int _selectedOwnDepotId;
+        private int _selectedSupplierDepotId;
+        private int _selectedCustomerDepotId;
+        private string _selectedCustomerDepotName;
         private int _selectedSupplierId;
-        private string _selectedDepotName;
+        private string _selectedSupplierDepotName;
         private int increaseAmount = 0;
+                
 
         public CustomerForm(int factoryId, int factoryTypeId)
         {
@@ -48,47 +53,46 @@ namespace Logistics.WebFormsUI
 
             _stockUpdaterService = InstanceFactory.GetInstance<IStockUpdaterService>();
             _orderService = InstanceFactory.GetInstance<IOrderService>();
+
+            _statusDetailService = InstanceFactory.GetInstance<IStatusDetailService>();
         }
 
         private void CustomerForm_Load(object sender, EventArgs e)
         {
             displayFactoryInformations();
-            loadDepots();
-            loadProducts();
+            loadDepots();       
             loadOwnDepot();
         }
 
         private void loadOwnDepot()
         {
             dgwOwnDepot.DataSource = _depotService.GetByFactoryId(_factoryId);
+
+            dgwOwnDepot.Columns["DepotName"].Width = 80;
+
+            hideOwnDepotColumns();
         }
 
-        private void loadProducts()
+        private void hideOwnDepotColumns()
         {
-            dgwProducts.DataSource = _productService.GetAll();
-
-            // Assuming that you have a DataGridView named dgvDepots on your form
-            foreach (DataGridViewColumn column in dgwProducts.Columns)
-            {
-                if (column.Name == "ProductName" || column.Name == "ProductID")
-                {
-                    column.Visible = true;
-                }
-                else
-                {
-                    column.Visible = false;
-                }
-            }
-
-
-
+            dgwOwnDepot.Columns["FactoryId"].Visible = false;
+            dgwOwnDepot.Columns["DepotId"].Visible = false;
+            dgwOwnDepot.Columns["ProductID"].Visible = false;
         }
 
         private void loadDepots()
         {
             dgwDepots.DataSource = _depotService.GetDepotsByCustomer(_factoryId);
+
+            hideSupplierColumns();
+        }
+
+        private void hideSupplierColumns()
+        {
             dgwDepots.Columns["UnitInStock"].Visible = false;
-            dgwDepots.Columns["FactoryId"].Visible = false;     
+            dgwDepots.Columns["FactoryId"].Visible = false;
+            dgwDepots.Columns["DepotId"].Visible = false;
+            dgwDepots.Columns["ProductID"].Visible = false;
         }
 
         private void loadOwnDepots()
@@ -138,22 +142,19 @@ namespace Logistics.WebFormsUI
 
         private void btnReceive_Click(object sender, EventArgs e)
         {
-
             try
             {
                 if (int.TryParse(txtStockInput.Text, out increaseAmount) && increaseAmount > 0)
                 {
 
-                    if (_stockUpdaterService.UpdateStockQuantityAfterReceivingProductFromDepot(_selectedDepotId, increaseAmount)
-                         && _stockUpdaterService.SendReceivedProductsToOurOwnDepot(_selectedOwnDepotId,increaseAmount))
+                    if (_stockUpdaterService.UpdateStockQuantityAfterReceivingProductFromDepot(_selectedSupplierDepotId, increaseAmount)
+                         && _stockUpdaterService.SendReceivedProductsToOurOwnDepot(_selectedCustomerDepotId, increaseAmount))
                     {
                         addOrders();
-
-                        var date = DateTime.Now.ToString("dd/MM/yyyy"); //dd/MM/yyyy HH:mm:ss
-                        MessageBox.Show("Stock has been updated!" + Environment.NewLine + date, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearTextboxes();
                         loadDepots();
                         loadOwnDepots();
+
+                        txtStockInput.Clear();
                         txtStockInput.Focus();
 
                     }
@@ -174,7 +175,7 @@ namespace Logistics.WebFormsUI
             // Check if _selectedOwnDepotId is selected
             try
             {
-                if (_selectedOwnDepotId == 0)
+                if (_selectedCustomerDepotId == 0)
                 {
                     throw new Exception("Please select a receiving repository!");
                 }
@@ -182,14 +183,15 @@ namespace Logistics.WebFormsUI
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            }  
+
         }
 
         private void clearTextboxes()
         {
             txtStockInput.Clear();
-            txtDepotId.Clear();
-            txtProductIdDisplay.Clear();
+            txtDepotNameDisplay.Clear();
+            txtProductNameDisplay.Clear();
         }
 
         private int addOrders()
@@ -198,16 +200,24 @@ namespace Logistics.WebFormsUI
             {
                 _orderService.Add(new Order
                 {
-                    CustomerID = _factoryId,
-                    DepotName = _selectedDepotName,
                     SupplierID = _selectedSupplierId,
-                    DepotId = _selectedDepotId,
-                    ProductId = _selectedProductId,
-                    Quantity = increaseAmount,
-                    OrderDate = DateTime.Now
+                    SupplierDepotId = _selectedSupplierDepotId,
+                    SupplierDepotName = _selectedSupplierDepotName,
+                    CustomerID = _factoryId,
+                    CustomerName = _factoryService.GetByFactoryId(_factoryId)[0].CompanyName,
+                    CustomerDepotId = _selectedCustomerDepotId,
+                    CustomerDepotName = _selectedCustomerDepotName,
+                    ProductID = _selectedProductId,
+                    ProductName = _productService.GetByProductId(_selectedProductId)[0].ProductName,
+                    Quantity = Convert.ToInt32(txtStockInput.Text),
+                    OrderDate = DateTime.Now,
+                    Status = FixedValues.PendingStatusId,
+                    StatusName = _statusDetailService.GetByStatusId(FixedValues.PendingStatusId)[0].StatusName
 
                 });
-                MessageBox.Show("Order added successfully.");
+
+                MessageBox.Show($"Your order dated {DateTime.Now.Date.ToShortDateString()} has been received successfully.", "Order Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             catch (Exception exception)
             {
@@ -220,14 +230,14 @@ namespace Logistics.WebFormsUI
         private void dgwDepots_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var row = dgwDepots.CurrentRow;
-            _selectedDepotId = Convert.ToInt32(row.Cells[0].Value);
-            _selectedDepotName = Convert.ToString(row.Cells[1].Value);
+            _selectedSupplierDepotId = Convert.ToInt32(row.Cells[0].Value);
+            _selectedSupplierDepotName = Convert.ToString(row.Cells[1].Value);
             _selectedSupplierId = Convert.ToInt32(row.Cells[2].Value);
             _selectedProductId = Convert.ToInt32(row.Cells[3].Value);
             
 
-            txtDepotId.Text = row.Cells[0].Value.ToString();
-            txtProductIdDisplay.Text = row.Cells[3].Value.ToString();
+            txtDepotNameDisplay.Text = row.Cells[1].Value.ToString();
+            txtProductNameDisplay.Text = row.Cells[4].Value.ToString();
         }
 
         private void txtSearchDepotName_TextChanged(object sender, EventArgs e)
@@ -267,7 +277,8 @@ namespace Logistics.WebFormsUI
         private void dgwOwnDepot_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var row = dgwOwnDepot.CurrentRow;
-            _selectedOwnDepotId = Convert.ToInt32(row.Cells[0].Value);
+            _selectedCustomerDepotId = Convert.ToInt32(row.Cells[0].Value);
+            _selectedCustomerDepotName = Convert.ToString(row.Cells[1].Value);
         }
 
         private void btnDepotOperations_Click(object sender, EventArgs e)
@@ -304,6 +315,13 @@ namespace Logistics.WebFormsUI
             ChangePasswordForm changePasswordForm = new ChangePasswordForm(_factoryId, _factoryTypeId);
             changePasswordForm.ShowDialog();
         }
-        
+
+        private void btnMyOrders_Click(object sender, EventArgs e)
+        {
+            CustomerMyOrdersForm customerMyOrdersForm = new CustomerMyOrdersForm(_factoryId, _factoryTypeId);
+            customerMyOrdersForm.Show();
+            this.Close();
+        }
     }
+
 }
