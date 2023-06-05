@@ -122,6 +122,8 @@
             this.gbxSearchByName.Controls.Add(this.pbxSearch);
             this.gbxSearchByName.Controls.Add(this.txtSearchDepotName);
             this.gbxSearchByName.Controls.Add(this.lblSearchDepotName);
+            this.gbxSearchByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gbxSearchByName.ForeColor = System.Drawing.SystemColors.GrayText;
             this.gbxSearchByName.Location = new System.Drawing.Point(323, 27);
             this.gbxSearchByName.Name = "gbxSearchByName";
             this.gbxSearchByName.Size = new System.Drawing.Size(606, 46);
@@ -132,7 +134,7 @@
             // pbxSearch
             // 
             this.pbxSearch.Image = ((System.Drawing.Image)(resources.GetObject("pbxSearch.Image")));
-            this.pbxSearch.Location = new System.Drawing.Point(286, 10);
+            this.pbxSearch.Location = new System.Drawing.Point(305, 11);
             this.pbxSearch.Name = "pbxSearch";
             this.pbxSearch.Size = new System.Drawing.Size(32, 29);
             this.pbxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,9 +143,11 @@
             // 
             // txtSearchDepotName
             // 
-            this.txtSearchDepotName.Location = new System.Drawing.Point(79, 19);
+            this.txtSearchDepotName.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtSearchDepotName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSearchDepotName.Location = new System.Drawing.Point(98, 20);
             this.txtSearchDepotName.Name = "txtSearchDepotName";
-            this.txtSearchDepotName.Size = new System.Drawing.Size(201, 20);
+            this.txtSearchDepotName.Size = new System.Drawing.Size(201, 21);
             this.txtSearchDepotName.TabIndex = 0;
             this.toolTipSearchDepotName.SetToolTip(this.txtSearchDepotName, "Enter the name of the depot you want to find.\r\n");
             this.txtSearchDepotName.TextChanged += new System.EventHandler(this.txtSearchDepotName_TextChanged);
@@ -151,7 +155,9 @@
             // lblSearchDepotName
             // 
             this.lblSearchDepotName.AutoSize = true;
-            this.lblSearchDepotName.Location = new System.Drawing.Point(6, 22);
+            this.lblSearchDepotName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSearchDepotName.ForeColor = System.Drawing.Color.Black;
+            this.lblSearchDepotName.Location = new System.Drawing.Point(25, 25);
             this.lblSearchDepotName.Name = "lblSearchDepotName";
             this.lblSearchDepotName.Size = new System.Drawing.Size(67, 13);
             this.lblSearchDepotName.TabIndex = 0;
@@ -218,6 +224,7 @@
             // 
             // txtProductNameDisplay
             // 
+            this.txtProductNameDisplay.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtProductNameDisplay.Location = new System.Drawing.Point(165, 63);
             this.txtProductNameDisplay.Name = "txtProductNameDisplay";
             this.txtProductNameDisplay.ReadOnly = true;
@@ -227,6 +234,7 @@
             // 
             // txtStockInput
             // 
+            this.txtStockInput.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtStockInput.Location = new System.Drawing.Point(320, 43);
             this.txtStockInput.Name = "txtStockInput";
             this.txtStockInput.Size = new System.Drawing.Size(172, 20);
@@ -252,6 +260,7 @@
             // 
             // txtDepotNameDisplay
             // 
+            this.txtDepotNameDisplay.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtDepotNameDisplay.Location = new System.Drawing.Point(165, 25);
             this.txtDepotNameDisplay.Name = "txtDepotNameDisplay";
             this.txtDepotNameDisplay.ReadOnly = true;
@@ -261,7 +270,7 @@
             // 
             // gbxFactoryInfo
             // 
-            this.gbxFactoryInfo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.gbxFactoryInfo.BackColor = System.Drawing.Color.Transparent;
             this.gbxFactoryInfo.Controls.Add(this.txtCompanyName);
             this.gbxFactoryInfo.Controls.Add(this.txtContactName);
             this.gbxFactoryInfo.Controls.Add(this.txtCity);
@@ -280,6 +289,8 @@
             this.gbxFactoryInfo.Controls.Add(this.lblContactTitle);
             this.gbxFactoryInfo.Controls.Add(this.lblCity);
             this.gbxFactoryInfo.Controls.Add(this.lblAddress);
+            this.gbxFactoryInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gbxFactoryInfo.ForeColor = System.Drawing.SystemColors.GrayText;
             this.gbxFactoryInfo.Location = new System.Drawing.Point(12, 27);
             this.gbxFactoryInfo.Name = "gbxFactoryInfo";
             this.gbxFactoryInfo.Size = new System.Drawing.Size(305, 341);
@@ -289,69 +300,85 @@
             // 
             // txtCompanyName
             // 
+            this.txtCompanyName.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCompanyName.Location = new System.Drawing.Point(125, 70);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.ReadOnly = true;
-            this.txtCompanyName.Size = new System.Drawing.Size(172, 20);
+            this.txtCompanyName.Size = new System.Drawing.Size(172, 21);
             this.txtCompanyName.TabIndex = 29;
             this.txtCompanyName.TabStop = false;
             // 
             // txtContactName
             // 
+            this.txtContactName.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtContactName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtContactName.Location = new System.Drawing.Point(111, 104);
             this.txtContactName.Name = "txtContactName";
             this.txtContactName.ReadOnly = true;
-            this.txtContactName.Size = new System.Drawing.Size(172, 20);
+            this.txtContactName.Size = new System.Drawing.Size(172, 21);
             this.txtContactName.TabIndex = 28;
             this.txtContactName.TabStop = false;
             // 
             // txtCity
             // 
+            this.txtCity.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCity.Location = new System.Drawing.Point(61, 208);
             this.txtCity.Name = "txtCity";
             this.txtCity.ReadOnly = true;
-            this.txtCity.Size = new System.Drawing.Size(172, 20);
+            this.txtCity.Size = new System.Drawing.Size(172, 21);
             this.txtCity.TabIndex = 26;
             this.txtCity.TabStop = false;
             // 
             // txtCountry
             // 
+            this.txtCountry.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCountry.Location = new System.Drawing.Point(84, 232);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.ReadOnly = true;
-            this.txtCountry.Size = new System.Drawing.Size(172, 20);
+            this.txtCountry.Size = new System.Drawing.Size(172, 21);
             this.txtCountry.TabIndex = 25;
             this.txtCountry.TabStop = false;
             // 
             // txtPhone
             // 
+            this.txtPhone.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPhone.Location = new System.Drawing.Point(72, 258);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.ReadOnly = true;
-            this.txtPhone.Size = new System.Drawing.Size(172, 20);
+            this.txtPhone.Size = new System.Drawing.Size(172, 21);
             this.txtPhone.TabIndex = 24;
             this.txtPhone.TabStop = false;
             // 
             // txtContactTitle
             // 
+            this.txtContactTitle.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtContactTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtContactTitle.Location = new System.Drawing.Point(111, 130);
             this.txtContactTitle.Name = "txtContactTitle";
             this.txtContactTitle.ReadOnly = true;
-            this.txtContactTitle.Size = new System.Drawing.Size(172, 20);
+            this.txtContactTitle.Size = new System.Drawing.Size(172, 21);
             this.txtContactTitle.TabIndex = 22;
             this.txtContactTitle.TabStop = false;
             // 
             // txtFactoryType
             // 
+            this.txtFactoryType.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtFactoryType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtFactoryType.Location = new System.Drawing.Point(111, 36);
             this.txtFactoryType.Name = "txtFactoryType";
             this.txtFactoryType.ReadOnly = true;
-            this.txtFactoryType.Size = new System.Drawing.Size(172, 20);
+            this.txtFactoryType.Size = new System.Drawing.Size(172, 21);
             this.txtFactoryType.TabIndex = 21;
             this.txtFactoryType.TabStop = false;
             // 
             // txtAddress
             // 
+            this.txtAddress.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAddress.Location = new System.Drawing.Point(84, 162);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ReadOnly = true;
@@ -362,6 +389,8 @@
             // 
             // txtHomePage
             // 
+            this.txtHomePage.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtHomePage.Location = new System.Drawing.Point(96, 286);
             this.txtHomePage.Name = "txtHomePage";
             this.txtHomePage.ReadOnly = true;
@@ -482,6 +511,7 @@
             // 
             // btnDepotOperations
             // 
+            this.btnDepotOperations.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnDepotOperations.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDepotOperations.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnDepotOperations.Image = ((System.Drawing.Image)(resources.GetObject("btnDepotOperations.Image")));
@@ -492,7 +522,7 @@
             this.btnDepotOperations.Text = "&Depot Operations";
             this.btnDepotOperations.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDepotOperations.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDepotOperations.UseVisualStyleBackColor = true;
+            this.btnDepotOperations.UseVisualStyleBackColor = false;
             this.btnDepotOperations.Click += new System.EventHandler(this.btnDepotOperations_Click);
             // 
             // menuStripBar
@@ -579,12 +609,13 @@
             // 
             this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.changePasswordToolStripMenuItem.Text = "Change password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // btnMyOrders
             // 
+            this.btnMyOrders.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnMyOrders.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMyOrders.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnMyOrders.Image = ((System.Drawing.Image)(resources.GetObject("btnMyOrders.Image")));
@@ -595,14 +626,14 @@
             this.btnMyOrders.Text = "&My Orders";
             this.btnMyOrders.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMyOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMyOrders.UseVisualStyleBackColor = true;
+            this.btnMyOrders.UseVisualStyleBackColor = false;
             this.btnMyOrders.Click += new System.EventHandler(this.btnMyOrders_Click);
             // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(941, 545);
             this.Controls.Add(this.btnMyOrders);
             this.Controls.Add(this.menuStripBar);

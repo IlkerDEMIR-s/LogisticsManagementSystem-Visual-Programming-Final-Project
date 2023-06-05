@@ -59,6 +59,7 @@
             // lblLoading
             // 
             this.lblLoading.AutoSize = true;
+            this.lblLoading.BackColor = System.Drawing.Color.Transparent;
             this.lblLoading.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoading.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblLoading.Location = new System.Drawing.Point(223, 249);
@@ -70,6 +71,7 @@
             // lblPercentage
             // 
             this.lblPercentage.AutoSize = true;
+            this.lblPercentage.BackColor = System.Drawing.Color.Transparent;
             this.lblPercentage.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPercentage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPercentage.Location = new System.Drawing.Point(335, 249);

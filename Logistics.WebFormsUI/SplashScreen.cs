@@ -14,6 +14,7 @@ namespace Logistics.WebFormsUI
 
         private void SplashScreen_Load(object sender, EventArgs e)
         {
+            progressBar.BringToFront();
             progressBar.Value = 1;
             progressBar.Step = 1; 
             progressBar.Maximum = 100;

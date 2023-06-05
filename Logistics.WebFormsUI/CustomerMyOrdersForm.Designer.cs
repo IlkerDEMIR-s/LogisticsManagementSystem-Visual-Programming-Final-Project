@@ -61,6 +61,7 @@
             // 
             // cbxStatus
             // 
+            this.cbxStatus.BackColor = System.Drawing.SystemColors.ControlLight;
             this.cbxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbxStatus.FormattingEnabled = true;
             this.cbxStatus.Location = new System.Drawing.Point(167, 40);
@@ -70,6 +71,7 @@
             // 
             // btnFilter
             // 
+            this.btnFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnFilter.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnFilter.Location = new System.Drawing.Point(329, 40);
@@ -77,7 +79,7 @@
             this.btnFilter.Size = new System.Drawing.Size(92, 23);
             this.btnFilter.TabIndex = 2;
             this.btnFilter.Text = "Filter";
-            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.UseVisualStyleBackColor = false;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // lblStatus
@@ -105,6 +107,7 @@
             // 
             // rtbInfo
             // 
+            this.rtbInfo.BackColor = System.Drawing.SystemColors.ControlLight;
             this.rtbInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rtbInfo.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbInfo.Location = new System.Drawing.Point(16, 19);
@@ -115,7 +118,7 @@
             // 
             // gbxViewDetails
             // 
-            this.gbxViewDetails.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.gbxViewDetails.BackColor = System.Drawing.Color.LightSteelBlue;
             this.gbxViewDetails.Controls.Add(this.rtbInfo);
             this.gbxViewDetails.Controls.Add(this.btnShowDetails);
             this.gbxViewDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -129,7 +132,7 @@
             // 
             // gbxApproval
             // 
-            this.gbxApproval.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.gbxApproval.BackColor = System.Drawing.Color.LightSteelBlue;
             this.gbxApproval.Controls.Add(this.cbxApprove);
             this.gbxApproval.Controls.Add(this.btnApprove);
             this.gbxApproval.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -169,6 +172,7 @@
             // 
             // btnHomePage
             // 
+            this.btnHomePage.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnHomePage.Image = ((System.Drawing.Image)(resources.GetObject("btnHomePage.Image")));
             this.btnHomePage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnHomePage.Location = new System.Drawing.Point(12, 12);
@@ -178,13 +182,14 @@
             this.btnHomePage.Text = "&Home Page";
             this.btnHomePage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHomePage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnHomePage.UseVisualStyleBackColor = true;
+            this.btnHomePage.UseVisualStyleBackColor = false;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
             // CustomerMyOrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(887, 461);
             this.Controls.Add(this.btnHomePage);
             this.Controls.Add(this.gbxApproval);

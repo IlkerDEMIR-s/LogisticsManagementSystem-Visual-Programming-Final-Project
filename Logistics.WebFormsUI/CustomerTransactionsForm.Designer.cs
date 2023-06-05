@@ -56,6 +56,7 @@
             // 
             // btnHomePage
             // 
+            this.btnHomePage.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnHomePage.Image = ((System.Drawing.Image)(resources.GetObject("btnHomePage.Image")));
             this.btnHomePage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnHomePage.Location = new System.Drawing.Point(12, 12);
@@ -65,11 +66,12 @@
             this.btnHomePage.Text = "&Home Page";
             this.btnHomePage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHomePage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnHomePage.UseVisualStyleBackColor = true;
+            this.btnHomePage.UseVisualStyleBackColor = false;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
             // btnDeleteCustomer
             // 
+            this.btnDeleteCustomer.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnDeleteCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDeleteCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteCustomer.Image")));
             this.btnDeleteCustomer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -80,11 +82,12 @@
             this.btnDeleteCustomer.Text = "&Delete Customer";
             this.btnDeleteCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDeleteCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnDeleteCustomer.UseVisualStyleBackColor = true;
+            this.btnDeleteCustomer.UseVisualStyleBackColor = false;
             this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
             // 
             // cbxCustomers
             // 
+            this.cbxCustomers.BackColor = System.Drawing.SystemColors.ControlLight;
             this.cbxCustomers.FormattingEnabled = true;
             this.cbxCustomers.Location = new System.Drawing.Point(228, 21);
             this.cbxCustomers.Name = "cbxCustomers";
@@ -103,12 +106,13 @@
             // 
             // btnAddCustomer
             // 
+            this.btnAddCustomer.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnAddCustomer.Location = new System.Drawing.Point(453, 21);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(92, 23);
             this.btnAddCustomer.TabIndex = 2;
             this.btnAddCustomer.Text = "Add Customer";
-            this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.UseVisualStyleBackColor = false;
             this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // gbxDelete
@@ -146,6 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(856, 296);
             this.Controls.Add(this.gbxDelete);
             this.Controls.Add(this.btnAddCustomer);

@@ -68,6 +68,7 @@
             // 
             // btnHomePage
             // 
+            this.btnHomePage.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnHomePage.Image = ((System.Drawing.Image)(resources.GetObject("btnHomePage.Image")));
             this.btnHomePage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnHomePage.Location = new System.Drawing.Point(12, 12);
@@ -77,12 +78,12 @@
             this.btnHomePage.Text = "&Home Page";
             this.btnHomePage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHomePage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnHomePage.UseVisualStyleBackColor = true;
+            this.btnHomePage.UseVisualStyleBackColor = false;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
             // gbxProducts
             // 
-            this.gbxProducts.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.gbxProducts.BackColor = System.Drawing.Color.LightSteelBlue;
             this.gbxProducts.Controls.Add(this.dgwOrders);
             this.gbxProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gbxProducts.Location = new System.Drawing.Point(12, 96);
@@ -106,7 +107,7 @@
             // 
             // gbxExpeditions
             // 
-            this.gbxExpeditions.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.gbxExpeditions.BackColor = System.Drawing.Color.LightSteelBlue;
             this.gbxExpeditions.Controls.Add(this.dgwExpedition);
             this.gbxExpeditions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gbxExpeditions.Location = new System.Drawing.Point(12, 254);
@@ -121,6 +122,8 @@
             this.gbxSearchByDepotName.Controls.Add(this.pbxSearch);
             this.gbxSearchByDepotName.Controls.Add(this.txtSearchDepotName);
             this.gbxSearchByDepotName.Controls.Add(this.lblSearchDepotName);
+            this.gbxSearchByDepotName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gbxSearchByDepotName.ForeColor = System.Drawing.SystemColors.GrayText;
             this.gbxSearchByDepotName.Location = new System.Drawing.Point(127, 12);
             this.gbxSearchByDepotName.Name = "gbxSearchByDepotName";
             this.gbxSearchByDepotName.Size = new System.Drawing.Size(291, 78);
@@ -141,15 +144,18 @@
             // txtSearchDepotName
             // 
             this.txtSearchDepotName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearchDepotName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSearchDepotName.Location = new System.Drawing.Point(87, 35);
             this.txtSearchDepotName.Name = "txtSearchDepotName";
-            this.txtSearchDepotName.Size = new System.Drawing.Size(160, 20);
+            this.txtSearchDepotName.Size = new System.Drawing.Size(160, 21);
             this.txtSearchDepotName.TabIndex = 0;
             this.txtSearchDepotName.TextChanged += new System.EventHandler(this.txtSearchDepotName_TextChanged);
             // 
             // lblSearchDepotName
             // 
             this.lblSearchDepotName.AutoSize = true;
+            this.lblSearchDepotName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSearchDepotName.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lblSearchDepotName.Location = new System.Drawing.Point(14, 38);
             this.lblSearchDepotName.Name = "lblSearchDepotName";
             this.lblSearchDepotName.Size = new System.Drawing.Size(67, 13);
@@ -158,16 +164,20 @@
             // 
             // dtpEndDate
             // 
+            this.dtpEndDate.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlText;
+            this.dtpEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtpEndDate.Location = new System.Drawing.Point(89, 47);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpEndDate.Size = new System.Drawing.Size(200, 21);
             this.dtpEndDate.TabIndex = 1;
             // 
             // dtpStartDate
             // 
+            this.dtpStartDate.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlText;
+            this.dtpStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtpStartDate.Location = new System.Drawing.Point(89, 19);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpStartDate.Size = new System.Drawing.Size(200, 21);
             this.dtpStartDate.TabIndex = 0;
             // 
             // gbxSearchByDate
@@ -178,6 +188,8 @@
             this.gbxSearchByDate.Controls.Add(this.lblStartDate);
             this.gbxSearchByDate.Controls.Add(this.dtpStartDate);
             this.gbxSearchByDate.Controls.Add(this.dtpEndDate);
+            this.gbxSearchByDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gbxSearchByDate.ForeColor = System.Drawing.SystemColors.GrayText;
             this.gbxSearchByDate.Location = new System.Drawing.Point(424, 12);
             this.gbxSearchByDate.Name = "gbxSearchByDate";
             this.gbxSearchByDate.Size = new System.Drawing.Size(418, 78);
@@ -187,22 +199,28 @@
             // 
             // btnClear
             // 
+            this.btnClear.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnClear.Location = new System.Drawing.Point(327, 47);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "&Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnFilter
             // 
+            this.btnFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnFilter.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnFilter.Location = new System.Drawing.Point(327, 19);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(75, 23);
             this.btnFilter.TabIndex = 2;
             this.btnFilter.Text = "&Filter";
-            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.UseVisualStyleBackColor = false;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // lblEndDate
@@ -223,7 +241,7 @@
             this.lblStartDate.BackColor = System.Drawing.Color.Transparent;
             this.lblStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblStartDate.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblStartDate.Location = new System.Drawing.Point(12, 22);
+            this.lblStartDate.Location = new System.Drawing.Point(12, 23);
             this.lblStartDate.Name = "lblStartDate";
             this.lblStartDate.Size = new System.Drawing.Size(71, 15);
             this.lblStartDate.TabIndex = 19;
@@ -233,6 +251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(871, 418);
             this.Controls.Add(this.gbxSearchByDate);
             this.Controls.Add(this.gbxSearchByDepotName);

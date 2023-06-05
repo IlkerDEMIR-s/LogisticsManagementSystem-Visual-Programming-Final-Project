@@ -81,7 +81,7 @@
             this.lblTotalCargoWeight.AutoSize = true;
             this.lblTotalCargoWeight.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalCargoWeight.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalCargoWeight.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalCargoWeight.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblTotalCargoWeight.Location = new System.Drawing.Point(397, 188);
             this.lblTotalCargoWeight.Name = "lblTotalCargoWeight";
             this.lblTotalCargoWeight.Size = new System.Drawing.Size(151, 20);
@@ -93,7 +93,7 @@
             this.lblDestination.AutoSize = true;
             this.lblDestination.BackColor = System.Drawing.Color.Transparent;
             this.lblDestination.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDestination.ForeColor = System.Drawing.Color.Black;
+            this.lblDestination.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblDestination.Location = new System.Drawing.Point(43, 147);
             this.lblDestination.Name = "lblDestination";
             this.lblDestination.Size = new System.Drawing.Size(92, 20);
@@ -105,7 +105,7 @@
             this.lblCargoParcelAmount.AutoSize = true;
             this.lblCargoParcelAmount.BackColor = System.Drawing.Color.Transparent;
             this.lblCargoParcelAmount.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCargoParcelAmount.ForeColor = System.Drawing.Color.Black;
+            this.lblCargoParcelAmount.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblCargoParcelAmount.Location = new System.Drawing.Point(387, 103);
             this.lblCargoParcelAmount.Name = "lblCargoParcelAmount";
             this.lblCargoParcelAmount.Size = new System.Drawing.Size(164, 20);
@@ -117,7 +117,7 @@
             this.lblTotalCargoVolume.AutoSize = true;
             this.lblTotalCargoVolume.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalCargoVolume.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalCargoVolume.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalCargoVolume.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblTotalCargoVolume.Location = new System.Drawing.Point(397, 147);
             this.lblTotalCargoVolume.Name = "lblTotalCargoVolume";
             this.lblTotalCargoVolume.Size = new System.Drawing.Size(154, 20);
@@ -129,8 +129,8 @@
             this.lblEstimatedDepartureDate.AutoSize = true;
             this.lblEstimatedDepartureDate.BackColor = System.Drawing.Color.Transparent;
             this.lblEstimatedDepartureDate.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblEstimatedDepartureDate.ForeColor = System.Drawing.Color.Black;
-            this.lblEstimatedDepartureDate.Location = new System.Drawing.Point(37, 262);
+            this.lblEstimatedDepartureDate.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblEstimatedDepartureDate.Location = new System.Drawing.Point(51, 262);
             this.lblEstimatedDepartureDate.Name = "lblEstimatedDepartureDate";
             this.lblEstimatedDepartureDate.Size = new System.Drawing.Size(197, 20);
             this.lblEstimatedDepartureDate.TabIndex = 41;
@@ -141,7 +141,7 @@
             this.lblCargoName.AutoSize = true;
             this.lblCargoName.BackColor = System.Drawing.Color.Transparent;
             this.lblCargoName.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCargoName.ForeColor = System.Drawing.Color.Black;
+            this.lblCargoName.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblCargoName.Location = new System.Drawing.Point(34, 191);
             this.lblCargoName.Name = "lblCargoName";
             this.lblCargoName.Size = new System.Drawing.Size(100, 20);
@@ -153,8 +153,8 @@
             this.lblEstimatedArrivalDate.AutoSize = true;
             this.lblEstimatedArrivalDate.BackColor = System.Drawing.Color.Transparent;
             this.lblEstimatedArrivalDate.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblEstimatedArrivalDate.ForeColor = System.Drawing.Color.Black;
-            this.lblEstimatedArrivalDate.Location = new System.Drawing.Point(64, 319);
+            this.lblEstimatedArrivalDate.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblEstimatedArrivalDate.Location = new System.Drawing.Point(78, 319);
             this.lblEstimatedArrivalDate.Name = "lblEstimatedArrivalDate";
             this.lblEstimatedArrivalDate.Size = new System.Drawing.Size(170, 20);
             this.lblEstimatedArrivalDate.TabIndex = 39;
@@ -162,6 +162,7 @@
             // 
             // txtCargoName
             // 
+            this.txtCargoName.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtCargoName.Location = new System.Drawing.Point(137, 190);
             this.txtCargoName.Name = "txtCargoName";
             this.txtCargoName.Size = new System.Drawing.Size(207, 20);
@@ -169,6 +170,7 @@
             // 
             // txtCargoParcelAmount
             // 
+            this.txtCargoParcelAmount.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtCargoParcelAmount.Location = new System.Drawing.Point(556, 104);
             this.txtCargoParcelAmount.Name = "txtCargoParcelAmount";
             this.txtCargoParcelAmount.Size = new System.Drawing.Size(206, 20);
@@ -176,6 +178,7 @@
             // 
             // txtTotalCargoVolume
             // 
+            this.txtTotalCargoVolume.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtTotalCargoVolume.Location = new System.Drawing.Point(556, 147);
             this.txtTotalCargoVolume.Name = "txtTotalCargoVolume";
             this.txtTotalCargoVolume.Size = new System.Drawing.Size(207, 20);
@@ -186,7 +189,7 @@
             this.lblSource.AutoSize = true;
             this.lblSource.BackColor = System.Drawing.Color.Transparent;
             this.lblSource.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSource.ForeColor = System.Drawing.Color.Black;
+            this.lblSource.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblSource.Location = new System.Drawing.Point(71, 104);
             this.lblSource.Name = "lblSource";
             this.lblSource.Size = new System.Drawing.Size(60, 20);
@@ -195,6 +198,7 @@
             // 
             // txtDestination
             // 
+            this.txtDestination.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtDestination.Location = new System.Drawing.Point(137, 147);
             this.txtDestination.Name = "txtDestination";
             this.txtDestination.ReadOnly = true;
@@ -203,6 +207,7 @@
             // 
             // txtTotalCargoWeight
             // 
+            this.txtTotalCargoWeight.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtTotalCargoWeight.Location = new System.Drawing.Point(556, 187);
             this.txtTotalCargoWeight.Name = "txtTotalCargoWeight";
             this.txtTotalCargoWeight.Size = new System.Drawing.Size(205, 20);
@@ -210,6 +215,7 @@
             // 
             // txtSource
             // 
+            this.txtSource.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtSource.Location = new System.Drawing.Point(137, 103);
             this.txtSource.Name = "txtSource";
             this.txtSource.ReadOnly = true;
@@ -233,11 +239,11 @@
             // lblCreateExpedition
             // 
             this.lblCreateExpedition.AutoSize = true;
-            this.lblCreateExpedition.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCreateExpedition.ForeColor = System.Drawing.Color.Brown;
+            this.lblCreateExpedition.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCreateExpedition.ForeColor = System.Drawing.Color.White;
             this.lblCreateExpedition.Location = new System.Drawing.Point(283, 23);
             this.lblCreateExpedition.Name = "lblCreateExpedition";
-            this.lblCreateExpedition.Size = new System.Drawing.Size(222, 29);
+            this.lblCreateExpedition.Size = new System.Drawing.Size(263, 33);
             this.lblCreateExpedition.TabIndex = 50;
             this.lblCreateExpedition.Text = "Create Expedition";
             // 
@@ -245,7 +251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Bisque;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblCreateExpedition);
             this.Controls.Add(this.dtpEstimatedArrivalDate);

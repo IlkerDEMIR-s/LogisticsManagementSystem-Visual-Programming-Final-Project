@@ -89,6 +89,7 @@
             // 
             // cbxUpdateCategory
             // 
+            this.cbxUpdateCategory.BackColor = System.Drawing.SystemColors.ControlLight;
             this.cbxUpdateCategory.FormattingEnabled = true;
             this.cbxUpdateCategory.Location = new System.Drawing.Point(105, 59);
             this.cbxUpdateCategory.Name = "cbxUpdateCategory";
@@ -97,16 +98,18 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnUpdate.Location = new System.Drawing.Point(121, 160);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "&Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtUpdateUnitInStock
             // 
+            this.txtUpdateUnitInStock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtUpdateUnitInStock.Location = new System.Drawing.Point(105, 134);
             this.txtUpdateUnitInStock.Name = "txtUpdateUnitInStock";
             this.txtUpdateUnitInStock.Size = new System.Drawing.Size(121, 20);
@@ -114,6 +117,7 @@
             // 
             // txtUpdateUnitPrice
             // 
+            this.txtUpdateUnitPrice.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtUpdateUnitPrice.Location = new System.Drawing.Point(105, 97);
             this.txtUpdateUnitPrice.Name = "txtUpdateUnitPrice";
             this.txtUpdateUnitPrice.Size = new System.Drawing.Size(121, 20);
@@ -121,6 +125,7 @@
             // 
             // txtUpdateProductName
             // 
+            this.txtUpdateProductName.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtUpdateProductName.Location = new System.Drawing.Point(105, 20);
             this.txtUpdateProductName.Name = "txtUpdateProductName";
             this.txtUpdateProductName.Size = new System.Drawing.Size(121, 20);
@@ -182,6 +187,7 @@
             // 
             // cbxAddCategory
             // 
+            this.cbxAddCategory.BackColor = System.Drawing.SystemColors.ControlLight;
             this.cbxAddCategory.FormattingEnabled = true;
             this.cbxAddCategory.Location = new System.Drawing.Point(105, 59);
             this.cbxAddCategory.Name = "cbxAddCategory";
@@ -190,16 +196,18 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnAdd.Location = new System.Drawing.Point(151, 167);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "&Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtAddUnitInStock
             // 
+            this.txtAddUnitInStock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtAddUnitInStock.Location = new System.Drawing.Point(105, 132);
             this.txtAddUnitInStock.Name = "txtAddUnitInStock";
             this.txtAddUnitInStock.Size = new System.Drawing.Size(121, 20);
@@ -207,6 +215,7 @@
             // 
             // txtAddUnitPrice
             // 
+            this.txtAddUnitPrice.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtAddUnitPrice.Location = new System.Drawing.Point(105, 97);
             this.txtAddUnitPrice.Name = "txtAddUnitPrice";
             this.txtAddUnitPrice.Size = new System.Drawing.Size(121, 20);
@@ -214,6 +223,7 @@
             // 
             // txtAddProductName
             // 
+            this.txtAddProductName.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtAddProductName.Location = new System.Drawing.Point(105, 23);
             this.txtAddProductName.Name = "txtAddProductName";
             this.txtAddProductName.Size = new System.Drawing.Size(121, 20);
@@ -269,6 +279,7 @@
             // 
             // btnDeleteProduct
             // 
+            this.btnDeleteProduct.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnDeleteProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDeleteProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteProduct.Image")));
             this.btnDeleteProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -277,7 +288,7 @@
             this.btnDeleteProduct.Size = new System.Drawing.Size(190, 40);
             this.btnDeleteProduct.TabIndex = 5;
             this.btnDeleteProduct.Text = "&Delete Product";
-            this.btnDeleteProduct.UseVisualStyleBackColor = true;
+            this.btnDeleteProduct.UseVisualStyleBackColor = false;
             this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
             // 
             // lblSearchProductName
@@ -291,6 +302,7 @@
             // 
             // txtSearchProductName
             // 
+            this.txtSearchProductName.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtSearchProductName.Location = new System.Drawing.Point(87, 35);
             this.txtSearchProductName.Name = "txtSearchProductName";
             this.txtSearchProductName.Size = new System.Drawing.Size(160, 20);
@@ -322,6 +334,7 @@
             // 
             // btnHomePage
             // 
+            this.btnHomePage.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnHomePage.Image = ((System.Drawing.Image)(resources.GetObject("btnHomePage.Image")));
             this.btnHomePage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnHomePage.Location = new System.Drawing.Point(14, 12);
@@ -331,7 +344,7 @@
             this.btnHomePage.Text = "&Home Page";
             this.btnHomePage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHomePage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnHomePage.UseVisualStyleBackColor = true;
+            this.btnHomePage.UseVisualStyleBackColor = false;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
             // gbxCategory
@@ -347,6 +360,7 @@
             // 
             // cbxSearchCategory
             // 
+            this.cbxSearchCategory.BackColor = System.Drawing.SystemColors.ControlLight;
             this.cbxSearchCategory.FormattingEnabled = true;
             this.cbxSearchCategory.Location = new System.Drawing.Point(95, 35);
             this.cbxSearchCategory.Name = "cbxSearchCategory";
@@ -367,6 +381,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(688, 507);
             this.Controls.Add(this.gbxCategory);
             this.Controls.Add(this.btnDeleteProduct);

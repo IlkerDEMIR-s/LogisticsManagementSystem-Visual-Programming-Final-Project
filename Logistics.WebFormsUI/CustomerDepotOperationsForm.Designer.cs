@@ -36,6 +36,7 @@
             this.lblSearchDepotName = new System.Windows.Forms.Label();
             this.dgwDepots = new System.Windows.Forms.DataGridView();
             this.gbxAddDepot = new System.Windows.Forms.GroupBox();
+            this.cbxProducts = new System.Windows.Forms.ComboBox();
             this.txtCountry = new System.Windows.Forms.TextBox();
             this.lblCountry = new System.Windows.Forms.Label();
             this.rtxtAdress = new System.Windows.Forms.RichTextBox();
@@ -52,6 +53,7 @@
             this.txtDepotName = new System.Windows.Forms.TextBox();
             this.lblContactTitle = new System.Windows.Forms.Label();
             this.lblContactName = new System.Windows.Forms.Label();
+            this.lblProduct = new System.Windows.Forms.Label();
             this.lblDepotName = new System.Windows.Forms.Label();
             this.gbxUpdate = new System.Windows.Forms.GroupBox();
             this.txtUpdateUnitInStock = new System.Windows.Forms.TextBox();
@@ -69,8 +71,6 @@
             this.lblUpdateContactName = new System.Windows.Forms.Label();
             this.btnCloseDepot = new System.Windows.Forms.Button();
             this.btnCloneDepot = new System.Windows.Forms.Button();
-            this.lblProduct = new System.Windows.Forms.Label();
-            this.cbxProducts = new System.Windows.Forms.ComboBox();
             this.gbxSearchByName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwDepots)).BeginInit();
@@ -80,6 +80,7 @@
             // 
             // btnHomePage
             // 
+            this.btnHomePage.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnHomePage.Image = ((System.Drawing.Image)(resources.GetObject("btnHomePage.Image")));
             this.btnHomePage.Location = new System.Drawing.Point(12, 12);
             this.btnHomePage.Name = "btnHomePage";
@@ -88,14 +89,17 @@
             this.btnHomePage.Text = "&Home Page";
             this.btnHomePage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHomePage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnHomePage.UseVisualStyleBackColor = true;
+            this.btnHomePage.UseVisualStyleBackColor = false;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
             // gbxSearchByName
             // 
+            this.gbxSearchByName.BackColor = System.Drawing.Color.Transparent;
             this.gbxSearchByName.Controls.Add(this.pbxSearch);
             this.gbxSearchByName.Controls.Add(this.txtSearchDepotName);
             this.gbxSearchByName.Controls.Add(this.lblSearchDepotName);
+            this.gbxSearchByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gbxSearchByName.ForeColor = System.Drawing.SystemColors.GrayText;
             this.gbxSearchByName.Location = new System.Drawing.Point(115, 12);
             this.gbxSearchByName.Name = "gbxSearchByName";
             this.gbxSearchByName.Size = new System.Drawing.Size(309, 67);
@@ -115,7 +119,9 @@
             // 
             // txtSearchDepotName
             // 
-            this.txtSearchDepotName.Location = new System.Drawing.Point(87, 35);
+            this.txtSearchDepotName.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtSearchDepotName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSearchDepotName.Location = new System.Drawing.Point(87, 37);
             this.txtSearchDepotName.Name = "txtSearchDepotName";
             this.txtSearchDepotName.Size = new System.Drawing.Size(163, 20);
             this.txtSearchDepotName.TabIndex = 0;
@@ -124,7 +130,9 @@
             // lblSearchDepotName
             // 
             this.lblSearchDepotName.AutoSize = true;
-            this.lblSearchDepotName.Location = new System.Drawing.Point(6, 38);
+            this.lblSearchDepotName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSearchDepotName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblSearchDepotName.Location = new System.Drawing.Point(14, 40);
             this.lblSearchDepotName.Name = "lblSearchDepotName";
             this.lblSearchDepotName.Size = new System.Drawing.Size(67, 13);
             this.lblSearchDepotName.TabIndex = 0;
@@ -170,8 +178,18 @@
             this.gbxAddDepot.TabStop = false;
             this.gbxAddDepot.Text = "Add new depot";
             // 
+            // cbxProducts
+            // 
+            this.cbxProducts.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.cbxProducts.FormattingEnabled = true;
+            this.cbxProducts.Location = new System.Drawing.Point(83, 61);
+            this.cbxProducts.Name = "cbxProducts";
+            this.cbxProducts.Size = new System.Drawing.Size(124, 21);
+            this.cbxProducts.TabIndex = 22;
+            // 
             // txtCountry
             // 
+            this.txtCountry.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtCountry.Location = new System.Drawing.Point(291, 58);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(115, 20);
@@ -188,6 +206,7 @@
             // 
             // rtxtAdress
             // 
+            this.rtxtAdress.BackColor = System.Drawing.SystemColors.ControlLight;
             this.rtxtAdress.Location = new System.Drawing.Point(83, 158);
             this.rtxtAdress.Name = "rtxtAdress";
             this.rtxtAdress.Size = new System.Drawing.Size(323, 58);
@@ -196,6 +215,7 @@
             // 
             // txtPhone
             // 
+            this.txtPhone.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtPhone.Location = new System.Drawing.Point(291, 93);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(115, 20);
@@ -203,6 +223,7 @@
             // 
             // txtUnitInStock
             // 
+            this.txtUnitInStock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtUnitInStock.Location = new System.Drawing.Point(291, 130);
             this.txtUnitInStock.Name = "txtUnitInStock";
             this.txtUnitInStock.Size = new System.Drawing.Size(115, 20);
@@ -210,6 +231,7 @@
             // 
             // txtCity
             // 
+            this.txtCity.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtCity.Location = new System.Drawing.Point(291, 23);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(115, 20);
@@ -253,16 +275,18 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnAdd.Location = new System.Drawing.Point(178, 222);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(92, 23);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "&Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtContactTitle
             // 
+            this.txtContactTitle.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtContactTitle.Location = new System.Drawing.Point(83, 129);
             this.txtContactTitle.Name = "txtContactTitle";
             this.txtContactTitle.Size = new System.Drawing.Size(124, 20);
@@ -270,6 +294,7 @@
             // 
             // txtContactName
             // 
+            this.txtContactName.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtContactName.Location = new System.Drawing.Point(83, 94);
             this.txtContactName.Name = "txtContactName";
             this.txtContactName.Size = new System.Drawing.Size(124, 20);
@@ -277,6 +302,7 @@
             // 
             // txtDepotName
             // 
+            this.txtDepotName.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtDepotName.Location = new System.Drawing.Point(83, 20);
             this.txtDepotName.Name = "txtDepotName";
             this.txtDepotName.Size = new System.Drawing.Size(124, 20);
@@ -299,6 +325,15 @@
             this.lblContactName.Size = new System.Drawing.Size(75, 13);
             this.lblContactName.TabIndex = 2;
             this.lblContactName.Text = "Contact Name";
+            // 
+            // lblProduct
+            // 
+            this.lblProduct.AutoSize = true;
+            this.lblProduct.Location = new System.Drawing.Point(19, 65);
+            this.lblProduct.Name = "lblProduct";
+            this.lblProduct.Size = new System.Drawing.Size(58, 13);
+            this.lblProduct.TabIndex = 1;
+            this.lblProduct.Text = "Product ID";
             // 
             // lblDepotName
             // 
@@ -333,6 +368,7 @@
             // 
             // txtUpdateUnitInStock
             // 
+            this.txtUpdateUnitInStock.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtUpdateUnitInStock.Location = new System.Drawing.Point(328, 125);
             this.txtUpdateUnitInStock.Name = "txtUpdateUnitInStock";
             this.txtUpdateUnitInStock.Size = new System.Drawing.Size(115, 20);
@@ -349,6 +385,7 @@
             // 
             // txtUpdatePhone
             // 
+            this.txtUpdatePhone.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtUpdatePhone.Location = new System.Drawing.Point(83, 125);
             this.txtUpdatePhone.Name = "txtUpdatePhone";
             this.txtUpdatePhone.Size = new System.Drawing.Size(163, 20);
@@ -365,6 +402,7 @@
             // 
             // txtUpdateAddress
             // 
+            this.txtUpdateAddress.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtUpdateAddress.Location = new System.Drawing.Point(83, 158);
             this.txtUpdateAddress.Name = "txtUpdateAddress";
             this.txtUpdateAddress.Size = new System.Drawing.Size(360, 47);
@@ -373,6 +411,7 @@
             // 
             // txtUpdateDepotName
             // 
+            this.txtUpdateDepotName.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtUpdateDepotName.Location = new System.Drawing.Point(83, 24);
             this.txtUpdateDepotName.Name = "txtUpdateDepotName";
             this.txtUpdateDepotName.Size = new System.Drawing.Size(163, 20);
@@ -398,6 +437,7 @@
             // 
             // txtUpdateContactTitle
             // 
+            this.txtUpdateContactTitle.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtUpdateContactTitle.Location = new System.Drawing.Point(83, 91);
             this.txtUpdateContactTitle.Name = "txtUpdateContactTitle";
             this.txtUpdateContactTitle.Size = new System.Drawing.Size(163, 20);
@@ -405,16 +445,18 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnUpdate.Location = new System.Drawing.Point(109, 220);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(92, 23);
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "&Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtUpdateContactName
             // 
+            this.txtUpdateContactName.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtUpdateContactName.Location = new System.Drawing.Point(83, 56);
             this.txtUpdateContactName.Name = "txtUpdateContactName";
             this.txtUpdateContactName.Size = new System.Drawing.Size(163, 20);
@@ -440,6 +482,7 @@
             // 
             // btnCloseDepot
             // 
+            this.btnCloseDepot.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnCloseDepot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCloseDepot.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseDepot.Image")));
             this.btnCloseDepot.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -448,11 +491,12 @@
             this.btnCloseDepot.Size = new System.Drawing.Size(161, 67);
             this.btnCloseDepot.TabIndex = 4;
             this.btnCloseDepot.Text = "&Close Depot";
-            this.btnCloseDepot.UseVisualStyleBackColor = true;
+            this.btnCloseDepot.UseVisualStyleBackColor = false;
             this.btnCloseDepot.Click += new System.EventHandler(this.btnCloseDepot_Click);
             // 
             // btnCloneDepot
             // 
+            this.btnCloneDepot.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnCloneDepot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCloneDepot.Image = ((System.Drawing.Image)(resources.GetObject("btnCloneDepot.Image")));
             this.btnCloneDepot.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -461,30 +505,14 @@
             this.btnCloneDepot.Size = new System.Drawing.Size(165, 42);
             this.btnCloneDepot.TabIndex = 8;
             this.btnCloneDepot.Text = "Clo&ne Depot";
-            this.btnCloneDepot.UseVisualStyleBackColor = true;
+            this.btnCloneDepot.UseVisualStyleBackColor = false;
             this.btnCloneDepot.Click += new System.EventHandler(this.btnCloneDepot_Click);
-            // 
-            // lblProduct
-            // 
-            this.lblProduct.AutoSize = true;
-            this.lblProduct.Location = new System.Drawing.Point(19, 65);
-            this.lblProduct.Name = "lblProduct";
-            this.lblProduct.Size = new System.Drawing.Size(58, 13);
-            this.lblProduct.TabIndex = 1;
-            this.lblProduct.Text = "Product ID";
-            // 
-            // cbxProducts
-            // 
-            this.cbxProducts.FormattingEnabled = true;
-            this.cbxProducts.Location = new System.Drawing.Point(83, 61);
-            this.cbxProducts.Name = "cbxProducts";
-            this.cbxProducts.Size = new System.Drawing.Size(124, 21);
-            this.cbxProducts.TabIndex = 22;
             // 
             // CustomerDepotOperationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(922, 494);
             this.Controls.Add(this.btnCloneDepot);
             this.Controls.Add(this.btnCloseDepot);

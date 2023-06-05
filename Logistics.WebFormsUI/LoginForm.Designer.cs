@@ -84,7 +84,7 @@
             this.cbxShowPassword.AutoSize = true;
             this.cbxShowPassword.BackColor = System.Drawing.Color.Transparent;
             this.cbxShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbxShowPassword.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.cbxShowPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cbxShowPassword.Location = new System.Drawing.Point(625, 295);
             this.cbxShowPassword.Name = "cbxShowPassword";
             this.cbxShowPassword.Size = new System.Drawing.Size(59, 19);
@@ -115,7 +115,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPassword.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblPassword.Location = new System.Drawing.Point(521, 269);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(86, 20);
@@ -127,7 +127,7 @@
             this.lblCompanyName.AutoSize = true;
             this.lblCompanyName.BackColor = System.Drawing.Color.Transparent;
             this.lblCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCompanyName.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblCompanyName.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblCompanyName.Location = new System.Drawing.Point(473, 230);
             this.lblCompanyName.Name = "lblCompanyName";
             this.lblCompanyName.Size = new System.Drawing.Size(134, 20);
@@ -139,7 +139,7 @@
             this.lblFactoryType.AutoSize = true;
             this.lblFactoryType.BackColor = System.Drawing.Color.Transparent;
             this.lblFactoryType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblFactoryType.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblFactoryType.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblFactoryType.Location = new System.Drawing.Point(495, 187);
             this.lblFactoryType.Name = "lblFactoryType";
             this.lblFactoryType.Size = new System.Drawing.Size(112, 20);
@@ -152,7 +152,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblTitle.Location = new System.Drawing.Point(214, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(406, 37);

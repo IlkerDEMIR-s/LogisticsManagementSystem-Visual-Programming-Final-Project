@@ -75,6 +75,7 @@
             // 
             // btnProductOperations
             // 
+            this.btnProductOperations.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnProductOperations.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnProductOperations.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnProductOperations.Image = ((System.Drawing.Image)(resources.GetObject("btnProductOperations.Image")));
@@ -85,11 +86,12 @@
             this.btnProductOperations.Text = "&Product Operations";
             this.btnProductOperations.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnProductOperations.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProductOperations.UseVisualStyleBackColor = true;
+            this.btnProductOperations.UseVisualStyleBackColor = false;
             this.btnProductOperations.Click += new System.EventHandler(this.btnProductOperations_Click);
             // 
             // btnDepotOperations
             // 
+            this.btnDepotOperations.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnDepotOperations.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDepotOperations.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnDepotOperations.Image = ((System.Drawing.Image)(resources.GetObject("btnDepotOperations.Image")));
@@ -100,11 +102,12 @@
             this.btnDepotOperations.TabIndex = 2;
             this.btnDepotOperations.Text = "&Depot Operations";
             this.btnDepotOperations.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDepotOperations.UseVisualStyleBackColor = true;
+            this.btnDepotOperations.UseVisualStyleBackColor = false;
             this.btnDepotOperations.Click += new System.EventHandler(this.btnDepotOperations_Click);
             // 
             // btnCustomerTransactions
             // 
+            this.btnCustomerTransactions.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnCustomerTransactions.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCustomerTransactions.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnCustomerTransactions.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomerTransactions.Image")));
@@ -117,7 +120,7 @@
             this.btnCustomerTransactions.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCustomerTransactions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCustomerTransactions.UseCompatibleTextRendering = true;
-            this.btnCustomerTransactions.UseVisualStyleBackColor = true;
+            this.btnCustomerTransactions.UseVisualStyleBackColor = false;
             this.btnCustomerTransactions.Click += new System.EventHandler(this.btnCustomerTransactions_Click);
             // 
             // lblCompanyName
@@ -221,7 +224,7 @@
             // 
             // gbxFactoryInfo
             // 
-            this.gbxFactoryInfo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.gbxFactoryInfo.BackColor = System.Drawing.Color.Transparent;
             this.gbxFactoryInfo.Controls.Add(this.txtCompanyName);
             this.gbxFactoryInfo.Controls.Add(this.txtContactName);
             this.gbxFactoryInfo.Controls.Add(this.txtCity);
@@ -240,6 +243,8 @@
             this.gbxFactoryInfo.Controls.Add(this.lblContactTitle);
             this.gbxFactoryInfo.Controls.Add(this.lblCity);
             this.gbxFactoryInfo.Controls.Add(this.lblAddress);
+            this.gbxFactoryInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gbxFactoryInfo.ForeColor = System.Drawing.SystemColors.GrayText;
             this.gbxFactoryInfo.Location = new System.Drawing.Point(12, 27);
             this.gbxFactoryInfo.Name = "gbxFactoryInfo";
             this.gbxFactoryInfo.Size = new System.Drawing.Size(393, 356);
@@ -249,69 +254,85 @@
             // 
             // txtCompanyName
             // 
+            this.txtCompanyName.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCompanyName.Location = new System.Drawing.Point(125, 70);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.ReadOnly = true;
-            this.txtCompanyName.Size = new System.Drawing.Size(172, 20);
+            this.txtCompanyName.Size = new System.Drawing.Size(172, 21);
             this.txtCompanyName.TabIndex = 29;
             this.txtCompanyName.TabStop = false;
             // 
             // txtContactName
             // 
+            this.txtContactName.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtContactName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtContactName.Location = new System.Drawing.Point(111, 104);
             this.txtContactName.Name = "txtContactName";
             this.txtContactName.ReadOnly = true;
-            this.txtContactName.Size = new System.Drawing.Size(172, 20);
+            this.txtContactName.Size = new System.Drawing.Size(172, 21);
             this.txtContactName.TabIndex = 28;
             this.txtContactName.TabStop = false;
             // 
             // txtCity
             // 
+            this.txtCity.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCity.Location = new System.Drawing.Point(61, 208);
             this.txtCity.Name = "txtCity";
             this.txtCity.ReadOnly = true;
-            this.txtCity.Size = new System.Drawing.Size(172, 20);
+            this.txtCity.Size = new System.Drawing.Size(172, 21);
             this.txtCity.TabIndex = 26;
             this.txtCity.TabStop = false;
             // 
             // txtCountry
             // 
+            this.txtCountry.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCountry.Location = new System.Drawing.Point(84, 232);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.ReadOnly = true;
-            this.txtCountry.Size = new System.Drawing.Size(172, 20);
+            this.txtCountry.Size = new System.Drawing.Size(172, 21);
             this.txtCountry.TabIndex = 25;
             this.txtCountry.TabStop = false;
             // 
             // txtPhone
             // 
+            this.txtPhone.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPhone.Location = new System.Drawing.Point(72, 258);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.ReadOnly = true;
-            this.txtPhone.Size = new System.Drawing.Size(172, 20);
+            this.txtPhone.Size = new System.Drawing.Size(172, 21);
             this.txtPhone.TabIndex = 24;
             this.txtPhone.TabStop = false;
             // 
             // txtContactTitle
             // 
+            this.txtContactTitle.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtContactTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtContactTitle.Location = new System.Drawing.Point(111, 130);
             this.txtContactTitle.Name = "txtContactTitle";
             this.txtContactTitle.ReadOnly = true;
-            this.txtContactTitle.Size = new System.Drawing.Size(172, 20);
+            this.txtContactTitle.Size = new System.Drawing.Size(172, 21);
             this.txtContactTitle.TabIndex = 22;
             this.txtContactTitle.TabStop = false;
             // 
             // txtFactoryType
             // 
+            this.txtFactoryType.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtFactoryType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtFactoryType.Location = new System.Drawing.Point(111, 36);
             this.txtFactoryType.Name = "txtFactoryType";
             this.txtFactoryType.ReadOnly = true;
-            this.txtFactoryType.Size = new System.Drawing.Size(172, 20);
+            this.txtFactoryType.Size = new System.Drawing.Size(172, 21);
             this.txtFactoryType.TabIndex = 1;
             this.txtFactoryType.TabStop = false;
             // 
             // txtAddress
             // 
+            this.txtAddress.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAddress.Location = new System.Drawing.Point(84, 162);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ReadOnly = true;
@@ -322,6 +343,8 @@
             // 
             // txtHomePage
             // 
+            this.txtHomePage.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtHomePage.Location = new System.Drawing.Point(96, 286);
             this.txtHomePage.Name = "txtHomePage";
             this.txtHomePage.ReadOnly = true;
@@ -361,6 +384,7 @@
             // 
             // rtbWarning
             // 
+            this.rtbWarning.BackColor = System.Drawing.SystemColors.ControlLight;
             this.rtbWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rtbWarning.Location = new System.Drawing.Point(12, 410);
             this.rtbWarning.Name = "rtbWarning";
@@ -480,6 +504,7 @@
             // 
             // btnOrderManagement
             // 
+            this.btnOrderManagement.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnOrderManagement.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOrderManagement.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnOrderManagement.Image = ((System.Drawing.Image)(resources.GetObject("btnOrderManagement.Image")));
@@ -491,11 +516,12 @@
             this.btnOrderManagement.Text = "&Order Management";
             this.btnOrderManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrderManagement.UseCompatibleTextRendering = true;
-            this.btnOrderManagement.UseVisualStyleBackColor = true;
+            this.btnOrderManagement.UseVisualStyleBackColor = false;
             this.btnOrderManagement.Click += new System.EventHandler(this.btnOrderManagement_Click);
             // 
             // btnReport
             // 
+            this.btnReport.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnReport.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnReport.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
@@ -507,13 +533,14 @@
             this.btnReport.Text = "&Reports";
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReport.UseCompatibleTextRendering = true;
-            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // SupplierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(718, 571);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnOrderManagement);
