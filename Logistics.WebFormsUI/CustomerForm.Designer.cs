@@ -165,6 +165,7 @@
             // 
             // dgwDepots
             // 
+            this.dgwDepots.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgwDepots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwDepots.Location = new System.Drawing.Point(323, 79);
             this.dgwDepots.Name = "dgwDepots";
@@ -540,7 +541,7 @@
             // 
             // helpToolStripMenuItemAbout
             // 
-            this.helpToolStripMenuItemAbout.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.helpToolStripMenuItemAbout.BackColor = System.Drawing.Color.LightBlue;
             this.helpToolStripMenuItemAbout.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.helpToolStripMenuItemAbout.Name = "helpToolStripMenuItemAbout";
             this.helpToolStripMenuItemAbout.Size = new System.Drawing.Size(52, 20);
@@ -549,7 +550,7 @@
             // 
             // helpToolStripMenuItemHelp
             // 
-            this.helpToolStripMenuItemHelp.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.helpToolStripMenuItemHelp.BackColor = System.Drawing.Color.LightBlue;
             this.helpToolStripMenuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemWithWebSite,
             this.toolStripSeparator1,
@@ -598,7 +599,7 @@
             // 
             // accountTransactionsToolStripMenuItem
             // 
-            this.accountTransactionsToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.accountTransactionsToolStripMenuItem.BackColor = System.Drawing.Color.LightBlue;
             this.accountTransactionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changePasswordToolStripMenuItem});
             this.accountTransactionsToolStripMenuItem.Name = "accountTransactionsToolStripMenuItem";
@@ -609,7 +610,7 @@
             // 
             this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 

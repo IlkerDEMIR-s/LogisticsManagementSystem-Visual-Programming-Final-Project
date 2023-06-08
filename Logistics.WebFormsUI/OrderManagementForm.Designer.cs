@@ -45,15 +45,26 @@
             this.dtpActualDepartureDate = new System.Windows.Forms.DateTimePicker();
             this.txtCargoName = new System.Windows.Forms.TextBox();
             this.btnActualDepartureDate = new System.Windows.Forms.Button();
+            this.menuStripBar = new System.Windows.Forms.MenuStrip();
+            this.helpToolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemWithWebSite = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemTips = new System.Windows.Forms.ToolStripMenuItem();
+            this.dffToolStripMenuItemGeneral = new System.Windows.Forms.ToolStripMenuItem();
+            this.ddfToolStripMenuItemSpecial = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwExpedition)).BeginInit();
             this.gbxOrderTransactions.SuspendLayout();
             this.gbxExpeditionOperations.SuspendLayout();
+            this.menuStripBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgwOrders
             // 
-            this.dgwOrders.BackgroundColor = System.Drawing.SystemColors.MenuBar;
+            this.dgwOrders.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgwOrders.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgwOrders.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgwOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -69,7 +80,7 @@
             this.btnHomePage.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnHomePage.Image = ((System.Drawing.Image)(resources.GetObject("btnHomePage.Image")));
             this.btnHomePage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHomePage.Location = new System.Drawing.Point(12, 9);
+            this.btnHomePage.Location = new System.Drawing.Point(12, 27);
             this.btnHomePage.Name = "btnHomePage";
             this.btnHomePage.Size = new System.Drawing.Size(88, 63);
             this.btnHomePage.TabIndex = 0;
@@ -176,7 +187,7 @@
             // 
             // dgwExpedition
             // 
-            this.dgwExpedition.BackgroundColor = System.Drawing.SystemColors.MenuBar;
+            this.dgwExpedition.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgwExpedition.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgwExpedition.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgwExpedition.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -199,7 +210,7 @@
             this.gbxOrderTransactions.Controls.Add(this.cbxUpdateStatus);
             this.gbxOrderTransactions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gbxOrderTransactions.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.gbxOrderTransactions.Location = new System.Drawing.Point(12, 78);
+            this.gbxOrderTransactions.Location = new System.Drawing.Point(12, 96);
             this.gbxOrderTransactions.Name = "gbxOrderTransactions";
             this.gbxOrderTransactions.Size = new System.Drawing.Size(901, 210);
             this.gbxOrderTransactions.TabIndex = 1;
@@ -218,7 +229,7 @@
             this.gbxExpeditionOperations.Controls.Add(this.btnExpeditionFilter);
             this.gbxExpeditionOperations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gbxExpeditionOperations.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.gbxExpeditionOperations.Location = new System.Drawing.Point(12, 305);
+            this.gbxExpeditionOperations.Location = new System.Drawing.Point(12, 323);
             this.gbxExpeditionOperations.Name = "gbxExpeditionOperations";
             this.gbxExpeditionOperations.Size = new System.Drawing.Size(901, 206);
             this.gbxExpeditionOperations.TabIndex = 2;
@@ -254,12 +265,101 @@
             this.btnActualDepartureDate.UseVisualStyleBackColor = false;
             this.btnActualDepartureDate.Click += new System.EventHandler(this.btnActualDepartureDate_Click);
             // 
+            // menuStripBar
+            // 
+            this.menuStripBar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStripBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItemAbout,
+            this.helpToolStripMenuItemHelp,
+            this.accountTransactionsToolStripMenuItem});
+            this.menuStripBar.Location = new System.Drawing.Point(0, 0);
+            this.menuStripBar.Name = "menuStripBar";
+            this.menuStripBar.Size = new System.Drawing.Size(924, 24);
+            this.menuStripBar.TabIndex = 3;
+            this.menuStripBar.Text = "menuStrip";
+            // 
+            // helpToolStripMenuItemAbout
+            // 
+            this.helpToolStripMenuItemAbout.BackColor = System.Drawing.Color.LightBlue;
+            this.helpToolStripMenuItemAbout.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.helpToolStripMenuItemAbout.Name = "helpToolStripMenuItemAbout";
+            this.helpToolStripMenuItemAbout.Size = new System.Drawing.Size(52, 20);
+            this.helpToolStripMenuItemAbout.Text = "About";
+            this.helpToolStripMenuItemAbout.Click += new System.EventHandler(this.helpToolStripMenuItemAbout_Click);
+            // 
+            // helpToolStripMenuItemHelp
+            // 
+            this.helpToolStripMenuItemHelp.BackColor = System.Drawing.Color.LightBlue;
+            this.helpToolStripMenuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemWithWebSite,
+            this.toolStripSeparator1,
+            this.toolStripMenuItemTips});
+            this.helpToolStripMenuItemHelp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.helpToolStripMenuItemHelp.Name = "helpToolStripMenuItemHelp";
+            this.helpToolStripMenuItemHelp.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItemHelp.Text = "Help";
+            // 
+            // toolStripMenuItemWithWebSite
+            // 
+            this.toolStripMenuItemWithWebSite.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemWithWebSite.Image")));
+            this.toolStripMenuItemWithWebSite.Name = "toolStripMenuItemWithWebSite";
+            this.toolStripMenuItemWithWebSite.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemWithWebSite.Text = "Tutorial";
+            this.toolStripMenuItemWithWebSite.Click += new System.EventHandler(this.toolStripMenuItemWithWebSite_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // toolStripMenuItemTips
+            // 
+            this.toolStripMenuItemTips.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dffToolStripMenuItemGeneral,
+            this.ddfToolStripMenuItemSpecial});
+            this.toolStripMenuItemTips.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemTips.Image")));
+            this.toolStripMenuItemTips.Name = "toolStripMenuItemTips";
+            this.toolStripMenuItemTips.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemTips.Text = "Tips";
+            // 
+            // dffToolStripMenuItemGeneral
+            // 
+            this.dffToolStripMenuItemGeneral.Name = "dffToolStripMenuItemGeneral";
+            this.dffToolStripMenuItemGeneral.Size = new System.Drawing.Size(180, 22);
+            this.dffToolStripMenuItemGeneral.Text = "General Tips";
+            this.dffToolStripMenuItemGeneral.Click += new System.EventHandler(this.dffToolStripMenuItemGeneral_Click);
+            // 
+            // ddfToolStripMenuItemSpecial
+            // 
+            this.ddfToolStripMenuItemSpecial.Name = "ddfToolStripMenuItemSpecial";
+            this.ddfToolStripMenuItemSpecial.Size = new System.Drawing.Size(180, 22);
+            this.ddfToolStripMenuItemSpecial.Text = "Special Tips";
+            this.ddfToolStripMenuItemSpecial.Click += new System.EventHandler(this.ddfToolStripMenuItemSpecial_Click);
+            // 
+            // accountTransactionsToolStripMenuItem
+            // 
+            this.accountTransactionsToolStripMenuItem.BackColor = System.Drawing.Color.LightBlue;
+            this.accountTransactionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changePasswordToolStripMenuItem});
+            this.accountTransactionsToolStripMenuItem.Name = "accountTransactionsToolStripMenuItem";
+            this.accountTransactionsToolStripMenuItem.Size = new System.Drawing.Size(131, 20);
+            this.accountTransactionsToolStripMenuItem.Text = "Account transactions";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Text = "Change password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click_1);
+            // 
             // OrderManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(924, 526);
+            this.ClientSize = new System.Drawing.Size(924, 536);
+            this.Controls.Add(this.menuStripBar);
             this.Controls.Add(this.gbxExpeditionOperations);
             this.Controls.Add(this.gbxOrderTransactions);
             this.Controls.Add(this.btnHomePage);
@@ -274,7 +374,10 @@
             this.gbxOrderTransactions.PerformLayout();
             this.gbxExpeditionOperations.ResumeLayout(false);
             this.gbxExpeditionOperations.PerformLayout();
+            this.menuStripBar.ResumeLayout(false);
+            this.menuStripBar.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -296,5 +399,15 @@
         private System.Windows.Forms.Button btnActualDepartureDate;
         private System.Windows.Forms.TextBox txtCargoName;
         private System.Windows.Forms.DateTimePicker dtpActualDepartureDate;
+        private System.Windows.Forms.MenuStrip menuStripBar;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItemAbout;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItemHelp;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWithWebSite;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTips;
+        private System.Windows.Forms.ToolStripMenuItem dffToolStripMenuItemGeneral;
+        private System.Windows.Forms.ToolStripMenuItem ddfToolStripMenuItemSpecial;
+        private System.Windows.Forms.ToolStripMenuItem accountTransactionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
     }
 }

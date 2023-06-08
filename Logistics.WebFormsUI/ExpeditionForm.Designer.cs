@@ -239,11 +239,11 @@
             // lblCreateExpedition
             // 
             this.lblCreateExpedition.AutoSize = true;
-            this.lblCreateExpedition.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCreateExpedition.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCreateExpedition.ForeColor = System.Drawing.Color.White;
             this.lblCreateExpedition.Location = new System.Drawing.Point(283, 23);
             this.lblCreateExpedition.Name = "lblCreateExpedition";
-            this.lblCreateExpedition.Size = new System.Drawing.Size(263, 33);
+            this.lblCreateExpedition.Size = new System.Drawing.Size(258, 39);
             this.lblCreateExpedition.TabIndex = 50;
             this.lblCreateExpedition.Text = "Create Expedition";
             // 

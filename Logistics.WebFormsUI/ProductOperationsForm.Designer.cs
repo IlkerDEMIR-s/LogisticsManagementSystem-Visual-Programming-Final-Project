@@ -61,12 +61,23 @@
             this.gbxCategory = new System.Windows.Forms.GroupBox();
             this.cbxSearchCategory = new System.Windows.Forms.ComboBox();
             this.lblSelect = new System.Windows.Forms.Label();
+            this.menuStripBar = new System.Windows.Forms.MenuStrip();
+            this.helpToolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemWithWebSite = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemTips = new System.Windows.Forms.ToolStripMenuItem();
+            this.dffToolStripMenuItemGeneral = new System.Windows.Forms.ToolStripMenuItem();
+            this.ddfToolStripMenuItemSpecial = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProduct)).BeginInit();
             this.gbxSearchByName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
             this.gbxCategory.SuspendLayout();
+            this.menuStripBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -80,7 +91,7 @@
             this.groupBox2.Controls.Add(this.lblUpdateUnitPrice);
             this.groupBox2.Controls.Add(this.lblUpdateCategory);
             this.groupBox2.Controls.Add(this.lblUpdateProductName);
-            this.groupBox2.Location = new System.Drawing.Point(370, 251);
+            this.groupBox2.Location = new System.Drawing.Point(370, 269);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(306, 207);
             this.groupBox2.TabIndex = 4;
@@ -178,7 +189,7 @@
             this.groupBox1.Controls.Add(this.lblAddUnitPrice);
             this.groupBox1.Controls.Add(this.lblAddCategory);
             this.groupBox1.Controls.Add(this.lblAddProductName);
-            this.groupBox1.Location = new System.Drawing.Point(16, 253);
+            this.groupBox1.Location = new System.Drawing.Point(16, 271);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(327, 205);
             this.groupBox1.TabIndex = 3;
@@ -267,8 +278,9 @@
             // 
             // dgwProduct
             // 
+            this.dgwProduct.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgwProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwProduct.Location = new System.Drawing.Point(16, 95);
+            this.dgwProduct.Location = new System.Drawing.Point(16, 113);
             this.dgwProduct.Name = "dgwProduct";
             this.dgwProduct.ReadOnly = true;
             this.dgwProduct.Size = new System.Drawing.Size(660, 134);
@@ -283,7 +295,7 @@
             this.btnDeleteProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDeleteProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteProduct.Image")));
             this.btnDeleteProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteProduct.Location = new System.Drawing.Point(22, 464);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(22, 482);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(190, 40);
             this.btnDeleteProduct.TabIndex = 5;
@@ -315,7 +327,7 @@
             this.gbxSearchByName.Controls.Add(this.pbxSearch);
             this.gbxSearchByName.Controls.Add(this.txtSearchProductName);
             this.gbxSearchByName.Controls.Add(this.lblSearchProductName);
-            this.gbxSearchByName.Location = new System.Drawing.Point(385, 12);
+            this.gbxSearchByName.Location = new System.Drawing.Point(385, 30);
             this.gbxSearchByName.Name = "gbxSearchByName";
             this.gbxSearchByName.Size = new System.Drawing.Size(291, 67);
             this.gbxSearchByName.TabIndex = 2;
@@ -337,7 +349,7 @@
             this.btnHomePage.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnHomePage.Image = ((System.Drawing.Image)(resources.GetObject("btnHomePage.Image")));
             this.btnHomePage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHomePage.Location = new System.Drawing.Point(14, 12);
+            this.btnHomePage.Location = new System.Drawing.Point(14, 30);
             this.btnHomePage.Name = "btnHomePage";
             this.btnHomePage.Size = new System.Drawing.Size(88, 67);
             this.btnHomePage.TabIndex = 0;
@@ -351,7 +363,7 @@
             // 
             this.gbxCategory.Controls.Add(this.cbxSearchCategory);
             this.gbxCategory.Controls.Add(this.lblSelect);
-            this.gbxCategory.Location = new System.Drawing.Point(108, 12);
+            this.gbxCategory.Location = new System.Drawing.Point(108, 30);
             this.gbxCategory.Name = "gbxCategory";
             this.gbxCategory.Size = new System.Drawing.Size(271, 67);
             this.gbxCategory.TabIndex = 1;
@@ -377,12 +389,101 @@
             this.lblSelect.TabIndex = 0;
             this.lblSelect.Text = "Select Category";
             // 
+            // menuStripBar
+            // 
+            this.menuStripBar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStripBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItemAbout,
+            this.helpToolStripMenuItemHelp,
+            this.accountTransactionsToolStripMenuItem});
+            this.menuStripBar.Location = new System.Drawing.Point(0, 0);
+            this.menuStripBar.Name = "menuStripBar";
+            this.menuStripBar.Size = new System.Drawing.Size(688, 24);
+            this.menuStripBar.TabIndex = 7;
+            this.menuStripBar.Text = "menuStrip";
+            // 
+            // helpToolStripMenuItemAbout
+            // 
+            this.helpToolStripMenuItemAbout.BackColor = System.Drawing.Color.LightBlue;
+            this.helpToolStripMenuItemAbout.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.helpToolStripMenuItemAbout.Name = "helpToolStripMenuItemAbout";
+            this.helpToolStripMenuItemAbout.Size = new System.Drawing.Size(52, 20);
+            this.helpToolStripMenuItemAbout.Text = "About";
+            this.helpToolStripMenuItemAbout.Click += new System.EventHandler(this.helpToolStripMenuItemAbout_Click);
+            // 
+            // helpToolStripMenuItemHelp
+            // 
+            this.helpToolStripMenuItemHelp.BackColor = System.Drawing.Color.LightBlue;
+            this.helpToolStripMenuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemWithWebSite,
+            this.toolStripSeparator1,
+            this.toolStripMenuItemTips});
+            this.helpToolStripMenuItemHelp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.helpToolStripMenuItemHelp.Name = "helpToolStripMenuItemHelp";
+            this.helpToolStripMenuItemHelp.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItemHelp.Text = "Help";
+            // 
+            // toolStripMenuItemWithWebSite
+            // 
+            this.toolStripMenuItemWithWebSite.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemWithWebSite.Image")));
+            this.toolStripMenuItemWithWebSite.Name = "toolStripMenuItemWithWebSite";
+            this.toolStripMenuItemWithWebSite.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemWithWebSite.Text = "Tutorial";
+            this.toolStripMenuItemWithWebSite.Click += new System.EventHandler(this.toolStripMenuItemWithWebSite_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
+            // 
+            // toolStripMenuItemTips
+            // 
+            this.toolStripMenuItemTips.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dffToolStripMenuItemGeneral,
+            this.ddfToolStripMenuItemSpecial});
+            this.toolStripMenuItemTips.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemTips.Image")));
+            this.toolStripMenuItemTips.Name = "toolStripMenuItemTips";
+            this.toolStripMenuItemTips.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemTips.Text = "Tips";
+            // 
+            // dffToolStripMenuItemGeneral
+            // 
+            this.dffToolStripMenuItemGeneral.Name = "dffToolStripMenuItemGeneral";
+            this.dffToolStripMenuItemGeneral.Size = new System.Drawing.Size(180, 22);
+            this.dffToolStripMenuItemGeneral.Text = "General Tips";
+            this.dffToolStripMenuItemGeneral.Click += new System.EventHandler(this.dffToolStripMenuItemGeneral_Click);
+            // 
+            // ddfToolStripMenuItemSpecial
+            // 
+            this.ddfToolStripMenuItemSpecial.Name = "ddfToolStripMenuItemSpecial";
+            this.ddfToolStripMenuItemSpecial.Size = new System.Drawing.Size(180, 22);
+            this.ddfToolStripMenuItemSpecial.Text = "Special Tips";
+            this.ddfToolStripMenuItemSpecial.Click += new System.EventHandler(this.ddfToolStripMenuItemSpecial_Click);
+            // 
+            // accountTransactionsToolStripMenuItem
+            // 
+            this.accountTransactionsToolStripMenuItem.BackColor = System.Drawing.Color.LightBlue;
+            this.accountTransactionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changePasswordToolStripMenuItem});
+            this.accountTransactionsToolStripMenuItem.Name = "accountTransactionsToolStripMenuItem";
+            this.accountTransactionsToolStripMenuItem.Size = new System.Drawing.Size(131, 20);
+            this.accountTransactionsToolStripMenuItem.Text = "Account transactions";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Text = "Change password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
             // ProductOperationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(688, 507);
+            this.ClientSize = new System.Drawing.Size(688, 522);
+            this.Controls.Add(this.menuStripBar);
             this.Controls.Add(this.gbxCategory);
             this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.btnHomePage);
@@ -405,7 +506,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).EndInit();
             this.gbxCategory.ResumeLayout(false);
             this.gbxCategory.PerformLayout();
+            this.menuStripBar.ResumeLayout(false);
+            this.menuStripBar.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -442,5 +546,15 @@
         private System.Windows.Forms.ComboBox cbxSearchCategory;
         private System.Windows.Forms.Label lblSelect;
         private System.Windows.Forms.PictureBox pbxSearch;
+        private System.Windows.Forms.MenuStrip menuStripBar;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItemAbout;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItemHelp;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWithWebSite;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTips;
+        private System.Windows.Forms.ToolStripMenuItem dffToolStripMenuItemGeneral;
+        private System.Windows.Forms.ToolStripMenuItem ddfToolStripMenuItemSpecial;
+        private System.Windows.Forms.ToolStripMenuItem accountTransactionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
     }
 }

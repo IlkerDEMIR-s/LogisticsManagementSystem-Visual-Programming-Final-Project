@@ -279,5 +279,39 @@ namespace Logistics.WebFormsUI
             _selectedSupplierDepotId = Convert.ToInt32(row.Cells[2].Value);
             _selectedCustomerDepotId = Convert.ToInt32(row.Cells[6].Value);
         }
+
+        private void toolStripMenuItemWithWebSite_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.microsoft.com/tr-tr");
+        }
+
+        private void dffToolStripMenuItemGeneral_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://visualstudio.microsoft.com/tr/");
+        }
+
+        private void ddfToolStripMenuItemSpecial_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://learn.microsoft.com/en-us/dotnet/desktop/winforms/?view=netdesktop-7.0");
+        }
+
+        private void helpToolStripMenuItemAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("We have been working on the development of logistics management systems for many years.",
+                                                        "Info", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePasswordForm changePasswordForm = new ChangePasswordForm(_factoryId, _factoryTypeId);
+            changePasswordForm.ShowDialog();
+
+        }
+
+        private void changePasswordToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ChangePasswordForm changePasswordForm = new ChangePasswordForm(_factoryId, _factoryTypeId);
+            changePasswordForm.ShowDialog();
+        }
     }
 }

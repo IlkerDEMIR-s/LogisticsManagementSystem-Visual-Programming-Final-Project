@@ -156,9 +156,17 @@ namespace Logistics.WebFormsUI
 
         private void btnUpdateStatus_Click(object sender, EventArgs e)
         {
-            if(dgwOrders.CurrentRow == null)
+            var statusColumn = Convert.ToInt32(dgwOrders.CurrentRow.Cells[12].Value.ToString());            
+
+            if (dgwOrders.CurrentRow == null)
             {
                 MessageBox.Show("Please select an order to update the status!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }            
+
+            if(statusColumn == FixedValues.ConfirmedStatusId || statusColumn == FixedValues.RejectedStatusId)
+            {
+                MessageBox.Show("You can not update the status of this order!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -374,6 +382,30 @@ namespace Logistics.WebFormsUI
             MessageBox.Show(message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
+        private void toolStripMenuItemWithWebSite_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.microsoft.com/tr-tr");
+        }
 
+        private void dffToolStripMenuItemGeneral_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://visualstudio.microsoft.com/tr/");
+        }
+
+        private void ddfToolStripMenuItemSpecial_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://learn.microsoft.com/en-us/dotnet/desktop/winforms/?view=netdesktop-7.0");
+        }
+
+        private void helpToolStripMenuItemAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("We have been working on the development of logistics management systems for many years.",
+                                                        "Info", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+        private void changePasswordToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ChangePasswordForm changePasswordForm = new ChangePasswordForm(_factoryId, _factoryTypeId);
+            changePasswordForm.ShowDialog();
+        }
     }
 }

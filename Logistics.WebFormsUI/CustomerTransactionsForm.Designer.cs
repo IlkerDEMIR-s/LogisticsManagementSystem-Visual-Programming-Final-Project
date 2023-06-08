@@ -40,14 +40,26 @@
             this.gbxDelete = new System.Windows.Forms.GroupBox();
             this.cbxDeleteCustomer = new System.Windows.Forms.ComboBox();
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
+            this.menuStripBar = new System.Windows.Forms.MenuStrip();
+            this.helpToolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemWithWebSite = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemTips = new System.Windows.Forms.ToolStripMenuItem();
+            this.dffToolStripMenuItemGeneral = new System.Windows.Forms.ToolStripMenuItem();
+            this.ddfToolStripMenuItemSpecial = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCustomers)).BeginInit();
             this.gbxDelete.SuspendLayout();
+            this.menuStripBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgwCustomers
             // 
+            this.dgwCustomers.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgwCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwCustomers.Location = new System.Drawing.Point(12, 85);
+            this.dgwCustomers.Location = new System.Drawing.Point(12, 99);
             this.dgwCustomers.Name = "dgwCustomers";
             this.dgwCustomers.ReadOnly = true;
             this.dgwCustomers.Size = new System.Drawing.Size(833, 87);
@@ -59,7 +71,7 @@
             this.btnHomePage.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnHomePage.Image = ((System.Drawing.Image)(resources.GetObject("btnHomePage.Image")));
             this.btnHomePage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHomePage.Location = new System.Drawing.Point(12, 12);
+            this.btnHomePage.Location = new System.Drawing.Point(12, 26);
             this.btnHomePage.Name = "btnHomePage";
             this.btnHomePage.Size = new System.Drawing.Size(88, 67);
             this.btnHomePage.TabIndex = 0;
@@ -89,7 +101,7 @@
             // 
             this.cbxCustomers.BackColor = System.Drawing.SystemColors.ControlLight;
             this.cbxCustomers.FormattingEnabled = true;
-            this.cbxCustomers.Location = new System.Drawing.Point(228, 21);
+            this.cbxCustomers.Location = new System.Drawing.Point(228, 35);
             this.cbxCustomers.Name = "cbxCustomers";
             this.cbxCustomers.Size = new System.Drawing.Size(219, 21);
             this.cbxCustomers.TabIndex = 1;
@@ -98,7 +110,7 @@
             // lblCustomers
             // 
             this.lblCustomers.AutoSize = true;
-            this.lblCustomers.Location = new System.Drawing.Point(166, 24);
+            this.lblCustomers.Location = new System.Drawing.Point(166, 38);
             this.lblCustomers.Name = "lblCustomers";
             this.lblCustomers.Size = new System.Drawing.Size(56, 13);
             this.lblCustomers.TabIndex = 7;
@@ -107,7 +119,7 @@
             // btnAddCustomer
             // 
             this.btnAddCustomer.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnAddCustomer.Location = new System.Drawing.Point(453, 21);
+            this.btnAddCustomer.Location = new System.Drawing.Point(453, 35);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(92, 23);
             this.btnAddCustomer.TabIndex = 2;
@@ -119,7 +131,7 @@
             // 
             this.gbxDelete.Controls.Add(this.cbxDeleteCustomer);
             this.gbxDelete.Controls.Add(this.btnDeleteCustomer);
-            this.gbxDelete.Location = new System.Drawing.Point(12, 188);
+            this.gbxDelete.Location = new System.Drawing.Point(12, 202);
             this.gbxDelete.Name = "gbxDelete";
             this.gbxDelete.Size = new System.Drawing.Size(833, 97);
             this.gbxDelete.TabIndex = 3;
@@ -146,12 +158,101 @@
             this.entityCommand1.EnablePlanCaching = true;
             this.entityCommand1.Transaction = null;
             // 
+            // menuStripBar
+            // 
+            this.menuStripBar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStripBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItemAbout,
+            this.helpToolStripMenuItemHelp,
+            this.accountTransactionsToolStripMenuItem});
+            this.menuStripBar.Location = new System.Drawing.Point(0, 0);
+            this.menuStripBar.Name = "menuStripBar";
+            this.menuStripBar.Size = new System.Drawing.Size(856, 24);
+            this.menuStripBar.TabIndex = 8;
+            this.menuStripBar.Text = "menuStrip";
+            // 
+            // helpToolStripMenuItemAbout
+            // 
+            this.helpToolStripMenuItemAbout.BackColor = System.Drawing.Color.LightBlue;
+            this.helpToolStripMenuItemAbout.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.helpToolStripMenuItemAbout.Name = "helpToolStripMenuItemAbout";
+            this.helpToolStripMenuItemAbout.Size = new System.Drawing.Size(52, 20);
+            this.helpToolStripMenuItemAbout.Text = "About";
+            this.helpToolStripMenuItemAbout.Click += new System.EventHandler(this.helpToolStripMenuItemAbout_Click);
+            // 
+            // helpToolStripMenuItemHelp
+            // 
+            this.helpToolStripMenuItemHelp.BackColor = System.Drawing.Color.LightBlue;
+            this.helpToolStripMenuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemWithWebSite,
+            this.toolStripSeparator1,
+            this.toolStripMenuItemTips});
+            this.helpToolStripMenuItemHelp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.helpToolStripMenuItemHelp.Name = "helpToolStripMenuItemHelp";
+            this.helpToolStripMenuItemHelp.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItemHelp.Text = "Help";
+            // 
+            // toolStripMenuItemWithWebSite
+            // 
+            this.toolStripMenuItemWithWebSite.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemWithWebSite.Image")));
+            this.toolStripMenuItemWithWebSite.Name = "toolStripMenuItemWithWebSite";
+            this.toolStripMenuItemWithWebSite.Size = new System.Drawing.Size(114, 22);
+            this.toolStripMenuItemWithWebSite.Text = "Tutorial";
+            this.toolStripMenuItemWithWebSite.Click += new System.EventHandler(this.toolStripMenuItemWithWebSite_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
+            // 
+            // toolStripMenuItemTips
+            // 
+            this.toolStripMenuItemTips.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dffToolStripMenuItemGeneral,
+            this.ddfToolStripMenuItemSpecial});
+            this.toolStripMenuItemTips.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemTips.Image")));
+            this.toolStripMenuItemTips.Name = "toolStripMenuItemTips";
+            this.toolStripMenuItemTips.Size = new System.Drawing.Size(114, 22);
+            this.toolStripMenuItemTips.Text = "Tips";
+            // 
+            // dffToolStripMenuItemGeneral
+            // 
+            this.dffToolStripMenuItemGeneral.Name = "dffToolStripMenuItemGeneral";
+            this.dffToolStripMenuItemGeneral.Size = new System.Drawing.Size(138, 22);
+            this.dffToolStripMenuItemGeneral.Text = "General Tips";
+            this.dffToolStripMenuItemGeneral.Click += new System.EventHandler(this.dffToolStripMenuItemGeneral_Click);
+            // 
+            // ddfToolStripMenuItemSpecial
+            // 
+            this.ddfToolStripMenuItemSpecial.Name = "ddfToolStripMenuItemSpecial";
+            this.ddfToolStripMenuItemSpecial.Size = new System.Drawing.Size(138, 22);
+            this.ddfToolStripMenuItemSpecial.Text = "Special Tips";
+            this.ddfToolStripMenuItemSpecial.Click += new System.EventHandler(this.ddfToolStripMenuItemSpecial_Click);
+            // 
+            // accountTransactionsToolStripMenuItem
+            // 
+            this.accountTransactionsToolStripMenuItem.BackColor = System.Drawing.Color.LightBlue;
+            this.accountTransactionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changePasswordToolStripMenuItem});
+            this.accountTransactionsToolStripMenuItem.Name = "accountTransactionsToolStripMenuItem";
+            this.accountTransactionsToolStripMenuItem.Size = new System.Drawing.Size(131, 20);
+            this.accountTransactionsToolStripMenuItem.Text = "Account transactions";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Text = "Change password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
             // CustomerTransactionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(856, 296);
+            this.ClientSize = new System.Drawing.Size(856, 306);
+            this.Controls.Add(this.menuStripBar);
             this.Controls.Add(this.gbxDelete);
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.lblCustomers);
@@ -165,6 +266,8 @@
             this.Load += new System.EventHandler(this.CustomerTransactionsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwCustomers)).EndInit();
             this.gbxDelete.ResumeLayout(false);
+            this.menuStripBar.ResumeLayout(false);
+            this.menuStripBar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +284,15 @@
         private System.Windows.Forms.GroupBox gbxDelete;
         private System.Windows.Forms.ComboBox cbxDeleteCustomer;
         private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
+        private System.Windows.Forms.MenuStrip menuStripBar;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItemAbout;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItemHelp;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWithWebSite;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTips;
+        private System.Windows.Forms.ToolStripMenuItem dffToolStripMenuItemGeneral;
+        private System.Windows.Forms.ToolStripMenuItem ddfToolStripMenuItemSpecial;
+        private System.Windows.Forms.ToolStripMenuItem accountTransactionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
     }
 }
