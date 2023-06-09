@@ -59,10 +59,10 @@
             // 
             this.dgwCustomers.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgwCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwCustomers.Location = new System.Drawing.Point(12, 99);
+            this.dgwCustomers.Location = new System.Drawing.Point(29, 117);
             this.dgwCustomers.Name = "dgwCustomers";
             this.dgwCustomers.ReadOnly = true;
-            this.dgwCustomers.Size = new System.Drawing.Size(833, 87);
+            this.dgwCustomers.Size = new System.Drawing.Size(833, 120);
             this.dgwCustomers.TabIndex = 0;
             this.dgwCustomers.TabStop = false;
             // 
@@ -87,7 +87,7 @@
             this.btnDeleteCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDeleteCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteCustomer.Image")));
             this.btnDeleteCustomer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDeleteCustomer.Location = new System.Drawing.Point(483, 19);
+            this.btnDeleteCustomer.Location = new System.Drawing.Point(528, 39);
             this.btnDeleteCustomer.Name = "btnDeleteCustomer";
             this.btnDeleteCustomer.Size = new System.Drawing.Size(216, 62);
             this.btnDeleteCustomer.TabIndex = 0;
@@ -101,7 +101,7 @@
             // 
             this.cbxCustomers.BackColor = System.Drawing.SystemColors.ControlLight;
             this.cbxCustomers.FormattingEnabled = true;
-            this.cbxCustomers.Location = new System.Drawing.Point(228, 35);
+            this.cbxCustomers.Location = new System.Drawing.Point(229, 55);
             this.cbxCustomers.Name = "cbxCustomers";
             this.cbxCustomers.Size = new System.Drawing.Size(219, 21);
             this.cbxCustomers.TabIndex = 1;
@@ -110,16 +110,17 @@
             // lblCustomers
             // 
             this.lblCustomers.AutoSize = true;
-            this.lblCustomers.Location = new System.Drawing.Point(166, 38);
+            this.lblCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCustomers.Location = new System.Drawing.Point(157, 58);
             this.lblCustomers.Name = "lblCustomers";
-            this.lblCustomers.Size = new System.Drawing.Size(56, 13);
+            this.lblCustomers.Size = new System.Drawing.Size(66, 15);
             this.lblCustomers.TabIndex = 7;
             this.lblCustomers.Text = "Customers";
             // 
             // btnAddCustomer
             // 
             this.btnAddCustomer.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnAddCustomer.Location = new System.Drawing.Point(453, 35);
+            this.btnAddCustomer.Location = new System.Drawing.Point(454, 55);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(92, 23);
             this.btnAddCustomer.TabIndex = 2;
@@ -131,9 +132,9 @@
             // 
             this.gbxDelete.Controls.Add(this.cbxDeleteCustomer);
             this.gbxDelete.Controls.Add(this.btnDeleteCustomer);
-            this.gbxDelete.Location = new System.Drawing.Point(12, 202);
+            this.gbxDelete.Location = new System.Drawing.Point(29, 255);
             this.gbxDelete.Name = "gbxDelete";
-            this.gbxDelete.Size = new System.Drawing.Size(833, 97);
+            this.gbxDelete.Size = new System.Drawing.Size(833, 137);
             this.gbxDelete.TabIndex = 3;
             this.gbxDelete.TabStop = false;
             this.gbxDelete.Text = "Delete Customer ";
@@ -145,7 +146,7 @@
             this.cbxDeleteCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbxDeleteCustomer.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.cbxDeleteCustomer.FormattingEnabled = true;
-            this.cbxDeleteCustomer.Location = new System.Drawing.Point(47, 35);
+            this.cbxDeleteCustomer.Location = new System.Drawing.Point(92, 55);
             this.cbxDeleteCustomer.Name = "cbxDeleteCustomer";
             this.cbxDeleteCustomer.Size = new System.Drawing.Size(271, 24);
             this.cbxDeleteCustomer.TabIndex = 1;
@@ -167,7 +168,7 @@
             this.accountTransactionsToolStripMenuItem});
             this.menuStripBar.Location = new System.Drawing.Point(0, 0);
             this.menuStripBar.Name = "menuStripBar";
-            this.menuStripBar.Size = new System.Drawing.Size(856, 24);
+            this.menuStripBar.Size = new System.Drawing.Size(886, 24);
             this.menuStripBar.TabIndex = 8;
             this.menuStripBar.Text = "menuStrip";
             // 
@@ -242,7 +243,7 @@
             // 
             this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
@@ -251,7 +252,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(856, 306);
+            this.ClientSize = new System.Drawing.Size(886, 409);
             this.Controls.Add(this.menuStripBar);
             this.Controls.Add(this.gbxDelete);
             this.Controls.Add(this.btnAddCustomer);

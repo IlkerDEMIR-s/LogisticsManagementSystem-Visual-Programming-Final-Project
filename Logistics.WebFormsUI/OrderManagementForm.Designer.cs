@@ -303,14 +303,14 @@
             // 
             this.toolStripMenuItemWithWebSite.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemWithWebSite.Image")));
             this.toolStripMenuItemWithWebSite.Name = "toolStripMenuItemWithWebSite";
-            this.toolStripMenuItemWithWebSite.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemWithWebSite.Size = new System.Drawing.Size(114, 22);
             this.toolStripMenuItemWithWebSite.Text = "Tutorial";
             this.toolStripMenuItemWithWebSite.Click += new System.EventHandler(this.toolStripMenuItemWithWebSite_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
             // 
             // toolStripMenuItemTips
             // 
@@ -319,20 +319,20 @@
             this.ddfToolStripMenuItemSpecial});
             this.toolStripMenuItemTips.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemTips.Image")));
             this.toolStripMenuItemTips.Name = "toolStripMenuItemTips";
-            this.toolStripMenuItemTips.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemTips.Size = new System.Drawing.Size(114, 22);
             this.toolStripMenuItemTips.Text = "Tips";
             // 
             // dffToolStripMenuItemGeneral
             // 
             this.dffToolStripMenuItemGeneral.Name = "dffToolStripMenuItemGeneral";
-            this.dffToolStripMenuItemGeneral.Size = new System.Drawing.Size(180, 22);
+            this.dffToolStripMenuItemGeneral.Size = new System.Drawing.Size(138, 22);
             this.dffToolStripMenuItemGeneral.Text = "General Tips";
             this.dffToolStripMenuItemGeneral.Click += new System.EventHandler(this.dffToolStripMenuItemGeneral_Click);
             // 
             // ddfToolStripMenuItemSpecial
             // 
             this.ddfToolStripMenuItemSpecial.Name = "ddfToolStripMenuItemSpecial";
-            this.ddfToolStripMenuItemSpecial.Size = new System.Drawing.Size(180, 22);
+            this.ddfToolStripMenuItemSpecial.Size = new System.Drawing.Size(138, 22);
             this.ddfToolStripMenuItemSpecial.Text = "Special Tips";
             this.ddfToolStripMenuItemSpecial.Click += new System.EventHandler(this.ddfToolStripMenuItemSpecial_Click);
             // 
@@ -349,7 +349,7 @@
             // 
             this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click_1);
             // 
@@ -358,7 +358,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(924, 536);
+            this.ClientSize = new System.Drawing.Size(924, 545);
             this.Controls.Add(this.menuStripBar);
             this.Controls.Add(this.gbxExpeditionOperations);
             this.Controls.Add(this.gbxOrderTransactions);

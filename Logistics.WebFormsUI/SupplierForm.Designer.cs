@@ -452,14 +452,14 @@
             // 
             this.toolStripMenuItemWithWebSite.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemWithWebSite.Image")));
             this.toolStripMenuItemWithWebSite.Name = "toolStripMenuItemWithWebSite";
-            this.toolStripMenuItemWithWebSite.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemWithWebSite.Size = new System.Drawing.Size(114, 22);
             this.toolStripMenuItemWithWebSite.Text = "Tutorial";
             this.toolStripMenuItemWithWebSite.Click += new System.EventHandler(this.toolStripMenuItemWithWebSite_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
             // 
             // toolStripMenuItemTips
             // 
@@ -468,7 +468,7 @@
             this.ddfToolStripMenuItemSpecial});
             this.toolStripMenuItemTips.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemTips.Image")));
             this.toolStripMenuItemTips.Name = "toolStripMenuItemTips";
-            this.toolStripMenuItemTips.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemTips.Size = new System.Drawing.Size(114, 22);
             this.toolStripMenuItemTips.Text = "Tips";
             // 
             // dffToolStripMenuItemGeneral

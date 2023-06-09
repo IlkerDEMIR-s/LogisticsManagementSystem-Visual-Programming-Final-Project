@@ -322,6 +322,32 @@ namespace Logistics.WebFormsUI
             customerMyOrdersForm.Show();
             this.Close();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            loadDepots();
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgwOwnDepot.CurrentRow != null)
+                {
+                    var countryName = dgwOwnDepot.CurrentRow.Cells[9].Value.ToString();
+                    dgwDepots.DataSource = _depotService.GetDepotsByCountry(countryName);
+                }
+                else
+                {
+                    MessageBox.Show("Please select your own deposit first!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 
 }

@@ -32,7 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.gbxSearchByName = new System.Windows.Forms.GroupBox();
+            this.gbxSearch = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnFilter = new System.Windows.Forms.Button();
             this.pbxSearch = new System.Windows.Forms.PictureBox();
             this.txtSearchDepotName = new System.Windows.Forms.TextBox();
             this.lblSearchDepotName = new System.Windows.Forms.Label();
@@ -79,13 +81,15 @@
             this.accountTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMyOrders = new System.Windows.Forms.Button();
-            this.gbxSearchByName.SuspendLayout();
+            this.gbxFrame = new System.Windows.Forms.GroupBox();
+            this.gbxSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwDepots)).BeginInit();
             this.gbxSend.SuspendLayout();
             this.gbxFactoryInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOwnDepot)).BeginInit();
             this.menuStripBar.SuspendLayout();
+            this.gbxFrame.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLogOut
@@ -95,7 +99,7 @@
             this.btnLogOut.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(665, 501);
+            this.btnLogOut.Location = new System.Drawing.Point(698, 529);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(129, 39);
             this.btnLogOut.TabIndex = 5;
@@ -109,7 +113,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.IndianRed;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancel.Location = new System.Drawing.Point(800, 501);
+            this.btnCancel.Location = new System.Drawing.Point(833, 529);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(129, 39);
             this.btnCancel.TabIndex = 6;
@@ -117,24 +121,52 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // gbxSearchByName
+            // gbxSearch
             // 
-            this.gbxSearchByName.Controls.Add(this.pbxSearch);
-            this.gbxSearchByName.Controls.Add(this.txtSearchDepotName);
-            this.gbxSearchByName.Controls.Add(this.lblSearchDepotName);
-            this.gbxSearchByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gbxSearchByName.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.gbxSearchByName.Location = new System.Drawing.Point(323, 27);
-            this.gbxSearchByName.Name = "gbxSearchByName";
-            this.gbxSearchByName.Size = new System.Drawing.Size(606, 46);
-            this.gbxSearchByName.TabIndex = 1;
-            this.gbxSearchByName.TabStop = false;
-            this.gbxSearchByName.Text = "Search by Supplier Depot Name";
+            this.gbxSearch.Controls.Add(this.btnClear);
+            this.gbxSearch.Controls.Add(this.btnFilter);
+            this.gbxSearch.Controls.Add(this.pbxSearch);
+            this.gbxSearch.Controls.Add(this.txtSearchDepotName);
+            this.gbxSearch.Controls.Add(this.lblSearchDepotName);
+            this.gbxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gbxSearch.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.gbxSearch.Location = new System.Drawing.Point(323, 27);
+            this.gbxSearch.Name = "gbxSearch";
+            this.gbxSearch.Size = new System.Drawing.Size(639, 46);
+            this.gbxSearch.TabIndex = 1;
+            this.gbxSearch.TabStop = false;
+            this.gbxSearch.Text = "Search or Filter";
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnClear.Location = new System.Drawing.Point(547, 15);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 29;
+            this.btnClear.Text = "&Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnFilter.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnFilter.Location = new System.Drawing.Point(466, 15);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(75, 23);
+            this.btnFilter.TabIndex = 28;
+            this.btnFilter.Text = "&Filter";
+            this.btnFilter.UseVisualStyleBackColor = false;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // pbxSearch
             // 
             this.pbxSearch.Image = ((System.Drawing.Image)(resources.GetObject("pbxSearch.Image")));
-            this.pbxSearch.Location = new System.Drawing.Point(305, 11);
+            this.pbxSearch.Location = new System.Drawing.Point(294, 11);
             this.pbxSearch.Name = "pbxSearch";
             this.pbxSearch.Size = new System.Drawing.Size(32, 29);
             this.pbxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -145,7 +177,7 @@
             // 
             this.txtSearchDepotName.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtSearchDepotName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSearchDepotName.Location = new System.Drawing.Point(98, 20);
+            this.txtSearchDepotName.Location = new System.Drawing.Point(87, 20);
             this.txtSearchDepotName.Name = "txtSearchDepotName";
             this.txtSearchDepotName.Size = new System.Drawing.Size(201, 21);
             this.txtSearchDepotName.TabIndex = 0;
@@ -157,7 +189,7 @@
             this.lblSearchDepotName.AutoSize = true;
             this.lblSearchDepotName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSearchDepotName.ForeColor = System.Drawing.Color.Black;
-            this.lblSearchDepotName.Location = new System.Drawing.Point(25, 25);
+            this.lblSearchDepotName.Location = new System.Drawing.Point(14, 25);
             this.lblSearchDepotName.Name = "lblSearchDepotName";
             this.lblSearchDepotName.Size = new System.Drawing.Size(67, 13);
             this.lblSearchDepotName.TabIndex = 0;
@@ -167,7 +199,7 @@
             // 
             this.dgwDepots.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgwDepots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwDepots.Location = new System.Drawing.Point(323, 79);
+            this.dgwDepots.Location = new System.Drawing.Point(17, 18);
             this.dgwDepots.Name = "dgwDepots";
             this.dgwDepots.ReadOnly = true;
             this.dgwDepots.Size = new System.Drawing.Size(606, 172);
@@ -186,7 +218,7 @@
             this.gbxSend.Controls.Add(this.lblStockInput);
             this.gbxSend.Controls.Add(this.lblProductName);
             this.gbxSend.Controls.Add(this.txtDepotNameDisplay);
-            this.gbxSend.Location = new System.Drawing.Point(323, 251);
+            this.gbxSend.Location = new System.Drawing.Point(17, 190);
             this.gbxSend.Name = "gbxSend";
             this.gbxSend.Size = new System.Drawing.Size(606, 117);
             this.gbxSend.TabIndex = 2;
@@ -204,7 +236,7 @@
             // lblDepotName
             // 
             this.lblDepotName.AutoSize = true;
-            this.lblDepotName.Location = new System.Drawing.Point(95, 28);
+            this.lblDepotName.Location = new System.Drawing.Point(40, 34);
             this.lblDepotName.Name = "lblDepotName";
             this.lblDepotName.Size = new System.Drawing.Size(64, 13);
             this.lblDepotName.TabIndex = 16;
@@ -226,10 +258,10 @@
             // txtProductNameDisplay
             // 
             this.txtProductNameDisplay.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtProductNameDisplay.Location = new System.Drawing.Point(165, 63);
+            this.txtProductNameDisplay.Location = new System.Drawing.Point(110, 69);
             this.txtProductNameDisplay.Name = "txtProductNameDisplay";
             this.txtProductNameDisplay.ReadOnly = true;
-            this.txtProductNameDisplay.Size = new System.Drawing.Size(100, 20);
+            this.txtProductNameDisplay.Size = new System.Drawing.Size(159, 20);
             this.txtProductNameDisplay.TabIndex = 1;
             this.txtProductNameDisplay.TabStop = false;
             // 
@@ -253,7 +285,7 @@
             // lblProductName
             // 
             this.lblProductName.AutoSize = true;
-            this.lblProductName.Location = new System.Drawing.Point(87, 69);
+            this.lblProductName.Location = new System.Drawing.Point(32, 75);
             this.lblProductName.Name = "lblProductName";
             this.lblProductName.Size = new System.Drawing.Size(72, 13);
             this.lblProductName.TabIndex = 17;
@@ -262,10 +294,10 @@
             // txtDepotNameDisplay
             // 
             this.txtDepotNameDisplay.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtDepotNameDisplay.Location = new System.Drawing.Point(165, 25);
+            this.txtDepotNameDisplay.Location = new System.Drawing.Point(110, 31);
             this.txtDepotNameDisplay.Name = "txtDepotNameDisplay";
             this.txtDepotNameDisplay.ReadOnly = true;
-            this.txtDepotNameDisplay.Size = new System.Drawing.Size(100, 20);
+            this.txtDepotNameDisplay.Size = new System.Drawing.Size(159, 20);
             this.txtDepotNameDisplay.TabIndex = 0;
             this.txtDepotNameDisplay.TabStop = false;
             // 
@@ -502,8 +534,9 @@
             // dgwOwnDepot
             // 
             this.dgwOwnDepot.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgwOwnDepot.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgwOwnDepot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwOwnDepot.Location = new System.Drawing.Point(323, 374);
+            this.dgwOwnDepot.Location = new System.Drawing.Point(17, 313);
             this.dgwOwnDepot.Name = "dgwOwnDepot";
             this.dgwOwnDepot.ReadOnly = true;
             this.dgwOwnDepot.Size = new System.Drawing.Size(606, 121);
@@ -516,9 +549,9 @@
             this.btnDepotOperations.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDepotOperations.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnDepotOperations.Image = ((System.Drawing.Image)(resources.GetObject("btnDepotOperations.Image")));
-            this.btnDepotOperations.Location = new System.Drawing.Point(12, 374);
+            this.btnDepotOperations.Location = new System.Drawing.Point(12, 451);
             this.btnDepotOperations.Name = "btnDepotOperations";
-            this.btnDepotOperations.Size = new System.Drawing.Size(305, 58);
+            this.btnDepotOperations.Size = new System.Drawing.Size(305, 73);
             this.btnDepotOperations.TabIndex = 3;
             this.btnDepotOperations.Text = "&Depot Operations";
             this.btnDepotOperations.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -535,7 +568,7 @@
             this.accountTransactionsToolStripMenuItem});
             this.menuStripBar.Location = new System.Drawing.Point(0, 0);
             this.menuStripBar.Name = "menuStripBar";
-            this.menuStripBar.Size = new System.Drawing.Size(941, 24);
+            this.menuStripBar.Size = new System.Drawing.Size(970, 24);
             this.menuStripBar.TabIndex = 0;
             this.menuStripBar.Text = "menuStrip1";
             // 
@@ -620,9 +653,9 @@
             this.btnMyOrders.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMyOrders.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnMyOrders.Image = ((System.Drawing.Image)(resources.GetObject("btnMyOrders.Image")));
-            this.btnMyOrders.Location = new System.Drawing.Point(12, 438);
+            this.btnMyOrders.Location = new System.Drawing.Point(12, 374);
             this.btnMyOrders.Name = "btnMyOrders";
-            this.btnMyOrders.Size = new System.Drawing.Size(305, 58);
+            this.btnMyOrders.Size = new System.Drawing.Size(305, 71);
             this.btnMyOrders.TabIndex = 4;
             this.btnMyOrders.Text = "&My Orders";
             this.btnMyOrders.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -630,20 +663,29 @@
             this.btnMyOrders.UseVisualStyleBackColor = false;
             this.btnMyOrders.Click += new System.EventHandler(this.btnMyOrders_Click);
             // 
+            // gbxFrame
+            // 
+            this.gbxFrame.Controls.Add(this.dgwDepots);
+            this.gbxFrame.Controls.Add(this.gbxSend);
+            this.gbxFrame.Controls.Add(this.dgwOwnDepot);
+            this.gbxFrame.Location = new System.Drawing.Point(323, 79);
+            this.gbxFrame.Name = "gbxFrame";
+            this.gbxFrame.Size = new System.Drawing.Size(639, 444);
+            this.gbxFrame.TabIndex = 28;
+            this.gbxFrame.TabStop = false;
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(941, 545);
+            this.ClientSize = new System.Drawing.Size(970, 572);
+            this.Controls.Add(this.gbxFrame);
             this.Controls.Add(this.btnMyOrders);
             this.Controls.Add(this.menuStripBar);
             this.Controls.Add(this.btnDepotOperations);
-            this.Controls.Add(this.dgwOwnDepot);
             this.Controls.Add(this.gbxFactoryInfo);
-            this.Controls.Add(this.gbxSend);
-            this.Controls.Add(this.gbxSearchByName);
-            this.Controls.Add(this.dgwDepots);
+            this.Controls.Add(this.gbxSearch);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnCancel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -651,8 +693,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer Page";
             this.Load += new System.EventHandler(this.CustomerForm_Load);
-            this.gbxSearchByName.ResumeLayout(false);
-            this.gbxSearchByName.PerformLayout();
+            this.gbxSearch.ResumeLayout(false);
+            this.gbxSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwDepots)).EndInit();
             this.gbxSend.ResumeLayout(false);
@@ -662,6 +704,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgwOwnDepot)).EndInit();
             this.menuStripBar.ResumeLayout(false);
             this.menuStripBar.PerformLayout();
+            this.gbxFrame.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -670,7 +713,7 @@
         #endregion
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.GroupBox gbxSearchByName;
+        private System.Windows.Forms.GroupBox gbxSearch;
         private System.Windows.Forms.TextBox txtSearchDepotName;
         private System.Windows.Forms.Label lblSearchDepotName;
         private System.Windows.Forms.DataGridView dgwDepots;
@@ -717,5 +760,8 @@
         private System.Windows.Forms.ToolStripMenuItem accountTransactionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.Button btnMyOrders;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnFilter;
+        private System.Windows.Forms.GroupBox gbxFrame;
     }
 }
