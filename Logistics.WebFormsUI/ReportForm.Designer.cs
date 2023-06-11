@@ -156,7 +156,7 @@
             // 
             // txtSearchDepotName
             // 
-            this.txtSearchDepotName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearchDepotName.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtSearchDepotName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSearchDepotName.Location = new System.Drawing.Point(87, 35);
             this.txtSearchDepotName.Name = "txtSearchDepotName";

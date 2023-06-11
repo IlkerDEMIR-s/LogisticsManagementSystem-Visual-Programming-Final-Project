@@ -162,7 +162,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Trebuchet MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTitle.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblTitle.ForeColor = System.Drawing.Color.NavajoWhite;
             this.lblTitle.Location = new System.Drawing.Point(24, 341);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(420, 37);
@@ -217,7 +217,7 @@
             // 
             this.pbxCopyright.BackColor = System.Drawing.Color.Transparent;
             this.pbxCopyright.Image = ((System.Drawing.Image)(resources.GetObject("pbxCopyright.Image")));
-            this.pbxCopyright.Location = new System.Drawing.Point(240, 409);
+            this.pbxCopyright.Location = new System.Drawing.Point(216, 412);
             this.pbxCopyright.Name = "pbxCopyright";
             this.pbxCopyright.Size = new System.Drawing.Size(19, 15);
             this.pbxCopyright.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -228,11 +228,11 @@
             // 
             this.lblCopyrightName.AutoSize = true;
             this.lblCopyrightName.BackColor = System.Drawing.Color.Transparent;
-            this.lblCopyrightName.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCopyrightName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCopyrightName.ForeColor = System.Drawing.Color.White;
-            this.lblCopyrightName.Location = new System.Drawing.Point(258, 412);
+            this.lblCopyrightName.Location = new System.Drawing.Point(233, 414);
             this.lblCopyrightName.Name = "lblCopyrightName";
-            this.lblCopyrightName.Size = new System.Drawing.Size(206, 12);
+            this.lblCopyrightName.Size = new System.Drawing.Size(231, 13);
             this.lblCopyrightName.TabIndex = 10;
             this.lblCopyrightName.Text = "2023 Ilker DEMIR | All Rights Reserved";
             // 
@@ -241,7 +241,7 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
             this.lblWelcome.Font = new System.Drawing.Font("Trebuchet MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblWelcome.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblWelcome.ForeColor = System.Drawing.Color.NavajoWhite;
             this.lblWelcome.Location = new System.Drawing.Point(22, 295);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(224, 46);
