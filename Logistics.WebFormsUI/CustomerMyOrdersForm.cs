@@ -113,7 +113,7 @@ namespace Logistics.WebFormsUI
 
             var dataSource = new List<StatusDetail>
                      {
-                        new StatusDetail { Id = 0, StatusName = "Select a filter..." }
+                        new StatusDetail { Id = 0, StatusName = "Select a verification..." }
                      };
 
             dataSource.AddRange(filters.Where(filter => filter.Id == FixedValues.DeliveredStatusId ||

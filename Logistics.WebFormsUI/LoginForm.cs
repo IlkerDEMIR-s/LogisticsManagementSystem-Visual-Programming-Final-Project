@@ -172,10 +172,6 @@ namespace Logistics.WebFormsUI
                 }
             }
         }
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void cbxShowPassword_CheckedChanged(object sender, EventArgs e)
         {
@@ -199,6 +195,11 @@ namespace Logistics.WebFormsUI
         private void btnDirectEntry_Click_1(object sender, EventArgs e)
         {
             tryAutoLogin();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
     }

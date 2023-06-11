@@ -102,7 +102,7 @@
             this.gbxProducts.Location = new System.Drawing.Point(6, 19);
             this.gbxProducts.Name = "gbxProducts";
             this.gbxProducts.Size = new System.Drawing.Size(847, 152);
-            this.gbxProducts.TabIndex = 3;
+            this.gbxProducts.TabIndex = 0;
             this.gbxProducts.TabStop = false;
             this.gbxProducts.Text = "The products taken by the customers";
             // 
@@ -126,7 +126,7 @@
             this.gbxExpeditions.Location = new System.Drawing.Point(6, 177);
             this.gbxExpeditions.Name = "gbxExpeditions";
             this.gbxExpeditions.Size = new System.Drawing.Size(847, 152);
-            this.gbxExpeditions.TabIndex = 4;
+            this.gbxExpeditions.TabIndex = 1;
             this.gbxExpeditions.TabStop = false;
             this.gbxExpeditions.Text = "Expeditions";
             // 
@@ -267,7 +267,7 @@
             this.gbxFrame.Location = new System.Drawing.Point(12, 122);
             this.gbxFrame.Name = "gbxFrame";
             this.gbxFrame.Size = new System.Drawing.Size(863, 350);
-            this.gbxFrame.TabIndex = 4;
+            this.gbxFrame.TabIndex = 3;
             this.gbxFrame.TabStop = false;
             // 
             // menuStripBar
@@ -280,7 +280,7 @@
             this.menuStripBar.Location = new System.Drawing.Point(0, 0);
             this.menuStripBar.Name = "menuStripBar";
             this.menuStripBar.Size = new System.Drawing.Size(882, 24);
-            this.menuStripBar.TabIndex = 5;
+            this.menuStripBar.TabIndex = 4;
             this.menuStripBar.Text = "menuStrip";
             // 
             // helpToolStripMenuItemAbout

@@ -292,7 +292,7 @@ namespace Logistics.WebFormsUI
         private void dgwExpedition_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var row = dgwExpedition.CurrentRow;
-            txtCargoName.Text = row.Cells[6].Value.ToString();
+            txtCargoName.Text = row.Cells[7].Value.ToString();
 
         }
 

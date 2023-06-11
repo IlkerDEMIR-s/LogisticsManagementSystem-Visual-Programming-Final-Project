@@ -162,9 +162,9 @@
             this.cbxApprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbxApprove.ForeColor = System.Drawing.Color.White;
             this.cbxApprove.FormattingEnabled = true;
-            this.cbxApprove.Location = new System.Drawing.Point(70, 79);
+            this.cbxApprove.Location = new System.Drawing.Point(42, 79);
             this.cbxApprove.Name = "cbxApprove";
-            this.cbxApprove.Size = new System.Drawing.Size(146, 23);
+            this.cbxApprove.Size = new System.Drawing.Size(181, 23);
             this.cbxApprove.TabIndex = 0;
             // 
             // btnApprove
