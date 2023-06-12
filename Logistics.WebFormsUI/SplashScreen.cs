@@ -27,7 +27,12 @@ namespace Logistics.WebFormsUI
             ticks++;
             progressBar.Value = ticks;
             lblPercentage.Text = "% " + progressBar.Value.ToString();
-            
+
+            if (progressBar.Value >= 80)
+            {
+                lblState.Text = "Almost done...";
+            }
+
             if (progressBar.Value == 100)
             {
                 timer.Stop();

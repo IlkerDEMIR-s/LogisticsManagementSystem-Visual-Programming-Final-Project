@@ -60,9 +60,10 @@ namespace Logistics.Business.Concrete
 
         public List<Expedition> GetByDepotName(string searchKey, int factoryId)
         {
-            return _expeditionDal.GetAll(e => (e.Source.ToLower().Contains(searchKey.ToLower()) ||
-                                            e.Destination.ToLower().Contains(searchKey.ToLower()))
-                                            && e.SupplierID == factoryId);
+            return _expeditionDal.GetAll(e => ( e.Source.ToLower().Contains(searchKey.ToLower()) ||
+                                            e.Destination.ToLower().Contains(searchKey.ToLower()) )
+                                            && e.SupplierID == factoryId
+                                           && (e.CargoStatusID == FixedValues.DeliveredStatusId || e.CargoStatusID == FixedValues.NotDeliveredStatusId));
         }
 
         public Expedition GetExpeditionById(int expeditionId)

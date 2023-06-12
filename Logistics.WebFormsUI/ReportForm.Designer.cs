@@ -69,7 +69,7 @@
             // 
             // dgwExpedition
             // 
-            this.dgwExpedition.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgwExpedition.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgwExpedition.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwExpedition.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwExpedition.Location = new System.Drawing.Point(17, 28);
@@ -108,7 +108,7 @@
             // 
             // dgwOrders
             // 
-            this.dgwOrders.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgwOrders.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgwOrders.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwOrders.Location = new System.Drawing.Point(17, 28);
@@ -213,6 +213,7 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnClear.Location = new System.Drawing.Point(349, 48);
@@ -226,6 +227,7 @@
             // btnFilter
             // 
             this.btnFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnFilter.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnFilter.Location = new System.Drawing.Point(349, 20);

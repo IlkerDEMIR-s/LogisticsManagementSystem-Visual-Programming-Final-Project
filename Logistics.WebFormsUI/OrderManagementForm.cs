@@ -155,16 +155,17 @@ namespace Logistics.WebFormsUI
         }
 
         private void btnUpdateStatus_Click(object sender, EventArgs e)
-        {
-            var statusColumn = Convert.ToInt32(dgwOrders.CurrentRow.Cells[12].Value.ToString());            
+        {                   
 
             if (dgwOrders.CurrentRow == null)
             {
                 MessageBox.Show("Please select an order to update the status!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            }            
+            }           
 
-            if(statusColumn == FixedValues.ConfirmedStatusId || statusColumn == FixedValues.RejectedStatusId)
+            var statusColumn = Convert.ToInt32(dgwOrders.CurrentRow.Cells[12].Value.ToString());
+
+            if (statusColumn == FixedValues.ConfirmedStatusId || statusColumn == FixedValues.RejectedStatusId)
             {
                 MessageBox.Show("You can not update the status of this order!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

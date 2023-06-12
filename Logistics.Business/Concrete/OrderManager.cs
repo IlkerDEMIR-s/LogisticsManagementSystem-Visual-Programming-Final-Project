@@ -54,9 +54,10 @@ namespace Logistics.Business.Concrete
 
         public List<Order> GetByDepotName(string searchKey, int factoryId)
         {
-            return _orderDal.GetAll(o => (o.SupplierDepotName.ToLower().Contains(searchKey.ToLower()) ||
+            return _orderDal.GetAll(o => ( o.SupplierDepotName.ToLower().Contains(searchKey.ToLower()) ||
                                                        o.CustomerDepotName.ToLower().Contains(searchKey.ToLower()))
-                                                                                                  && o.SupplierID == factoryId);
+                                                         && o.SupplierID == factoryId 
+                                                         && (o.Status == FixedValues.ConfirmedStatusId || o.Status ==  FixedValues.RejectedStatusId));
         }
 
         public Order GetOrderById(int orderId)

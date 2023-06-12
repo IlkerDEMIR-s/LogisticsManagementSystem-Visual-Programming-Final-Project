@@ -93,6 +93,7 @@
             // btnFilter
             // 
             this.btnFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnFilter.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnFilter.Location = new System.Drawing.Point(221, 19);
@@ -154,6 +155,7 @@
             // btnExpeditionFilter
             // 
             this.btnExpeditionFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnExpeditionFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExpeditionFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExpeditionFilter.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnExpeditionFilter.Location = new System.Drawing.Point(221, 21);

@@ -217,7 +217,7 @@
             // 
             this.pbxCopyright.BackColor = System.Drawing.Color.Transparent;
             this.pbxCopyright.Image = ((System.Drawing.Image)(resources.GetObject("pbxCopyright.Image")));
-            this.pbxCopyright.Location = new System.Drawing.Point(216, 412);
+            this.pbxCopyright.Location = new System.Drawing.Point(226, 406);
             this.pbxCopyright.Name = "pbxCopyright";
             this.pbxCopyright.Size = new System.Drawing.Size(19, 15);
             this.pbxCopyright.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -230,11 +230,11 @@
             this.lblCopyrightName.BackColor = System.Drawing.Color.Transparent;
             this.lblCopyrightName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCopyrightName.ForeColor = System.Drawing.Color.White;
-            this.lblCopyrightName.Location = new System.Drawing.Point(233, 414);
+            this.lblCopyrightName.Location = new System.Drawing.Point(243, 408);
             this.lblCopyrightName.Name = "lblCopyrightName";
-            this.lblCopyrightName.Size = new System.Drawing.Size(231, 13);
+            this.lblCopyrightName.Size = new System.Drawing.Size(221, 13);
             this.lblCopyrightName.TabIndex = 10;
-            this.lblCopyrightName.Text = "2023 Ilker DEMIR | All Rights Reserved";
+            this.lblCopyrightName.Text = "2023 Ilker DEMIR | All rights reserved";
             // 
             // lblWelcome
             // 
