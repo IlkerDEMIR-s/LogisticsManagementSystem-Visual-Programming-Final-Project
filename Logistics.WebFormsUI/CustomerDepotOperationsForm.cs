@@ -36,7 +36,7 @@ namespace Logistics.WebFormsUI
 
         private void loadProductsID()
         {
-            cbxProducts.DataSource = _productService.GetAll(); ;
+            cbxProducts.DataSource = _productService.GetAll(); 
             cbxProducts.DisplayMember = "ProductID";
             cbxProducts.ValueMember = "ProductID";
         }

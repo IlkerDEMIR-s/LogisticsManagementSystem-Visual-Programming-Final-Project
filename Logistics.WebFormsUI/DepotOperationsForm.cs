@@ -50,7 +50,7 @@ namespace Logistics.WebFormsUI
 
         private void loadProductsID()
         {
-            cbxProducts.DataSource = _productService.GetAll(); ;
+            cbxProducts.DataSource = _productService.GetByFactoryId(_factoryId);
             cbxProducts.DisplayMember = "ProductID";
             cbxProducts.ValueMember = "ProductID";
         }
