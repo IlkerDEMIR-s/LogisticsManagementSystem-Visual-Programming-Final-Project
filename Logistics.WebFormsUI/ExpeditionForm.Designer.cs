@@ -82,11 +82,11 @@
             this.lblTotalCargoWeight.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalCargoWeight.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTotalCargoWeight.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblTotalCargoWeight.Location = new System.Drawing.Point(407, 190);
+            this.lblTotalCargoWeight.Location = new System.Drawing.Point(362, 186);
             this.lblTotalCargoWeight.Name = "lblTotalCargoWeight";
-            this.lblTotalCargoWeight.Size = new System.Drawing.Size(140, 19);
+            this.lblTotalCargoWeight.Size = new System.Drawing.Size(171, 19);
             this.lblTotalCargoWeight.TabIndex = 47;
-            this.lblTotalCargoWeight.Text = "Total Cargo Weight";
+            this.lblTotalCargoWeight.Text = "Total Cargo Weight (kg)";
             // 
             // lblDestination
             // 
@@ -106,7 +106,7 @@
             this.lblCargoParcelAmount.BackColor = System.Drawing.Color.Transparent;
             this.lblCargoParcelAmount.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCargoParcelAmount.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblCargoParcelAmount.Location = new System.Drawing.Point(397, 105);
+            this.lblCargoParcelAmount.Location = new System.Drawing.Point(362, 105);
             this.lblCargoParcelAmount.Name = "lblCargoParcelAmount";
             this.lblCargoParcelAmount.Size = new System.Drawing.Size(153, 19);
             this.lblCargoParcelAmount.TabIndex = 44;
@@ -118,11 +118,11 @@
             this.lblTotalCargoVolume.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalCargoVolume.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTotalCargoVolume.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblTotalCargoVolume.Location = new System.Drawing.Point(407, 149);
+            this.lblTotalCargoVolume.Location = new System.Drawing.Point(362, 148);
             this.lblTotalCargoVolume.Name = "lblTotalCargoVolume";
-            this.lblTotalCargoVolume.Size = new System.Drawing.Size(143, 19);
+            this.lblTotalCargoVolume.Size = new System.Drawing.Size(188, 19);
             this.lblTotalCargoVolume.TabIndex = 42;
-            this.lblTotalCargoVolume.Text = "Total Cargo Volume";
+            this.lblTotalCargoVolume.Text = "Total Cargo Volume (m^3)";
             // 
             // lblEstimatedDepartureDate
             // 
