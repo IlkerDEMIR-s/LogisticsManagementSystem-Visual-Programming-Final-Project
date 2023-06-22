@@ -368,7 +368,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OrderManagementForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Order Management Form";
+            this.Text = "Order Management Page";
             this.Load += new System.EventHandler(this.OrderManagementForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwOrders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwExpedition)).EndInit();

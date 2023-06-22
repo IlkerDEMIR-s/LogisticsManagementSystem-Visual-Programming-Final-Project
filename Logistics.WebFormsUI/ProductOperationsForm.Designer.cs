@@ -399,7 +399,7 @@
             this.menuStripBar.Location = new System.Drawing.Point(0, 0);
             this.menuStripBar.Name = "menuStripBar";
             this.menuStripBar.Size = new System.Drawing.Size(688, 24);
-            this.menuStripBar.TabIndex = 7;
+            this.menuStripBar.TabIndex = 6;
             this.menuStripBar.Text = "menuStrip";
             // 
             // helpToolStripMenuItemAbout

@@ -12,5 +12,6 @@ namespace Logistics.DataAccess.Abstract
         string CheckUnitInStock(int factoryId);
         List<Depot> GetDepotsByCustomer(int customerId);
         List<Depot> GetDepotsByCustomerWithSearchKey(int customerId, string searchKey);
+        List<Depot> GetDepotsByCountry(int customerId, string countryName);
     }
 }

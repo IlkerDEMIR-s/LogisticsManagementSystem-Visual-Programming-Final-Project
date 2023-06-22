@@ -102,9 +102,9 @@ namespace Logistics.Business.Concrete
             return _depotDal.GetDepotsByCustomerWithSearchKey(customerId, searchKey);
         }
 
-        public List<Depot> GetDepotsByCountry(string countryName)
+        public List<Depot> GetDepotsByCountry(int customerId, string countryName)
         {
-            return _depotDal.GetAll(d => d.Country.ToLower().Contains(countryName.ToLower()));
+            return _depotDal.GetDepotsByCountry(customerId, countryName);
         }
     }
 }

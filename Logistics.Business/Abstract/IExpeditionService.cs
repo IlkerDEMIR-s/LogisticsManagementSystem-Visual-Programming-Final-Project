@@ -18,5 +18,7 @@ namespace Logistics.Business.Abstract
         Expedition GetExpeditionByOrderId(int orderId);
         List<Expedition> GetByDepotName(string searchKey, int factoryId);
         List<Expedition> GetByDateRange(DateTime startDate, DateTime endDate, int factoryId);
+        int GetExpeditionStatusIdByOrderId(int orderId);
+        DateTime GetExpeditionActualDepatureDateByOrderId(int orderId);
     }
 }

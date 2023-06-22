@@ -90,7 +90,7 @@
             this.btnDeleteCustomer.Location = new System.Drawing.Point(528, 39);
             this.btnDeleteCustomer.Name = "btnDeleteCustomer";
             this.btnDeleteCustomer.Size = new System.Drawing.Size(216, 62);
-            this.btnDeleteCustomer.TabIndex = 0;
+            this.btnDeleteCustomer.TabIndex = 1;
             this.btnDeleteCustomer.Text = "&Delete Customer";
             this.btnDeleteCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDeleteCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -149,7 +149,7 @@
             this.cbxDeleteCustomer.Location = new System.Drawing.Point(92, 55);
             this.cbxDeleteCustomer.Name = "cbxDeleteCustomer";
             this.cbxDeleteCustomer.Size = new System.Drawing.Size(271, 24);
-            this.cbxDeleteCustomer.TabIndex = 1;
+            this.cbxDeleteCustomer.TabIndex = 0;
             // 
             // entityCommand1
             // 
@@ -169,7 +169,7 @@
             this.menuStripBar.Location = new System.Drawing.Point(0, 0);
             this.menuStripBar.Name = "menuStripBar";
             this.menuStripBar.Size = new System.Drawing.Size(886, 24);
-            this.menuStripBar.TabIndex = 8;
+            this.menuStripBar.TabIndex = 4;
             this.menuStripBar.Text = "menuStrip";
             // 
             // helpToolStripMenuItemAbout

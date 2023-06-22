@@ -107,6 +107,23 @@ namespace Logistics.DataAccess.Concrete.EntityFramework
                 return depots;
             }
         }
+
+        public List<Depot> GetDepotsByCountry(int customerId, string countryName)
+        {
+            using (var context = new LogisticsContext())
+            {
+                var factories = context.CustomerSupplier
+                    .Where(cs => cs.CustomerId == customerId)
+                    .Select(cs => cs.SupplierId)
+                    .ToList();
+
+                var depots = context.Depots
+                    .Where(d => factories.Contains(d.FactoryID) && d.Country == countryName)
+                    .ToList();
+
+                return depots;
+            }
+        }
     }
 
 

@@ -61,17 +61,13 @@ namespace Logistics.WebFormsUI
         }
 
         private void loadOrders()
-        {
-            // Get the data from the data source
+        {            
             var data = _orderService.GetAllBySupplierId(_factoryId);
-
-            // Sort the data in reverse order based on the "ColumnName" column
+                        
             var sortedData = data.OrderByDescending(x => x.OrderDate).ToList();
-
-            // Bind the sorted data to the DataGridView control
+                        
             dgwOrders.DataSource = sortedData;
-
-            // Decreace the width of the column 
+            
             dgwOrders.Columns["SupplierDepotName"].Width = 170;
             dgwOrders.Columns["CustomerDepotName"].Width = 170;
 

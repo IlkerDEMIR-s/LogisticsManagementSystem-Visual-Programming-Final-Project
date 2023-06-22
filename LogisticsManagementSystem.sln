@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logistics.DataAccess", "Log
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logistics.Business", "Logistics.Business\Logistics.Business.csproj", "{84A5CE0A-B25D-4383-B82B-42F30D051732}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupLogistics", "SetupLogistics\SetupLogistics.vdproj", "{89739CD1-6301-4300-AB14-42EE7654F8E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,8 @@ Global
 		{84A5CE0A-B25D-4383-B82B-42F30D051732}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84A5CE0A-B25D-4383-B82B-42F30D051732}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84A5CE0A-B25D-4383-B82B-42F30D051732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89739CD1-6301-4300-AB14-42EE7654F8E6}.Debug|Any CPU.ActiveCfg = Debug
+		{89739CD1-6301-4300-AB14-42EE7654F8E6}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

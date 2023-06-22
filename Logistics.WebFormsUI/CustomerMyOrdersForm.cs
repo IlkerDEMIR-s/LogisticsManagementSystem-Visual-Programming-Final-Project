@@ -48,16 +48,16 @@ namespace Logistics.WebFormsUI
 
         private void loadOrders()
         {
-            // Get the data from the data source
+            
             var data = _orderService.GetAllByCustomerId(_factoryId);
 
-            // Sort the data in reverse order based on the "ColumnName" column
+            
             var sortedData = data.OrderByDescending(x => x.OrderDate).ToList();
 
-            // Bind the sorted data to the DataGridView control
+           
             dgwOrders.DataSource = sortedData;
 
-            // Decreace the width of the column 
+            
             dgwOrders.Columns["SupplierDepotName"].Width = 170;
             dgwOrders.Columns["CustomerDepotName"].Width = 170;
 
@@ -199,7 +199,7 @@ namespace Logistics.WebFormsUI
 
             if(Order == null || Expedition == null)
             {
-                MessageBox.Show("There is expedition data for this order!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("There is no expedition data for this order!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -208,38 +208,57 @@ namespace Logistics.WebFormsUI
                 MessageBox.Show("Please select an option!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (selectedApprove == FixedValues.DeliveredStatusId)
-            {
 
-                try
+
+            var currentOrderId = Convert.ToInt32(dgwOrders.CurrentRow.Cells[0].Value.ToString());
+            var expeditionStatusId = _expeditionService.GetExpeditionStatusIdByOrderId(currentOrderId);
+            var currentActuaDepartureDate = _expeditionService.GetExpeditionByOrderId(currentOrderId).ActualDepartureDate;
+
+
+            if (expeditionStatusId == FixedValues.DeliveredStatusId || currentActuaDepartureDate == null) // || expeditionStatusId == FixedValues.NotDeliveredStatusId
+            {
+                MessageBox.Show("You can not update the status of this order!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                if (selectedApprove == FixedValues.DeliveredStatusId)
                 {
+
                     try
                     {
-                        if (increaseAmount > 0)
+                        try
                         {
-
-                            if (_stockUpdaterService.UpdateStockQuantityAfterReceivingProductFromDepot(_selectedSupplierDepotId, increaseAmount)
-                                 && _stockUpdaterService.SendReceivedProductsToOurOwnDepot(_selectedCustomerDepotId, increaseAmount))
+                            if (increaseAmount > 0)
                             {
-                                Expedition.CargoStatusID = selectedApprove;
-                                Expedition.CargoStatusName = _statusDetailService.GetByStatusId(selectedApprove)[0].StatusName;
-                                Expedition.ActualArrivalDate = DateTime.Now;
-                                _expeditionService.Update(Expedition);
 
-                                loadOrders();
+                                if (_stockUpdaterService.UpdateStockQuantityAfterReceivingProductFromDepot(_selectedSupplierDepotId, increaseAmount)
+                                     && _stockUpdaterService.SendReceivedProductsToOurOwnDepot(_selectedCustomerDepotId, increaseAmount))
+                                {
+                                    Expedition.CargoStatusID = selectedApprove;
+                                    Expedition.CargoStatusName = _statusDetailService.GetByStatusId(selectedApprove)[0].StatusName;
+                                    Expedition.ActualArrivalDate = DateTime.Now;
+                                    _expeditionService.Update(Expedition);
 
-                                MessageBox.Show("Stock has been updated!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                MessageBox.Show("Order has been delivered!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+                                    loadOrders();
+
+                                    MessageBox.Show("Stock has been updated!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Order has been delivered!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show("There are not enough products in stock!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("There are not enough products in stock!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Invalid stock amount entered!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
-                        else
+                        catch (Exception exception)
                         {
-                            MessageBox.Show("Invalid stock amount entered!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(exception.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     catch (Exception exception)
@@ -247,29 +266,28 @@ namespace Logistics.WebFormsUI
                         MessageBox.Show(exception.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch (Exception exception)
-                {
-                    MessageBox.Show(exception.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
 
-            if(selectedApprove == FixedValues.NotDeliveredStatusId)
-            {
-                if (Expedition.EstimatedArrivalDate > DateTime.Now.Date)
+                if (selectedApprove == FixedValues.NotDeliveredStatusId)
                 {
-                    MessageBox.Show("Order cannot be rejected before the estimated arrival date!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                else
-                {
-                    Expedition.CargoStatusID = selectedApprove;
-                    Expedition.CargoStatusName = _statusDetailService.GetByStatusId(selectedApprove)[0].StatusName;
-                    _expeditionService.Update(Expedition);
-                    loadOrders();
-                    MessageBox.Show("Order not delivered information, sent to supplier.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (Expedition.EstimatedArrivalDate > DateTime.Now.Date)
+                    {
+                        MessageBox.Show("Order cannot be rejected before the estimated arrival date!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        Expedition.CargoStatusID = selectedApprove;
+                        Expedition.CargoStatusName = _statusDetailService.GetByStatusId(selectedApprove)[0].StatusName;
+                        _expeditionService.Update(Expedition);
+                        loadOrders();
+                        MessageBox.Show("Order not delivered information, sent to supplier.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
 
             }
+
+
 
         }
 

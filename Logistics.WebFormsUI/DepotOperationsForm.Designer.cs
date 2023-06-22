@@ -131,14 +131,14 @@
             this.txtStockInput.Location = new System.Drawing.Point(30, 132);
             this.txtStockInput.Name = "txtStockInput";
             this.txtStockInput.Size = new System.Drawing.Size(136, 20);
-            this.txtStockInput.TabIndex = 3;
+            this.txtStockInput.TabIndex = 0;
             // 
             // btnSend
             // 
             this.btnSend.Location = new System.Drawing.Point(58, 158);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(92, 24);
-            this.btnSend.TabIndex = 4;
+            this.btnSend.TabIndex = 1;
             this.btnSend.Text = "&Send";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
@@ -252,7 +252,7 @@
             this.gbxSend.Location = new System.Drawing.Point(12, 298);
             this.gbxSend.Name = "gbxSend";
             this.gbxSend.Size = new System.Drawing.Size(242, 205);
-            this.gbxSend.TabIndex = 2;
+            this.gbxSend.TabIndex = 3;
             this.gbxSend.TabStop = false;
             this.gbxSend.Text = "Send product to depot";
             // 
@@ -280,7 +280,7 @@
             this.gbxAddDepot.Location = new System.Drawing.Point(260, 298);
             this.gbxAddDepot.Name = "gbxAddDepot";
             this.gbxAddDepot.Size = new System.Drawing.Size(412, 251);
-            this.gbxAddDepot.TabIndex = 3;
+            this.gbxAddDepot.TabIndex = 4;
             this.gbxAddDepot.TabStop = false;
             this.gbxAddDepot.Text = "Add new depot";
             // 
@@ -291,7 +291,7 @@
             this.cbxProducts.Location = new System.Drawing.Point(85, 57);
             this.cbxProducts.Name = "cbxProducts";
             this.cbxProducts.Size = new System.Drawing.Size(115, 21);
-            this.cbxProducts.TabIndex = 24;
+            this.cbxProducts.TabIndex = 1;
             // 
             // lblProduct
             // 
@@ -478,7 +478,7 @@
             this.gbxUpdate.Location = new System.Drawing.Point(678, 298);
             this.gbxUpdate.Name = "gbxUpdate";
             this.gbxUpdate.Size = new System.Drawing.Size(287, 251);
-            this.gbxUpdate.TabIndex = 4;
+            this.gbxUpdate.TabIndex = 5;
             this.gbxUpdate.TabStop = false;
             this.gbxUpdate.Text = "Update depot";
             // 
@@ -588,7 +588,7 @@
             this.btnCloseDepot.Location = new System.Drawing.Point(12, 509);
             this.btnCloseDepot.Name = "btnCloseDepot";
             this.btnCloseDepot.Size = new System.Drawing.Size(242, 40);
-            this.btnCloseDepot.TabIndex = 5;
+            this.btnCloseDepot.TabIndex = 6;
             this.btnCloseDepot.Text = "&Close Depot";
             this.toolTipInfo.SetToolTip(this.btnCloseDepot, "You delete the data of the selected depot from the database.\r\n");
             this.btnCloseDepot.UseVisualStyleBackColor = false;
@@ -617,7 +617,7 @@
             this.btnCloneDepot.Location = new System.Drawing.Point(13, 103);
             this.btnCloneDepot.Name = "btnCloneDepot";
             this.btnCloneDepot.Size = new System.Drawing.Size(165, 42);
-            this.btnCloneDepot.TabIndex = 7;
+            this.btnCloneDepot.TabIndex = 2;
             this.btnCloneDepot.Text = "Clo&ne Depot";
             this.btnCloneDepot.UseVisualStyleBackColor = false;
             this.btnCloneDepot.Click += new System.EventHandler(this.btnCloneDepot_Click);
@@ -632,7 +632,7 @@
             this.menuStripBar.Location = new System.Drawing.Point(0, 0);
             this.menuStripBar.Name = "menuStripBar";
             this.menuStripBar.Size = new System.Drawing.Size(978, 24);
-            this.menuStripBar.TabIndex = 8;
+            this.menuStripBar.TabIndex = 7;
             this.menuStripBar.Text = "menuStrip";
             // 
             // helpToolStripMenuItemAbout

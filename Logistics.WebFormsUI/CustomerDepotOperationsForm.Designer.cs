@@ -186,7 +186,7 @@
             this.gbxAddDepot.Location = new System.Drawing.Point(12, 247);
             this.gbxAddDepot.Name = "gbxAddDepot";
             this.gbxAddDepot.Size = new System.Drawing.Size(424, 251);
-            this.gbxAddDepot.TabIndex = 2;
+            this.gbxAddDepot.TabIndex = 3;
             this.gbxAddDepot.TabStop = false;
             this.gbxAddDepot.Text = "Add new depot";
             // 
@@ -197,7 +197,7 @@
             this.cbxProducts.Location = new System.Drawing.Point(83, 61);
             this.cbxProducts.Name = "cbxProducts";
             this.cbxProducts.Size = new System.Drawing.Size(124, 21);
-            this.cbxProducts.TabIndex = 22;
+            this.cbxProducts.TabIndex = 1;
             // 
             // txtCountry
             // 
@@ -374,7 +374,7 @@
             this.gbxUpdate.Location = new System.Drawing.Point(442, 247);
             this.gbxUpdate.Name = "gbxUpdate";
             this.gbxUpdate.Size = new System.Drawing.Size(469, 251);
-            this.gbxUpdate.TabIndex = 3;
+            this.gbxUpdate.TabIndex = 5;
             this.gbxUpdate.TabStop = false;
             this.gbxUpdate.Text = "Update depot";
             // 
@@ -515,7 +515,7 @@
             this.btnCloneDepot.Location = new System.Drawing.Point(430, 52);
             this.btnCloneDepot.Name = "btnCloneDepot";
             this.btnCloneDepot.Size = new System.Drawing.Size(165, 42);
-            this.btnCloneDepot.TabIndex = 8;
+            this.btnCloneDepot.TabIndex = 2;
             this.btnCloneDepot.Text = "Clo&ne Depot";
             this.btnCloneDepot.UseVisualStyleBackColor = false;
             this.btnCloneDepot.Click += new System.EventHandler(this.btnCloneDepot_Click);
@@ -530,7 +530,7 @@
             this.menuStripBar.Location = new System.Drawing.Point(0, 0);
             this.menuStripBar.Name = "menuStripBar";
             this.menuStripBar.Size = new System.Drawing.Size(922, 24);
-            this.menuStripBar.TabIndex = 9;
+            this.menuStripBar.TabIndex = 6;
             this.menuStripBar.Text = "menuStrip";
             // 
             // helpToolStripMenuItemAbout

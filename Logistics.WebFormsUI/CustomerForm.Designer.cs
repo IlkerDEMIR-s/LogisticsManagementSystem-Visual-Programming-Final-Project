@@ -102,7 +102,7 @@
             this.btnLogOut.Location = new System.Drawing.Point(698, 529);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(129, 39);
-            this.btnLogOut.TabIndex = 5;
+            this.btnLogOut.TabIndex = 4;
             this.btnLogOut.Text = "&Log Out";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -116,7 +116,7 @@
             this.btnCancel.Location = new System.Drawing.Point(833, 529);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(129, 39);
-            this.btnCancel.TabIndex = 6;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -133,7 +133,7 @@
             this.gbxSearch.Location = new System.Drawing.Point(323, 27);
             this.gbxSearch.Name = "gbxSearch";
             this.gbxSearch.Size = new System.Drawing.Size(639, 46);
-            this.gbxSearch.TabIndex = 1;
+            this.gbxSearch.TabIndex = 0;
             this.gbxSearch.TabStop = false;
             this.gbxSearch.Text = "Search or Filter";
             // 
@@ -146,7 +146,7 @@
             this.btnClear.Location = new System.Drawing.Point(547, 15);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 29;
+            this.btnClear.TabIndex = 2;
             this.btnClear.Text = "&Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -160,7 +160,7 @@
             this.btnFilter.Location = new System.Drawing.Point(466, 15);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(75, 23);
-            this.btnFilter.TabIndex = 28;
+            this.btnFilter.TabIndex = 1;
             this.btnFilter.Text = "&Filter";
             this.btnFilter.UseVisualStyleBackColor = false;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
@@ -223,7 +223,7 @@
             this.gbxSend.Location = new System.Drawing.Point(17, 190);
             this.gbxSend.Name = "gbxSend";
             this.gbxSend.Size = new System.Drawing.Size(606, 117);
-            this.gbxSend.TabIndex = 2;
+            this.gbxSend.TabIndex = 0;
             this.gbxSend.TabStop = false;
             // 
             // lblStockInputSecondLine
@@ -571,7 +571,7 @@
             this.menuStripBar.Location = new System.Drawing.Point(0, 0);
             this.menuStripBar.Name = "menuStripBar";
             this.menuStripBar.Size = new System.Drawing.Size(970, 24);
-            this.menuStripBar.TabIndex = 0;
+            this.menuStripBar.TabIndex = 6;
             this.menuStripBar.Text = "menuStrip1";
             // 
             // helpToolStripMenuItemAbout
@@ -658,7 +658,7 @@
             this.btnMyOrders.Location = new System.Drawing.Point(12, 374);
             this.btnMyOrders.Name = "btnMyOrders";
             this.btnMyOrders.Size = new System.Drawing.Size(305, 71);
-            this.btnMyOrders.TabIndex = 4;
+            this.btnMyOrders.TabIndex = 2;
             this.btnMyOrders.Text = "&My Orders";
             this.btnMyOrders.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMyOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -673,7 +673,7 @@
             this.gbxFrame.Location = new System.Drawing.Point(323, 79);
             this.gbxFrame.Name = "gbxFrame";
             this.gbxFrame.Size = new System.Drawing.Size(639, 444);
-            this.gbxFrame.TabIndex = 28;
+            this.gbxFrame.TabIndex = 1;
             this.gbxFrame.TabStop = false;
             // 
             // CustomerForm

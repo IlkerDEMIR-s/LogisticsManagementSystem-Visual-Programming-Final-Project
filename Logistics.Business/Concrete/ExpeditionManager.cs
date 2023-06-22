@@ -66,6 +66,11 @@ namespace Logistics.Business.Concrete
                                            && (e.CargoStatusID == FixedValues.DeliveredStatusId || e.CargoStatusID == FixedValues.NotDeliveredStatusId));
         }
 
+        public DateTime GetExpeditionActualDepatureDateByOrderId(int orderId)
+        {
+            return (DateTime)_expeditionDal.Get(e => e.OrderId == orderId).ActualDepartureDate;
+        }
+
         public Expedition GetExpeditionById(int expeditionId)
         {
             return _expeditionDal.Get(e => e.ExpeditionID == expeditionId);
@@ -74,6 +79,11 @@ namespace Logistics.Business.Concrete
         public Expedition GetExpeditionByOrderId(int orderId)
         {
             return _expeditionDal.Get(e => e.OrderId == orderId);
+        }
+
+        public int GetExpeditionStatusIdByOrderId(int orderId)
+        {
+            return _expeditionDal.Get(e => e.OrderId == orderId).CargoStatusID;
         }
 
         public void Update(Expedition expedition)

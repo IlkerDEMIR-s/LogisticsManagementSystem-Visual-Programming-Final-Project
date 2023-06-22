@@ -275,7 +275,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ExpeditionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Expedition Form";
+            this.Text = "Expedition Page";
             this.Load += new System.EventHandler(this.ExpeditionForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

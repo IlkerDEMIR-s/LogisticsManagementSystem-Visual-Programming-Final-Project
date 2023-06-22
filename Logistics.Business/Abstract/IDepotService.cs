@@ -22,7 +22,7 @@ namespace Logistics.Business.Abstract
         List<Depot> GetByFactoryId(int factoryId);
         List<Depot> GetDepotsByCustomer(int customerId);
         List<Depot> GetDepotsByCustomerWithSearchKey(int customerId, string searchKey);
-        List<Depot> GetDepotsByCountry(string countryName);
+        List<Depot> GetDepotsByCountry(int customerId, string countryName);
 
     }
 }

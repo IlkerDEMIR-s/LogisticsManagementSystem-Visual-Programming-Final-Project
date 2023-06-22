@@ -208,7 +208,7 @@
             this.menuStripBar.Location = new System.Drawing.Point(0, 0);
             this.menuStripBar.Name = "menuStripBar";
             this.menuStripBar.Size = new System.Drawing.Size(887, 24);
-            this.menuStripBar.TabIndex = 14;
+            this.menuStripBar.TabIndex = 5;
             this.menuStripBar.Text = "menuStrip";
             // 
             // helpToolStripMenuItemAbout
@@ -303,7 +303,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerMyOrdersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "My Orders Form";
+            this.Text = "My Orders Page";
             this.Load += new System.EventHandler(this.CustomerMyOrdersForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwOrders)).EndInit();
             this.gbxViewDetails.ResumeLayout(false);

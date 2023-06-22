@@ -335,7 +335,7 @@ namespace Logistics.WebFormsUI
                 if (dgwOwnDepot.CurrentRow != null)
                 {
                     var countryName = dgwOwnDepot.CurrentRow.Cells[9].Value.ToString();
-                    dgwDepots.DataSource = _depotService.GetDepotsByCountry(countryName);
+                    dgwDepots.DataSource = _depotService.GetDepotsByCountry(_factoryId, countryName);
                 }
                 else
                 {
